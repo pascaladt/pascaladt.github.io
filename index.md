@@ -43,4 +43,4 @@ Copyright and license
 
 Copyright (C) 2004-2021 by Lukasz Czajka.
 
-Distributed under LGPL 2.1. See [LICENSE](https://github.com/lukaszcz/pascaladt/LICENSE).
+Distributed under LGPL 2.1. See [LICENSE](https://github.com/lukaszcz/pascaladt/blob/master/LICENSE).
