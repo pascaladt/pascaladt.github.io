@@ -1,0 +1,2310 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtlist</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtiters.html">adtiters</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtmem.html">adtmem</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtcont.html">adtcont</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides three implementations of lists: <a href="adtlist__-TSingleList.html">TSingleList</a>, <a href="adtlist__-TDoubleList.html">TDoubleList</a> and <a href="adtlist__-TXorList.html">TXorList</a>..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleList.html">TSingleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a singly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a singly linked list (<a href="adtlist__-TSingleList.html">TSingleList</a>).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleList.html">TDoubleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorListIterator.html">TXorListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringSingleList.html">TStringSingleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a singly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringSingleListIterator.html">TStringSingleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a singly linked list (<a href="adtlist__-TStringSingleList.html">TStringSingleList</a>).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringDoubleList.html">TStringDoubleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringDoubleListIterator.html">TStringDoubleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringXorList.html">TStringXorList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TStringXorListIterator.html">TStringXorListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerSingleList.html">TIntegerSingleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a singly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerSingleListIterator.html">TIntegerSingleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a singly linked list (<a href="adtlist__-TIntegerSingleList.html">TIntegerSingleList</a>).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerDoubleList.html">TIntegerDoubleList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerDoubleListIterator.html">TIntegerDoubleListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a doubly linked list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorListIterator.html">TIntegerXorListIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a XOR list.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___53">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___54">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___55">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___56">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___57">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___58">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___59">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___60">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TSingleListNode">TSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TDoubleListNode">TDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TXListNode">TXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A XOR list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TStringSingleListNode">TStringSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TStringDoubleListNode">TStringDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TStringXListNode">TStringXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A XOR list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TIntegerSingleListNode">TIntegerSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TIntegerDoubleListNode">TIntegerDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#TIntegerXListNode">TIntegerXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A XOR list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PSingleListNode">PSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PDoubleListNode">PDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PXListNode">PXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PStringSingleListNode">PStringSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PStringDoubleListNode">PStringDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PStringXListNode">PStringXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PIntegerSingleListNode">PIntegerSingleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PIntegerDoubleListNode">PIntegerDoubleListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A doubly-linked list node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist.html#PIntegerXListNode">PIntegerXListNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="CopyOf"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 670
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___53"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 671
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___53">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___54"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TXorListIterator.html">TXorListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TXorListIterator.html">TXorListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 672
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___54">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___55"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringSingleListIterator.html">TStringSingleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringSingleListIterator.html">TStringSingleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1131
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___55">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___56"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringDoubleListIterator.html">TStringDoubleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringDoubleListIterator.html">TStringDoubleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1132
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___56">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___57"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringXorListIterator.html">TStringXorListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TStringXorListIterator.html">TStringXorListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1133
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___57">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___58"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerSingleListIterator.html">TIntegerSingleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerSingleListIterator.html">TIntegerSingleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1592
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___58">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___59"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerDoubleListIterator.html">TIntegerDoubleListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerDoubleListIterator.html">TIntegerDoubleListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1593
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___59">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___60"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerXorListIterator.html">TIntegerXorListIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerXorListIterator.html">TIntegerXorListIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1594
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#CopyOf___overloaded___60">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TSingleListNode"><hr></a>
+
+<h2>TSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSingleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PSingleListNode">PSingleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 247
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TSingleList.html">TSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TSingleListNode">TSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TDoubleListNode"><hr></a>
+
+<h2>TDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TDoubleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PDoubleListNode">PDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Prev : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PDoubleListNode">PDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 414
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TDoubleList.html">TDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TDoubleListNode">TDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TXListNode"><hr></a>
+
+<h2>TXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TXListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PN : </span><span class="program_code"><span class="global_symbol">PointerValueType</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 550
+</p><p>
+
+<h3>Description</h3>
+  XOR list.
+</p><p>
+ A XOR list node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TXListNode">TXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringSingleListNode"><hr></a>
+
+<h2>TStringSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringSingleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PStringSingleListNode">PStringSingleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 708
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TStringSingleList.html">TStringSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TStringSingleListNode">TStringSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringDoubleListNode"><hr></a>
+
+<h2>TStringDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringDoubleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PStringDoubleListNode">PStringDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Prev : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PStringDoubleListNode">PStringDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 875
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TStringDoubleList.html">TStringDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TStringDoubleListNode">TStringDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringXListNode"><hr></a>
+
+<h2>TStringXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringXListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PN : </span><span class="program_code"><span class="global_symbol">PointerValueType</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1011
+</p><p>
+
+<h3>Description</h3>
+  XOR list.
+</p><p>
+ A XOR list node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TStringXListNode">TStringXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerSingleListNode"><hr></a>
+
+<h2>TIntegerSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSingleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PIntegerSingleListNode">PIntegerSingleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1169
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TIntegerSingleList.html">TIntegerSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TIntegerSingleListNode">TIntegerSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerDoubleListNode"><hr></a>
+
+<h2>TIntegerDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerDoubleListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PIntegerDoubleListNode">PIntegerDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Prev : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PIntegerDoubleListNode">PIntegerDoubleListNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1336
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TIntegerDoubleList.html">TIntegerDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TIntegerDoubleListNode">TIntegerDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerXListNode"><hr></a>
+
+<h2>TIntegerXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerXListNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PN : </span><span class="program_code"><span class="global_symbol">PointerValueType</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1472
+</p><p>
+
+<h3>Description</h3>
+  XOR list.
+</p><p>
+ A XOR list node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#TIntegerXListNode">TIntegerXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PSingleListNode"><hr></a>
+
+<h2>PSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PSingleListNode = ^TSingleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 246
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TSingleList.html">TSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PSingleListNode">PSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PDoubleListNode"><hr></a>
+
+<h2>PDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PDoubleListNode = ^TDoubleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 413
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TDoubleList.html">TDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PDoubleListNode">PDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PXListNode"><hr></a>
+
+<h2>PXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PXListNode = ^TXListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 554
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PXListNode">PXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringSingleListNode"><hr></a>
+
+<h2>PStringSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringSingleListNode = ^TStringSingleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 707
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TStringSingleList.html">TStringSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PStringSingleListNode">PStringSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringDoubleListNode"><hr></a>
+
+<h2>PStringDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringDoubleListNode = ^TStringDoubleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 874
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TStringDoubleList.html">TStringDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PStringDoubleListNode">PStringDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringXListNode"><hr></a>
+
+<h2>PStringXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringXListNode = ^TStringXListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1015
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PStringXListNode">PStringXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerSingleListNode"><hr></a>
+
+<h2>PIntegerSingleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerSingleListNode = ^TIntegerSingleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1168
+</p><p>
+
+<h3>Description</h3>
+  Singly linked list.
+</p><p>
+ A node of a singly linked list.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TIntegerSingleList.html">TIntegerSingleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PIntegerSingleListNode">PIntegerSingleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerDoubleListNode"><hr></a>
+
+<h2>PIntegerDoubleListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerDoubleListNode = ^TIntegerDoubleListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1335
+</p><p>
+
+<h3>Description</h3>
+  Doubly linked list.
+</p><p>
+ A doubly-linked list node.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtlist__-TIntegerDoubleList.html">TIntegerDoubleList</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PIntegerDoubleListNode">PIntegerDoubleListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerXListNode"><hr></a>
+
+<h2>PIntegerXListNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerXListNode = ^TIntegerXListNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlist.pas on line 1476
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist.html#PIntegerXListNode">PIntegerXListNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,1037 @@
+<html>
+<head>
+<title>Reference for TIntegerBinarySearchTree</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerBinarySearchTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerBinarySearchTree = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerBinarySearchTreeBase)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html">TIntegerBinarySearchTreeBase</a>
+<h3>Source</h3>
+adtbstree.pas on line 686
+</p><p>
+
+<h3>Description</h3>
+  TIntegerBinarySearchTree.
+</p><p>
+ Implements a set using the ordinary binary search tree. Guarantees average O(log(n)) time for all set operations.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a binary search tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Find">Find</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing at the first item with the key equal to that of aitem, or nil if not found.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items in the set equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but uses pos as a hint where to insert.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes all items equal to aitem from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at pos from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Create">TIntegerBinarySearchTreeBase.Create</a>, <a href="adtcont__-TIntegerSetAdt.html#Create">TIntegerSetAdt.Create</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#Create">TIntegerContainerAdt.Create</a>
+<h3>Source</h3>
+adtbstree.pas on line 689
+</p><p>
+
+<h3>Description</h3>
+ Creates a binary search tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TIntegerBinarySearchTree.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#CreateCopy">TIntegerBinarySearchTreeBase.CreateCopy</a>, <a href="adtcont__-TIntegerSetAdt.html#CreateCopy">TIntegerSetAdt.CreateCopy</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#CreateCopy">TIntegerContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtbstree.pas on line 691
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. Uses itemCopier to copy items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerBinarySearchTree.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CopySelf">TIntegerContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtbstree.pas on line 694
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Find"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Find</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Find(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbstree.pas on line 701
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing at the first item with the key equal to that of aitem, or nil if not found.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Find">Find</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Count">TIntegerBinarySearchTreeBase.Count</a>, <a href="adtcont__-TIntegerSetAdt.html#Count">TIntegerSetAdt.Count</a>
+<h3>Source</h3>
+adtbstree.pas on line 704
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items in the set equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Insert">TIntegerBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TIntegerSetAdt.html#Insert">TIntegerSetAdt.Insert</a>
+<h3>Source</h3>
+adtbstree.pas on line 709
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the set. Returns true if self was inserted, or false if it cannot be inserted (this happens for non-multi (without repeated items) set when item equal to aitem is already in the set).
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Insert">TIntegerBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TIntegerSetAdt.html#Insert">TIntegerSetAdt.Insert</a>
+<h3>Source</h3>
+adtbstree.pas on line 712
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but uses pos as a hint where to insert.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Delete">TIntegerBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TIntegerSetAdt.html#Delete">TIntegerSetAdt.Delete</a>
+<h3>Source</h3>
+adtbstree.pas on line 717
+</p><p>
+
+<h3>Description</h3>
+ Removes all items equal to aitem from the set. Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(m*log(n)), where m is the number of deleted items, worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>TIntegerBinarySearchTree.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#LowerBound">TIntegerBinarySearchTreeBase.LowerBound</a>, <a href="adtcont__-TIntegerSetAdt.html#LowerBound">TIntegerSetAdt.LowerBound</a>
+<h3>Source</h3>
+adtbstree.pas on line 722
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>TIntegerBinarySearchTree.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#UpperBound">TIntegerBinarySearchTreeBase.UpperBound</a>, <a href="adtcont__-TIntegerSetAdt.html#UpperBound">TIntegerSetAdt.UpperBound</a>
+<h3>Source</h3>
+adtbstree.pas on line 725
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>TIntegerBinarySearchTree.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIteratorRange.html">TIntegerSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#EqualRange">TIntegerBinarySearchTreeBase.EqualRange</a>, <a href="adtcont__-TIntegerSetAdt.html#EqualRange">TIntegerSetAdt.EqualRange</a>
+<h3>Source</h3>
+adtbstree.pas on line 729
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+<h3>Source</h3>
+adtbstree.pas on line 697
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TIntegerBinarySearchTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBase.html#Delete">TIntegerBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TIntegerSetAdt.html#Delete">TIntegerSetAdt.Delete</a>
+<h3>Source</h3>
+adtbstree.pas on line 719
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at pos from the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TIntegerBinarySearchTree.html">TIntegerBinarySearchTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

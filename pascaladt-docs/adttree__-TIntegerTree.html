@@ -1,0 +1,2279 @@
+<html>
+<head>
+<title>Reference for TIntegerTree</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerTree = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerBasicTreeAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html">TIntegerBasicTreeAdt</a>
+<h3>Source</h3>
+adttree.pas on line 1199
+</p><p>
+
+<h3>Description</h3>
+ Implements a tree using the LCRS (leftmost-child, right sibling) representation.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Frees all Items and deallocates any allocated memory.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an exact copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Root">Root</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing at the root of the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#BasicRoot">BasicRoot</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing at the root of the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an invalid iterator representing the end of traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator for traversing the tree in preorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator for traversing the tree in postorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator for traversing the tree in inorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#LevelOrderIterator">LevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator for traversing the tree in levelorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the given node together with its subtree, invalidates the given iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the tree contains no Items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of Items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns false.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodePreOrder">ExtractNodePreOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes node without violating pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodePostOrder">ExtractNodePostOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes node without violating post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodeInOrder">ExtractNodeInOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes node without violating in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#NodeSubTreeDelete">NodeSubTreeDelete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the subtree of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#NodeSubTreeSize">NodeSubTreeSize</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the size of the subtree of node (i.e. the overall number of nodes in the subtree).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsRoot">InsertAsRoot</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts the given Item as the root of the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsRightSibling">InsertAsRightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the tree as a right sibling of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsLeftMostChild">InsertAsLeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the tree as a left-most child of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#MoveToRightSibling">MoveToRightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves sourcenode (together with its subtrees) to become a right sibling of destnode.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#MoveToLeftMostChild">MoveToLeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves sourcenode (together with its subtrees) to become a leftmost child of destnode.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all Items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts pointer at node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#NewNode">NewNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates new node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#DisposeNode">DisposeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates a node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html#RootNode">RootNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a pointer to the root node (PBinaryTreeNode).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerTree.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Create">TIntegerContainerAdt.Create</a>
+<h3>Source</h3>
+adttree.pas on line 1222
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TIntegerTree.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTree.html">TIntegerTree</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CreateCopy">TIntegerContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adttree.pas on line 1224
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. Uses itemCopier to copy items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TIntegerTree.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Destroy">TIntegerContainerAdt.Destroy</a>
+<h3>Source</h3>
+adttree.pas on line 1227
+</p><p>
+
+<h3>Description</h3>
+ Frees all Items and deallocates any allocated memory.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerTree.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CopySelf">TIntegerContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adttree.pas on line 1229
+</p><p>
+
+<h3>Description</h3>
+ Returns an exact copy of self.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Root"><hr></a>
+
+<h2>TIntegerTree.Root</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Root : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1234
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing at the root of the tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Root">Root</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BasicRoot"><hr></a>
+
+<h2>TIntegerTree.BasicRoot</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> BasicRoot : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#BasicRoot">TIntegerBasicTreeAdt.BasicRoot</a>
+<h3>Source</h3>
+adttree.pas on line 1237
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing at the root of the tree. Returns the same as Root.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#BasicRoot">BasicRoot</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TIntegerTree.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#Finish">TIntegerBasicTreeAdt.Finish</a>
+<h3>Source</h3>
+adttree.pas on line 1241
+</p><p>
+
+<h3>Description</h3>
+ Returns an invalid iterator representing the end of traversal. It can be used to mark the end of sequence when using tree traversal iterators as forward iterators in algorithms.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrderIterator"><hr></a>
+
+<h2>TIntegerTree.PreOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#PreOrderIterator">TIntegerBasicTreeAdt.PreOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1243
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator for traversing the tree in preorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrderIterator"><hr></a>
+
+<h2>TIntegerTree.PostOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#PostOrderIterator">TIntegerBasicTreeAdt.PostOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1247
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator for traversing the tree in postorder traversal order.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), but if counted as a part of traversal then amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrderIterator"><hr></a>
+
+<h2>TIntegerTree.InOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#InOrderIterator">TIntegerBasicTreeAdt.InOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1251
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator for traversing the tree in inorder traversal order.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), but if counted as a part of traversal then amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LevelOrderIterator"><hr></a>
+
+<h2>TIntegerTree.LevelOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LevelOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#LevelOrderIterator">TIntegerBasicTreeAdt.LevelOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1253
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator for traversing the tree in levelorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#LevelOrderIterator">LevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="DeleteSubTree"><hr></a>
+
+<h2>TIntegerTree.DeleteSubTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> DeleteSubTree(node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#DeleteSubTree">TIntegerBasicTreeAdt.DeleteSubTree</a>
+<h3>Source</h3>
+adttree.pas on line 1257
+</p><p>
+
+<h3>Description</h3>
+ Deletes the given node together with its subtree, invalidates the given iterator. Returns the number of items deleted.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TIntegerTree.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Empty">TIntegerContainerAdt.Empty</a>
+<h3>Source</h3>
+adttree.pas on line 1281
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the tree contains no Items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TIntegerTree.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Size">TIntegerContainerAdt.Size</a>
+<h3>Source</h3>
+adttree.pas on line 1283
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of Items.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TIntegerTree.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#IsDefinedOrder">TIntegerContainerAdt.IsDefinedOrder</a>
+<h3>Source</h3>
+adttree.pas on line 1285
+</p><p>
+
+<h3>Description</h3>
+ Returns false.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractNodePreOrder"><hr></a>
+
+<h2>TIntegerTree.ExtractNodePreOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractNodePreOrder(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">; fadvance : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1300
+</p><p>
+
+<h3>Description</h3>
+ Removes node without violating pre-order. Returns the parent of the node actually removed (this is not necessarily node^.Parent). Fadvance indicates if to assign node the next node after it in pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodePreOrder">ExtractNodePreOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractNodePostOrder"><hr></a>
+
+<h2>TIntegerTree.ExtractNodePostOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractNodePostOrder(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">; fadvance : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1306
+</p><p>
+
+<h3>Description</h3>
+ Removes node without violating post-order. Returns the parent of the node actually removed (this is not necessarily node^.Parent). Fadvance indicates if to assign node the next node after it in post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodePostOrder">ExtractNodePostOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractNodeInOrder"><hr></a>
+
+<h2>TIntegerTree.ExtractNodeInOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractNodeInOrder(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">; fadvance : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1312
+</p><p>
+
+<h3>Description</h3>
+ Removes node without violating in-order. Returns the parent of the node actually removed (this is not necessarily node^.Parent). Fadvance indicates if to assign node the next node after it in in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#ExtractNodeInOrder">ExtractNodeInOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeSubTreeDelete"><hr></a>
+
+<h2>TIntegerTree.NodeSubTreeDelete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeSubTreeDelete(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1316
+</p><p>
+
+<h3>Description</h3>
+ Deletes the subtree of node. Returns the number of nodes deleted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#NodeSubTreeDelete">NodeSubTreeDelete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeSubTreeSize"><hr></a>
+
+<h2>TIntegerTree.NodeSubTreeSize</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeSubTreeSize(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1319
+</p><p>
+
+<h3>Description</h3>
+ Returns the size of the subtree of node (i.e. the overall number of nodes in the subtree).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#NodeSubTreeSize">NodeSubTreeSize</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TIntegerTree.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+<h3>Source</h3>
+adttree.pas on line 1232
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsRoot"><hr></a>
+
+<h2>TIntegerTree.InsertAsRoot</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsRoot(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerBasicTreeAdt.html#InsertAsRoot">TIntegerBasicTreeAdt.InsertAsRoot</a>
+<h3>Source</h3>
+adttree.pas on line 1260
+</p><p>
+
+<h3>Description</h3>
+ Inserts the given Item as the root of the tree. The old root becomes the left-most child of the new one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsRoot">InsertAsRoot</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsRightSibling"><hr></a>
+
+<h2>TIntegerTree.InsertAsRightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsRightSibling(node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1262
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the tree as a right sibling of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsRightSibling">InsertAsRightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsLeftMostChild"><hr></a>
+
+<h2>TIntegerTree.InsertAsLeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsLeftMostChild(node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1264
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the tree as a left-most child of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertAsLeftMostChild">InsertAsLeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MoveToRightSibling"><hr></a>
+
+<h2>TIntegerTree.MoveToRightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> MoveToRightSibling(destnode, sourcenode : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1270
+</p><p>
+
+<h3>Description</h3>
+ Moves sourcenode (together with its subtrees) to become a right sibling of destnode. Destnode cannot be an ancestor of sourcenode, sourcenode can be from different tree.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of sourcenode..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#MoveToRightSibling">MoveToRightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MoveToLeftMostChild"><hr></a>
+
+<h2>TIntegerTree.MoveToLeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> MoveToLeftMostChild(destnode, sourcenode : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1276
+</p><p>
+
+<h3>Description</h3>
+ Moves sourcenode (together with its subtrees) to become a leftmost child of destnode. Destnode cannot be an ancestor of sourcenode, sourcenode can be from different tree.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of sourcenode..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#MoveToLeftMostChild">MoveToLeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TIntegerTree.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Clear">TIntegerContainerAdt.Clear</a>
+<h3>Source</h3>
+adttree.pas on line 1279
+</p><p>
+
+<h3>Description</h3>
+ Deletes all Items. Equivalent to: if not Empty then Delete(Root).
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertNode"><hr></a>
+
+<h2>TIntegerTree.InsertNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertNode(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">; parent, rsibling : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1294
+</p><p>
+
+<h3>Description</h3>
+ Inserts pointer at node. Node should be the place to which to assign the new node (e.g. parent^.LeftMostChild).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NewNode"><hr></a>
+
+<h2>TIntegerTree.NewNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> NewNode(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1321
+</p><p>
+
+<h3>Description</h3>
+ Allocates new node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#NewNode">NewNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="DisposeNode"><hr></a>
+
+<h2>TIntegerTree.DisposeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> DisposeNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1323
+</p><p>
+
+<h3>Description</h3>
+ Deallocates a node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#DisposeNode">DisposeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RootNode"><hr></a>
+
+<h2>TIntegerTree.RootNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> RootNode : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FRoot;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 1291
+</p><p>
+
+<h3>Description</h3>
+ Returns a pointer to the root node (PBinaryTreeNode). This may be sometimes useful in performance-critical parts of application, but does not have the common, extensible interface.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html#RootNode">RootNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

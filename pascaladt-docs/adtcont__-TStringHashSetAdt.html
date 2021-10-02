@@ -1,0 +1,1373 @@
+<html>
+<head>
+<title>Reference for TStringHashSetAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringHashSetAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringHashSetAdt = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TStringSetAdt.html">TStringSetAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adthash__-TStringHashTable.html">TStringHashTable</a>, <a href="adthash__-TStringScatterTable.html">TStringScatterTable</a>
+<h3>Source</h3>
+adtcont.pas on line 1134
+</p><p>
+
+<h3>Description</h3>
+ A set that uses hashing.
+</p><p>
+
+<h3>See also</h3>
+<a href="adthash.html">adthash</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#NeedsHasher">NeedsHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the minimal allowed capacity for the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Rehashes the set making it approximately 2^EX times larger (i.e. the capacity is increased (decreased)).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Hasher">Hasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the hasher used to hash items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the capacity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MaxFillRatio">MaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Maximal value of (Size/Capacity)*100%.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MinFillRatio">MinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but minimal value.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#AutoShrink">AutoShrink</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If true then the table's capacity is decreased by half each time Size/Capacity goes below MinFillRatio.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the capacity that should be used for table with approximately 2^ex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ By default calls Rehash.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="NeedsHasher"><hr></a>
+
+<h2>TStringHashSetAdt.NeedsHasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">class</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NeedsHasher : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#NeedsHasher">TStringSetAdt.NeedsHasher</a>
+<h3>Source</h3>
+adtcont.pas on line 1164
+</p><p>
+
+<h3>Description</h3>
+ Returns true.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#NeedsHasher">NeedsHasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MinCapacity"><hr></a>
+
+<h2>TStringHashSetAdt.MinCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> MinCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1174
+</p><p>
+
+<h3>Description</h3>
+ Returns the minimal allowed capacity for the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LogStatus"><hr></a>
+
+<h2>TStringHashSetAdt.LogStatus</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> LogStatus(mname : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#LogStatus">TStringContainerAdt.LogStatus</a>
+<h3>Source</h3>
+adtcont.pas on line 1161
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Rehash"><hr></a>
+
+<h2>TStringHashSetAdt.Rehash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Rehash(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1172
+</p><p>
+
+<h3>Description</h3>
+ Rehashes the set making it approximately 2^EX times larger (i.e. the capacity is increased (decreased)). Ex may be negative, but the resulting capacity of the set cannot be less than its minimal allowed value.
+</p><p>
+
+<h3>Precondition</h3>
+ Capacity * 2^ex &gt;= MinCapacity.
+</p><p>
+
+<h3>Postcondition</h3>
+ Capacity = approx. Old Capacity * 2^ex.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Hasher"><hr></a>
+
+<h2>TStringHashSetAdt.Hasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Hasher : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringHasher.html">IStringHasher</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FHasher </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> FHasher;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1176
+</p><p>
+
+<h3>Description</h3>
+ Returns the hasher used to hash items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Hasher">Hasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Capacity"><hr></a>
+
+<h2>TStringHashSetAdt.Capacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetCapacity </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetCapacity;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1183
+</p><p>
+
+<h3>Description</h3>
+ Returns the capacity. In hash sets it is not necessarily the maximal number of items allowed, but rather the number of free buckets or slots or whatever that influences the performance of the set. When assigning to this property the set rehashes itself to have the capacity closest to the given value.
+</p><p>
+
+<h3>Invariant</h3>
+ Capacity &gt;= MinCapacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MaxFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.MaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> MaxFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetMaxFillRatio </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetMaxFillRatio;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1187
+</p><p>
+
+<h3>Description</h3>
+ Maximal value of (Size/Capacity)*100%. The default is 80%. This shouldn't be less than 50%
+</p><p>
+
+<h3>Invariant</h3>
+ MaxFillRatio &gt;= 50%.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MaxFillRatio">MaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MinFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.MinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> MinFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetMinFillRatio </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetMinFillRatio;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1191
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but minimal value. The default is 10%. This should be larger than MaxFillRatio/2.
+</p><p>
+
+<h3>Invariant</h3>
+ MinFillRatio &gt; MaxFillRatio/2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#MinFillRatio">MinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AutoShrink"><hr></a>
+
+<h2>TStringHashSetAdt.AutoShrink</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> AutoShrink : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FAutoShrink </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> FAutoShrink;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1195
+</p><p>
+
+<h3>Description</h3>
+ If true then the table's capacity is decreased by half each time Size/Capacity goes below MinFillRatio. This may be useful for sparing memory. False by default.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#AutoShrink">AutoShrink</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringHashSetAdt.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Create">TStringSetAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtcont.pas on line 1142
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TStringHashSetAdt.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#CreateCopy">TStringSetAdt.CreateCopy</a>, <a href="adtcontbase__-TStringContainerAdt.html#CreateCopy">TStringContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtcont.pas on line 1143
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>TStringHashSetAdt.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1149
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CalculateCapacity"><hr></a>
+
+<h2>TStringHashSetAdt.CalculateCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CalculateCapacity(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1153
+</p><p>
+
+<h3>Description</h3>
+ Returns the capacity that should be used for table with approximately 2^ex. This simply converts FTableSize to FCapacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMaxFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.GetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMaxFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1154
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMinFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.GetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMinFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1156
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BasicSwap"><hr></a>
+
+<h2>TStringHashSetAdt.BasicSwap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BasicSwap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#BasicSwap">TStringSetAdt.BasicSwap</a>, <a href="adtcontbase__-TStringContainerAdt.html#BasicSwap">TStringContainerAdt.BasicSwap</a>
+<h3>Source</h3>
+adtcont.pas on line 1146
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetCapacity"><hr></a>
+
+<h2>TStringHashSetAdt.SetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetCapacity(cap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1148
+</p><p>
+
+<h3>Description</h3>
+ By default calls Rehash.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMaxFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.SetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMaxFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1155
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMinFillRatio"><hr></a>
+
+<h2>TStringHashSetAdt.SetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMinFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1157
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

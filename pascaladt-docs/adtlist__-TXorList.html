@@ -1,0 +1,1749 @@
+<html>
+<head>
+<title>Reference for TXorList</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TXorList</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TXorList = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TDoubleListAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TDoubleListAdt.html">TDoubleListAdt</a>
+<h3>Source</h3>
+adtlist.pas on line 564
+</p><p>
+
+<h3>Description</h3>
+ Implements a XOR list. A XOR list is essentially a doubly-linked list, but it uses a dirty trick of xor'ing the next and previous node pointers together, thanks to which it uses the same amount of memory as a singly-linked list. Generally, TDoubleList should be used, and TXorList only in critical code where low memory usage is vital..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A copy-constructor.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self, i.e. copies all the data into the new object of then same type.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the first item in the list (the start iterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator pointing to one position after the end of list (the finish iterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all items in the range [start,finish).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Front">Front</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Back">Back</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns false.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> at the position <span class="local_symbol">pos</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item pointed to by the iterator pos.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Move">Move</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Move___overloaded___0">Move</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TXorList.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TXorList.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Create">TListAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adtlist.pas on line 594
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TXorList.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TXorList.html">TXorList</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtlist.pas on line 597
+</p><p>
+
+<h3>Description</h3>
+ A copy-constructor. Creates self as a copy of cont. Uses itemCopier to copy items from cont.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TXorList.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Destroy">TContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtlist.pas on line 599
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TXorList.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">TContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtlist.pas on line 602
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self, i.e. copies all the data into the new object of then same type.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ForwardStart"><hr></a>
+
+<h2>TXorList.ForwardStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#ForwardStart">TListAdt.ForwardStart</a>
+<h3>Source</h3>
+adtlist.pas on line 606
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ForwardFinish"><hr></a>
+
+<h2>TXorList.ForwardFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#ForwardFinish">TListAdt.ForwardFinish</a>
+<h3>Source</h3>
+adtlist.pas on line 607
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TXorList.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TXorListIterator.html">TXorListIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtlist.pas on line 610
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the first item in the list (the start iterator).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TXorList.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TXorListIterator.html">TXorListIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtlist.pas on line 613
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator pointing to one position after the end of list (the finish iterator).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TXorList.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(astart, afinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Delete">TListAdt.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 621
+</p><p>
+
+<h3>Description</h3>
+ Deletes all items in the range [start,finish). Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n), where n is the number of items in the range.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TXorList.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Extract">TListAdt.Extract</a>
+<h3>Source</h3>
+adtlist.pas on line 622
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Front"><hr></a>
+
+<h2>TXorList.Front</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Front : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TQueueAdt.html#Front">TQueueAdt.Front</a>
+<h3>Source</h3>
+adtlist.pas on line 626
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Front">Front</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Back"><hr></a>
+
+<h2>TXorList.Back</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Back : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TDequeAdt.html#Back">TDequeAdt.Back</a>
+<h3>Source</h3>
+adtlist.pas on line 627
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Back">Back</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TXorList.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Empty">TContainerAdt.Empty</a>
+<h3>Source</h3>
+adtlist.pas on line 633
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TXorList.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Size">TContainerAdt.Size</a>
+<h3>Source</h3>
+adtlist.pas on line 634
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TXorList.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TQueueAdt.html#IsDefinedOrder">TQueueAdt.IsDefinedOrder</a>, <a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">TContainerAdt.IsDefinedOrder</a>
+<h3>Source</h3>
+adtlist.pas on line 636
+</p><p>
+
+<h3>Description</h3>
+ Returns false.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TXorList.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+<h3>Source</h3>
+adtlist.pas on line 605
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TXorList.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Insert">TListAdt.Insert</a>
+<h3>Source</h3>
+adtlist.pas on line 615
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> at the position <span class="local_symbol">pos</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TXorList.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Delete">TListAdt.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 617
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item pointed to by the iterator pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Move"><hr></a>
+
+<h2>TXorList.Move</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Move(Source, Dest : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Move">TListAdt.Move</a>
+<h3>Source</h3>
+adtlist.pas on line 623
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Move">Move</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Move___overloaded___0"><hr></a>
+
+<h2>TXorList.Move</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Move(SourceStart, SourceFinish, Dest : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TListAdt.html#Move">TListAdt.Move</a>
+<h3>Source</h3>
+adtlist.pas on line 624
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Move___overloaded___0">Move</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushBack"><hr></a>
+
+<h2>TXorList.PushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushBack(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TQueueAdt.html#PushBack">TQueueAdt.PushBack</a>
+<h3>Source</h3>
+adtlist.pas on line 628
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopBack"><hr></a>
+
+<h2>TXorList.PopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopBack; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TDequeAdt.html#PopBack">TDequeAdt.PopBack</a>
+<h3>Source</h3>
+adtlist.pas on line 629
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushFront"><hr></a>
+
+<h2>TXorList.PushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushFront(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TDequeAdt.html#PushFront">TDequeAdt.PushFront</a>
+<h3>Source</h3>
+adtlist.pas on line 630
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopFront"><hr></a>
+
+<h2>TXorList.PopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopFront; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TQueueAdt.html#PopFront">TQueueAdt.PopFront</a>
+<h3>Source</h3>
+adtlist.pas on line 631
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TXorList.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Clear">TContainerAdt.Clear</a>
+<h3>Source</h3>
+adtlist.pas on line 632
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TXorList.html">TXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,727 @@
+<html>
+<head>
+<title>Reference for TForwardIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TForwardIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TForwardIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TOutputIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TOutputIterator.html">TOutputIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a>, <a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+<h3>Source</h3>
+adtiters.pas on line 294
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a sequence of items allowing to move forward.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as <a href="adtiters__-TForwardIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all items from the range [self, finish).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the first iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the 'one beyond last' iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Goes one position forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Goes one position forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts before (at) the position where self points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item to which self points and advances self to the next position.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Write">Write</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements this procedure using Insert, Advance and SetItem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TForwardIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 311
+</p><p>
+
+<h3>Description</h3>
+ The same as <a href="adtiters__-TForwardIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TForwardIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 328
+</p><p>
+
+<h3>Description</h3>
+ Deletes all items from the range [self, finish). After the deletion the iterator points to finish. Invalidates all other iterators (in general). Returns the number of items deleted. After the deletion the iterator points to finish. The default implementation uses only abstract methods and traverses the range twice. This may be a bit inefficient, so this is re-implemented by some containers.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n) invocations of Delete();.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TForwardIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 331
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the first iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TForwardIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 333
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the 'one beyond last' iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TForwardIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 300
+</p><p>
+
+<h3>Description</h3>
+ Goes one position forward. The second declaration only for compilers that do not support overloading.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AdvanceOnePosition"><hr></a>
+
+<h2>TForwardIterator.AdvanceOnePosition</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> AdvanceOnePosition; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 302
+</p><p>
+
+<h3>Description</h3>
+ Goes one position forward. The second declaration only for compilers that do not support overloading.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TForwardIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 308
+</p><p>
+
+<h3>Description</h3>
+ Inserts before (at) the position where self points. Makes self point at the newly inserted item. Invalidates all other iterators (in genereal).
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">TContainerAdt.IsDefinedOrder</a>, <a href="adtiters__-TSetIterator.html">TSetIterator</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TForwardIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 316
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item to which self points and advances self to the next position. Invalidates all other iterators (in general). Implemented using Extract.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">TContainerAdt.IsDefinedOrder</a>, <a href="adtiters__-TSetIterator.html">TSetIterator</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Write"><hr></a>
+
+<h2>TForwardIterator.Write</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Write(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TOutputIterator.html#Write">TOutputIterator.Write</a>
+<h3>Source</h3>
+adtiters.pas on line 336
+</p><p>
+
+<h3>Description</h3>
+ Implements this procedure using Insert, Advance and SetItem.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html#Write">Write</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

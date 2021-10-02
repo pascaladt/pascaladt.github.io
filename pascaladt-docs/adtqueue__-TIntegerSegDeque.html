@@ -1,0 +1,1855 @@
+<html>
+<head>
+<title>Reference for TIntegerSegDeque</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerSegDeque</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSegDeque = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerArrayAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TIntegerArrayAdt.html">TIntegerArrayAdt</a>
+<h3>Source</h3>
+adtqueue.pas on line 645
+</p><p>
+
+<h3>Description</h3>
+ Implements a 0-based deque using segments. A segmented double-ended queue stores its items in several segments. It prevents the whole array from being reallocated when it the whole preallocated memory becomes used-up. Only a new segment is allocated and the already-present segments are left intact. Using segments makes accessing an item at a given index a bit slower than in an ordinary array or in <a href="adtqueue__-TIntegerCircularDeque.html">TIntegerCircularDeque</a>, but it still takes constant time..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the first Item in the deque.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the 'one beyond last' Item in the deque.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Front">Front</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Back">Back</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns false.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the current capacity of the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the capacity to <span class="local_symbol">cap</span>, but only if <span class="local_symbol">cap</span> is bigger than the current capacity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerSegDeque.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Create">TIntegerListAdt.Create</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#Create">TIntegerContainerAdt.Create</a>
+<h3>Source</h3>
+adtqueue.pas on line 656
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TIntegerSegDeque.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CreateCopy">TIntegerContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtqueue.pas on line 657
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TIntegerSegDeque.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Destroy">TIntegerContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtqueue.pas on line 659
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerSegDeque.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CopySelf">TIntegerContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtqueue.pas on line 660
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessStart"><hr></a>
+
+<h2>TIntegerSegDeque.RandomAccessStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessStart">TIntegerRandomAccessContainerAdt.RandomAccessStart</a>
+<h3>Source</h3>
+adtqueue.pas on line 664
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessFinish"><hr></a>
+
+<h2>TIntegerSegDeque.RandomAccessFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessFinish">TIntegerRandomAccessContainerAdt.RandomAccessFinish</a>
+<h3>Source</h3>
+adtqueue.pas on line 665
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TIntegerSegDeque.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtqueue__-TIntegerSegDequeIterator.html">TIntegerSegDequeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtqueue.pas on line 667
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the first Item in the deque.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TIntegerSegDeque.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtqueue__-TIntegerSegDequeIterator.html">TIntegerSegDequeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtqueue.pas on line 669
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the 'one beyond last' Item in the deque.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TIntegerSegDeque.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetItem">TIntegerRandomAccessContainerAdt.GetItem</a>
+<h3>Source</h3>
+adtqueue.pas on line 670
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TIntegerSegDeque.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(starti : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete">TIntegerRandomAccessContainerAdt.Delete</a>, <a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtqueue.pas on line 674
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerSegDeque.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Extract">TIntegerRandomAccessContainerAdt.Extract</a>, <a href="adtcont__-TIntegerListAdt.html#Extract">TIntegerListAdt.Extract</a>
+<h3>Source</h3>
+adtqueue.pas on line 676
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Front"><hr></a>
+
+<h2>TIntegerSegDeque.Front</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Front : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#Front">TIntegerQueueAdt.Front</a>
+<h3>Source</h3>
+adtqueue.pas on line 677
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Front">Front</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Back"><hr></a>
+
+<h2>TIntegerSegDeque.Back</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Back : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#Back">TIntegerDequeAdt.Back</a>
+<h3>Source</h3>
+adtqueue.pas on line 678
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Back">Back</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TIntegerSegDeque.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Empty">TIntegerContainerAdt.Empty</a>
+<h3>Source</h3>
+adtqueue.pas on line 684
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TIntegerSegDeque.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Size">TIntegerContainerAdt.Size</a>
+<h3>Source</h3>
+adtqueue.pas on line 685
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TIntegerSegDeque.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#IsDefinedOrder">TIntegerQueueAdt.IsDefinedOrder</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#IsDefinedOrder">TIntegerContainerAdt.IsDefinedOrder</a>
+<h3>Source</h3>
+adtqueue.pas on line 687
+</p><p>
+
+<h3>Description</h3>
+ Returns false.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TIntegerSegDeque.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+<h3>Source</h3>
+adtqueue.pas on line 663
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TIntegerSegDeque.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetItem">TIntegerRandomAccessContainerAdt.SetItem</a>
+<h3>Source</h3>
+adtqueue.pas on line 671
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerSegDeque.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Insert">TIntegerRandomAccessContainerAdt.Insert</a>, <a href="adtcont__-TIntegerListAdt.html#Insert">TIntegerListAdt.Insert</a>
+<h3>Source</h3>
+adtqueue.pas on line 672
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerSegDeque.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete">TIntegerRandomAccessContainerAdt.Delete</a>, <a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtqueue.pas on line 673
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushFront"><hr></a>
+
+<h2>TIntegerSegDeque.PushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushFront(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#PushFront">TIntegerDequeAdt.PushFront</a>
+<h3>Source</h3>
+adtqueue.pas on line 679
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopFront"><hr></a>
+
+<h2>TIntegerSegDeque.PopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopFront; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#PopFront">TIntegerQueueAdt.PopFront</a>
+<h3>Source</h3>
+adtqueue.pas on line 680
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushBack"><hr></a>
+
+<h2>TIntegerSegDeque.PushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushBack(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#PushBack">TIntegerQueueAdt.PushBack</a>
+<h3>Source</h3>
+adtqueue.pas on line 681
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopBack"><hr></a>
+
+<h2>TIntegerSegDeque.PopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopBack; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#PopBack">TIntegerDequeAdt.PopBack</a>
+<h3>Source</h3>
+adtqueue.pas on line 682
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TIntegerSegDeque.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Clear">TIntegerContainerAdt.Clear</a>
+<h3>Source</h3>
+adtqueue.pas on line 683
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>TIntegerSegDeque.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetCapacity">TIntegerRandomAccessContainerAdt.GetCapacity</a>
+<h3>Source</h3>
+adtqueue.pas on line 650
+</p><p>
+
+<h3>Description</h3>
+ Returns the current capacity of the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetCapacity"><hr></a>
+
+<h2>TIntegerSegDeque.SetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetCapacity(cap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetCapacity">TIntegerRandomAccessContainerAdt.SetCapacity</a>
+<h3>Source</h3>
+adtqueue.pas on line 653
+</p><p>
+
+<h3>Description</h3>
+ Sets the capacity to <span class="local_symbol">cap</span>, but only if <span class="local_symbol">cap</span> is bigger than the current capacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

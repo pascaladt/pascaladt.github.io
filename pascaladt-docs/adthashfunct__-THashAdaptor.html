@@ -1,0 +1,299 @@
+<html>
+<head>
+<title>Reference for THashAdaptor</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>THashAdaptor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">THashAdaptor = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TFunctor)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtfunct__-TFunctor.html">TFunctor</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adthashfunct__-TAnsiStringHasher.html">TAnsiStringHasher</a>, <a href="adthashfunct__-TIntegerHasher.html">TIntegerHasher</a>
+<h3>Source</h3>
+adthashfunct.pas on line 223
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Assings hf to hashFunc.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets hashFunc to nil.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#hashFunc">hashFunc</a>
+</p>
+</td>
+<td width="15%">
+<p>
+field
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html">THashAdaptor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>THashAdaptor.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(hf : </span><span class="program_code"><span class="global_symbol"><a href="adthashfunct.html#THashFunction">THashFunction</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Create">TFunctor.Create</a>
+<h3>Source</h3>
+adthashfunct.pas on line 228
+</p><p>
+
+<h3>Description</h3>
+ Assings hf to hashFunc.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html">THashAdaptor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create___overloaded___0"><hr></a>
+
+<h2>THashAdaptor.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Create">TFunctor.Create</a>
+<h3>Source</h3>
+adthashfunct.pas on line 231
+</p><p>
+
+<h3>Description</h3>
+ Sets hashFunc to nil. Derived classes use FNVHash if this is set to nil.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html">THashAdaptor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="hashFunc"><hr></a>
+
+<h2>THashAdaptor.hashFunc</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">hashFunc : </span><span class="program_code"><span class="global_symbol"><a href="adthashfunct.html#THashFunction">THashFunction</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adthashfunct.pas on line 225
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html#hashFunc">hashFunc</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html">THashAdaptor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

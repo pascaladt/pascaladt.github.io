@@ -1,0 +1,1105 @@
+<html>
+<head>
+<title>Reference for TAvlTree</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TAvlTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TAvlTree = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TBinarySearchTreeBase)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html">TBinarySearchTreeBase</a>
+<h3>Source</h3>
+adtavltree.pas on line 254
+</p><p>
+
+<h3>Description</h3>
+ Implements a set using the AVL-tree. Guarantees worst-case O(log(n)) time for all set operations.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates an AVL tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Find">Find</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing at the first item with the key equal to that of aitem, or nil if not found.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items in the set equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but uses pos as a hint where to insert.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes all items equal to aitem from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at pos from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem at proper position in the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TAvlTree.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Create">TBinarySearchTreeBase.Create</a>, <a href="adtcont__-TSetAdt.html#Create">TSetAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adtavltree.pas on line 277
+</p><p>
+
+<h3>Description</h3>
+ Creates an AVL tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TAvlTree.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtavltree__-TAvlTree.html">TAvlTree</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#CreateCopy">TBinarySearchTreeBase.CreateCopy</a>, <a href="adtcont__-TSetAdt.html#CreateCopy">TSetAdt.CreateCopy</a>, <a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtavltree.pas on line 279
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. Uses itemCopier to copy items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TAvlTree.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">TContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtavltree.pas on line 282
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Find"><hr></a>
+
+<h2>TAvlTree.Find</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Find(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtavltree.pas on line 289
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing at the first item with the key equal to that of aitem, or nil if not found.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Find">Find</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>TAvlTree.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Count">TBinarySearchTreeBase.Count</a>, <a href="adtcont__-TSetAdt.html#Count">TSetAdt.Count</a>
+<h3>Source</h3>
+adtavltree.pas on line 292
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items in the set equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TAvlTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Insert">TBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adtavltree.pas on line 297
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the set. Returns true if self was inserted, or false if it cannot be inserted (this happens for non-multi (without repeated items) set when item equal to aitem is already in the set).
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TAvlTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Insert">TBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adtavltree.pas on line 300
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but uses pos as a hint where to insert.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TAvlTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Delete">TBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adtavltree.pas on line 305
+</p><p>
+
+<h3>Description</h3>
+ Removes all items equal to aitem from the set. Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(m*log(n)), where m is the number of deleted items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>TAvlTree.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#LowerBound">TBinarySearchTreeBase.LowerBound</a>, <a href="adtcont__-TSetAdt.html#LowerBound">TSetAdt.LowerBound</a>
+<h3>Source</h3>
+adtavltree.pas on line 310
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>TAvlTree.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#UpperBound">TBinarySearchTreeBase.UpperBound</a>, <a href="adtcont__-TSetAdt.html#UpperBound">TSetAdt.UpperBound</a>
+<h3>Source</h3>
+adtavltree.pas on line 313
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>TAvlTree.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIteratorRange.html">TSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#EqualRange">TBinarySearchTreeBase.EqualRange</a>, <a href="adtcont__-TSetAdt.html#EqualRange">TSetAdt.EqualRange</a>
+<h3>Source</h3>
+adtavltree.pas on line 317
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TAvlTree.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+<h3>Source</h3>
+adtavltree.pas on line 285
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TAvlTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Delete">TBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adtavltree.pas on line 307
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at pos from the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertNode"><hr></a>
+
+<h2>TAvlTree.InsertNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InsertNode(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#InsertNode">TBinarySearchTreeBase.InsertNode</a>
+<h3>Source</h3>
+adtavltree.pas on line 272
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem at proper position in the tree. Starts searching from node. Returns the newly created node or nil if aitem could not be inserted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

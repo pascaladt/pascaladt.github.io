@@ -1,0 +1,993 @@
+<html>
+<head>
+<title>Reference for TStringRandomAccessIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringRandomAccessIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringRandomAccessIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringBidirectionalIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtcont__-TStringRandomAccessContainerIterator.html">TStringRandomAccessContainerIterator</a>
+<h3>Source</h3>
+adtiters.pas on line 876
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a sequence of items allowing random access.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#GetItemAt">GetItemAt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item at index self.Index + i (i may be negative).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes items from the range [self, finish).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes at most n items beginning with start, less if the end of the container is reached.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Distance">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Computes the distance between pos and self (pos - self) - i.e. by how much you have to advance self to get to pos.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Less">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is closer to the beginning of the collection than pos.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Index">Index</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the index of the iterator within the container into which it points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#SetItemAt">SetItemAt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the item at index self.Index + i.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#ExchangeItemsAt">ExchangeItemsAt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges items at positions i and j relative to self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This method is overriden to be equivalent to Advance(-1).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This method is overriden to be equivalent to Advance(1).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves self by i positions.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Items">Items</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="GetItemAt"><hr></a>
+
+<h2>TStringRandomAccessIterator.GetItemAt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItemAt(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 879
+</p><p>
+
+<h3>Description</h3>
+ Returns the item at index self.Index + i (i may be negative).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#GetItemAt">GetItemAt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TStringRandomAccessIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Delete">TStringForwardIterator.Delete</a>
+<h3>Source</h3>
+adtiters.pas on line 902
+</p><p>
+
+<h3>Description</h3>
+ Deletes items from the range [self, finish). After the deletion the iterator points to finish. Invalidates all other iterators (in general). Returns the number of items deleted.
+</p><p>
+
+<h3>Complexity</h3>
+ At best O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TStringRandomAccessIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Delete">TStringForwardIterator.Delete</a>
+<h3>Source</h3>
+adtiters.pas on line 908
+</p><p>
+
+<h3>Description</h3>
+ Deletes at most n items beginning with start, less if the end of the container is reached. Returns the number of items actually deleted. After the deletion self points to the first item after the deleted sequence.
+</p><p>
+
+<h3>Complexity</h3>
+ At best O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance"><hr></a>
+
+<h2>TStringRandomAccessIterator.Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 911
+</p><p>
+
+<h3>Description</h3>
+ Computes the distance between pos and self (pos - self) - i.e. by how much you have to advance self to get to pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Distance">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less"><hr></a>
+
+<h2>TStringRandomAccessIterator.Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 915
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is closer to the beginning of the collection than pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Less">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Index"><hr></a>
+
+<h2>TStringRandomAccessIterator.Index</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 919
+</p><p>
+
+<h3>Description</h3>
+ Returns the index of the iterator within the container into which it points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Index">Index</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItemAt"><hr></a>
+
+<h2>TStringRandomAccessIterator.SetItemAt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItemAt(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 881
+</p><p>
+
+<h3>Description</h3>
+ Sets the item at index self.Index + i.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#SetItemAt">SetItemAt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItemsAt"><hr></a>
+
+<h2>TStringRandomAccessIterator.ExchangeItemsAt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItemsAt(i, j : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 883
+</p><p>
+
+<h3>Description</h3>
+ Exchanges items at positions i and j relative to self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#ExchangeItemsAt">ExchangeItemsAt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TStringRandomAccessIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html#Retreat">TStringBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtiters.pas on line 885
+</p><p>
+
+<h3>Description</h3>
+ This method is overriden to be equivalent to Advance(-1).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TStringRandomAccessIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Advance">TStringForwardIterator.Advance</a>
+<h3>Source</h3>
+adtiters.pas on line 888
+</p><p>
+
+<h3>Description</h3>
+ This method is overriden to be equivalent to Advance(1).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AdvanceOnePosition"><hr></a>
+
+<h2>TStringRandomAccessIterator.AdvanceOnePosition</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> AdvanceOnePosition; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#AdvanceOnePosition">TStringForwardIterator.AdvanceOnePosition</a>
+<h3>Source</h3>
+adtiters.pas on line 890
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___0"><hr></a>
+
+<h2>TStringRandomAccessIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Advance">TStringForwardIterator.Advance</a>
+<h3>Source</h3>
+adtiters.pas on line 893
+</p><p>
+
+<h3>Description</h3>
+ Moves self by i positions.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Items"><hr></a>
+
+<h2>TStringRandomAccessIterator.Items</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Items[ind : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">] : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetItemAt </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetItemAt; </span><span class="program_code"><span class="keyword">default</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 920
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html#Items">Items</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

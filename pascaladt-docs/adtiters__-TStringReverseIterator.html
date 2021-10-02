@@ -1,0 +1,1199 @@
+<html>
+<head>
+<title>Reference for TStringReverseIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringReverseIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringReverseIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringBidirectionalIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a>
+<h3>Source</h3>
+adtiters.pas on line 1090
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an exact copy of self;.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self and pos both point to the same item in the same collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item from the position pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as <a href="adtiters__-TStringReverseIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes items from the range [self, finish);.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the container into which self points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#GetIterator">GetIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the underlying iterator..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the first iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the 'one beyond last' iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the Item at the position pointed to by the iterator to aitem;.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Goes one position forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves iter one position back.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges Items pointed by the iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringReverseIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Create">TStringIterator.Create</a>
+<h3>Source</h3>
+adtiters.pas on line 1094
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TStringReverseIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#CopySelf">TStringIterator.CopySelf</a>
+<h3>Source</h3>
+adtiters.pas on line 1096
+</p><p>
+
+<h3>Description</h3>
+ Returns an exact copy of self;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TStringReverseIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Equal">TStringIterator.Equal</a>
+<h3>Source</h3>
+adtiters.pas on line 1099
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self and pos both point to the same item in the same collection.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TStringReverseIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#GetItem">TStringIterator.GetItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1101
+</p><p>
+
+<h3>Description</h3>
+ Returns the item from the position pointed by self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TStringReverseIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Extract">TStringForwardIterator.Extract</a>
+<h3>Source</h3>
+adtiters.pas on line 1120
+</p><p>
+
+<h3>Description</h3>
+ The same as <a href="adtiters__-TStringReverseIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TStringReverseIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Delete">TStringForwardIterator.Delete</a>
+<h3>Source</h3>
+adtiters.pas on line 1122
+</p><p>
+
+<h3>Description</h3>
+ Deletes items from the range [self, finish);.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TStringReverseIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Owner">TStringIterator.Owner</a>
+<h3>Source</h3>
+adtiters.pas on line 1124
+</p><p>
+
+<h3>Description</h3>
+ Returns the container into which self points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetIterator"><hr></a>
+
+<h2>TStringReverseIterator.GetIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 1126
+</p><p>
+
+<h3>Description</h3>
+ Returns the underlying iterator..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#GetIterator">GetIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TStringReverseIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#IsStart">TStringForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtiters.pas on line 1128
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the first iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TStringReverseIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#IsFinish">TStringForwardIterator.IsFinish</a>
+<h3>Source</h3>
+adtiters.pas on line 1130
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the 'one beyond last' iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TStringReverseIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#SetItem">TStringIterator.SetItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1104
+</p><p>
+
+<h3>Description</h3>
+ Sets the Item at the position pointed to by the iterator to aitem;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TStringReverseIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Advance">TStringForwardIterator.Advance</a>
+<h3>Source</h3>
+adtiters.pas on line 1107
+</p><p>
+
+<h3>Description</h3>
+ Goes one position forward.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AdvanceOnePosition"><hr></a>
+
+<h2>TStringReverseIterator.AdvanceOnePosition</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> AdvanceOnePosition; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#AdvanceOnePosition">TStringForwardIterator.AdvanceOnePosition</a>
+<h3>Source</h3>
+adtiters.pas on line 1109
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TStringReverseIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html#Retreat">TStringBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtiters.pas on line 1112
+</p><p>
+
+<h3>Description</h3>
+ Moves iter one position back.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TStringReverseIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#ExchangeItem">TStringIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1114
+</p><p>
+
+<h3>Description</h3>
+ Exchanges Items pointed by the iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringReverseIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Insert">TStringForwardIterator.Insert</a>
+<h3>Source</h3>
+adtiters.pas on line 1117
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the container. After insertion the iterator points to the same index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

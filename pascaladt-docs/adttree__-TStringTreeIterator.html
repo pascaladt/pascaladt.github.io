@@ -1,0 +1,1427 @@
+<html>
+<head>
+<title>Reference for TStringTreeIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringTreeIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringTreeIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringBasicTreeIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html">TStringBasicTreeIterator</a>
+<h3>Source</h3>
+adttree.pas on line 856
+</p><p>
+
+<h3>Description</h3>
+ An iterator into TStringTree.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Argnode is the node at which iterator will point.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an exact copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if iter and self point at the same node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns Item from the position pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes Item pointed to by self together with the whole subtree of self and moves self to its parent.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#SubTreeSize">SubTreeSize</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the size of the subtree of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a pre-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a post-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an in-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns container into which self points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#IsLeaf">IsLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the iterator points to a leaf.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#IsRoot">IsRoot</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the iterator points to the root.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the Item at the position pointed to by iterator to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges item pointed by iter with item pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToParent">GoToParent</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to its parent.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToLeftMostChild">GoToLeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to point at its leftmost child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToRightSibling">GoToRightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves iterator to point at its right sibling.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InsertAsRightSibling">InsertAsRightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts Item as a right sibling of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InsertAsLeftMostChild">InsertAsLeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem as the left-most child of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringTreeIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(argnode : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">; tree : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTree.html">TStringTree</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Create">TStringIterator.Create</a>
+<h3>Source</h3>
+adttree.pas on line 864
+</p><p>
+
+<h3>Description</h3>
+ Argnode is the node at which iterator will point. Tree is the owner of this node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TStringTreeIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#CopySelf">TStringIterator.CopySelf</a>
+<h3>Source</h3>
+adttree.pas on line 866
+</p><p>
+
+<h3>Description</h3>
+ Returns an exact copy of self. I.e. copies all the data.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TStringTreeIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Equal">TStringIterator.Equal</a>
+<h3>Source</h3>
+adttree.pas on line 868
+</p><p>
+
+<h3>Description</h3>
+ Returns true if iter and self point at the same node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TStringTreeIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#GetItem">TStringIterator.GetItem</a>
+<h3>Source</h3>
+adttree.pas on line 870
+</p><p>
+
+<h3>Description</h3>
+ Returns Item from the position pointed by self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="DeleteSubTree"><hr></a>
+
+<h2>TStringTreeIterator.DeleteSubTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> DeleteSubTree : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#DeleteSubTree">TStringBasicTreeIterator.DeleteSubTree</a>
+<h3>Source</h3>
+adttree.pas on line 890
+</p><p>
+
+<h3>Description</h3>
+ Deletes Item pointed to by self together with the whole subtree of self and moves self to its parent. Returns the number of items deleted.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SubTreeSize"><hr></a>
+
+<h2>TStringTreeIterator.SubTreeSize</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SubTreeSize : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#SubTreeSize">TStringBasicTreeIterator.SubTreeSize</a>
+<h3>Source</h3>
+adttree.pas on line 893
+</p><p>
+
+<h3>Description</h3>
+ Returns the size of the subtree of self.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n), where n is the number of items in the subtree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#SubTreeSize">SubTreeSize</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrderIterator"><hr></a>
+
+<h2>TStringTreeIterator.PreOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#PreOrderIterator">TStringBasicTreeIterator.PreOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 895
+</p><p>
+
+<h3>Description</h3>
+ Returns a pre-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrderIterator"><hr></a>
+
+<h2>TStringTreeIterator.PostOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#PostOrderIterator">TStringBasicTreeIterator.PostOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 897
+</p><p>
+
+<h3>Description</h3>
+ Returns a post-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrderIterator"><hr></a>
+
+<h2>TStringTreeIterator.InOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#InOrderIterator">TStringBasicTreeIterator.InOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 899
+</p><p>
+
+<h3>Description</h3>
+ Returns an in-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TStringTreeIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Owner">TStringIterator.Owner</a>
+<h3>Source</h3>
+adttree.pas on line 901
+</p><p>
+
+<h3>Description</h3>
+ Returns container into which self points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsLeaf"><hr></a>
+
+<h2>TStringTreeIterator.IsLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsLeaf : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#IsLeaf">TStringBasicTreeIterator.IsLeaf</a>
+<h3>Source</h3>
+adttree.pas on line 903
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the iterator points to a leaf.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#IsLeaf">IsLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsRoot"><hr></a>
+
+<h2>TStringTreeIterator.IsRoot</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsRoot : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#IsRoot">TStringBasicTreeIterator.IsRoot</a>
+<h3>Source</h3>
+adttree.pas on line 905
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the iterator points to the root.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#IsRoot">IsRoot</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TStringTreeIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#SetItem">TStringIterator.SetItem</a>
+<h3>Source</h3>
+adttree.pas on line 872
+</p><p>
+
+<h3>Description</h3>
+ Sets the Item at the position pointed to by iterator to aitem.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TStringTreeIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#ExchangeItem">TStringIterator.ExchangeItem</a>
+<h3>Source</h3>
+adttree.pas on line 874
+</p><p>
+
+<h3>Description</h3>
+ Exchanges item pointed by iter with item pointed by self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToParent"><hr></a>
+
+<h2>TStringTreeIterator.GoToParent</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToParent; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBasicTreeIterator.html#GoToParent">TStringBasicTreeIterator.GoToParent</a>
+<h3>Source</h3>
+adttree.pas on line 876
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to its parent.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToParent">GoToParent</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToLeftMostChild"><hr></a>
+
+<h2>TStringTreeIterator.GoToLeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToLeftMostChild;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 878
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to point at its leftmost child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToLeftMostChild">GoToLeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToRightSibling"><hr></a>
+
+<h2>TStringTreeIterator.GoToRightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToRightSibling;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 880
+</p><p>
+
+<h3>Description</h3>
+ Moves iterator to point at its right sibling.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#GoToRightSibling">GoToRightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsRightSibling"><hr></a>
+
+<h2>TStringTreeIterator.InsertAsRightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsRightSibling(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 883
+</p><p>
+
+<h3>Description</h3>
+ Inserts Item as a right sibling of self. Moves self to newly inserted item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InsertAsRightSibling">InsertAsRightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsLeftMostChild"><hr></a>
+
+<h2>TStringTreeIterator.InsertAsLeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsLeftMostChild(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adttree.pas on line 886
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem as the left-most child of self. Moves self to newly inserted item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html#InsertAsLeftMostChild">InsertAsLeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<html>
+<head>
+<title>Reference for TIntegerBinaryTreePreOrderIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerBinaryTreePreOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerBinaryTreePreOrderIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerPreOrderIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 1481
+</p><p>
+
+<h3>Description</h3>
+ Preorder iterator into TIntegerBinaryTree.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as Delete but returns the removed item instead of disposing it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#TreeIterator">TreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a normal tree iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the first iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#StartTraversal">StartTraversal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to the first node in its tree, according to inorder traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to the next node according to inorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to the previous node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts at the current position, advances to next position according to pre-order traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#CopySelf">TIntegerIterator.CopySelf</a>
+<h3>Source</h3>
+adtbintree.pas on line 1491
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Extract">TIntegerForwardIterator.Extract</a>
+<h3>Source</h3>
+adtbintree.pas on line 1507
+</p><p>
+
+<h3>Description</h3>
+ The same as Delete but returns the removed item instead of disposing it.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), where h is the height of the tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TreeIterator"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.TreeIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> TreeIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html#TreeIterator">TIntegerTreeTraversalIterator.TreeIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 1510
+</p><p>
+
+<h3>Description</h3>
+ Returns a normal tree iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#TreeIterator">TreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#IsStart">TIntegerForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtbintree.pas on line 1512
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the first iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="StartTraversal"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.StartTraversal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> StartTraversal; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html#StartTraversal">TIntegerTreeTraversalIterator.StartTraversal</a>
+<h3>Source</h3>
+adtbintree.pas on line 1494
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to the first node in its tree, according to inorder traversal.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#StartTraversal">StartTraversal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Advance">TIntegerForwardIterator.Advance</a>
+<h3>Source</h3>
+adtbintree.pas on line 1497
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to the next node according to inorder traversal order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerBidirectionalIterator.html#Retreat">TIntegerBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtbintree.pas on line 1499
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to the previous node.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerBinaryTreePreOrderIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Insert">TIntegerForwardIterator.Insert</a>
+<h3>Source</h3>
+adtbintree.pas on line 1503
+</p><p>
+
+<h3>Description</h3>
+ Inserts at the current position, advances to next position according to pre-order traversal. Does not change pre-order order of nodes..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TIntegerBinaryTreePreOrderIterator.html">TIntegerBinaryTreePreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

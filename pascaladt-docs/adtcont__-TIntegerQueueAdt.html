@@ -1,0 +1,585 @@
+<html>
+<head>
+<title>Reference for TIntegerQueueAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerQueueAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerQueueAdt = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerContainerAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtcont__-TIntegerDequeAdt.html">TIntegerDequeAdt</a>
+<h3>Source</h3>
+adtcont.pas on line 1874
+</p><p>
+
+<h3>Description</h3>
+ An abstract interface of a queue..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#Front">Front</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item at the front.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#InsertItem">InsertItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">aitem</span> somewhere into the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#ExtractItem">ExtractItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes some item from the container and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#CanExtract">CanExtract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implemented with not Empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns false.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes <span class="local_symbol">aitem</span> at the back.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item at the front of the queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Front"><hr></a>
+
+<h2>TIntegerQueueAdt.Front</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Front : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1881
+</p><p>
+
+<h3>Description</h3>
+ Returns the item at the front.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#Front">Front</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertItem"><hr></a>
+
+<h2>TIntegerQueueAdt.InsertItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InsertItem(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#InsertItem">TIntegerContainerAdt.InsertItem</a>
+<h3>Source</h3>
+adtcont.pas on line 1886
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">aitem</span> somewhere into the container. Returns true if successful, false if <span class="local_symbol">aitem</span> could not be inserted. Implemented with <a href="adtcont__-TIntegerQueueAdt.html#PushBack">PushBack</a>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#InsertItem">InsertItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractItem"><hr></a>
+
+<h2>TIntegerQueueAdt.ExtractItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractItem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#ExtractItem">TIntegerContainerAdt.ExtractItem</a>
+<h3>Source</h3>
+adtcont.pas on line 1890
+</p><p>
+
+<h3>Description</h3>
+ Removes some item from the container and returns it. If there are no more items to extract then returns nil. Implemented as <a href="adtcont__-TIntegerQueueAdt.html#Front">Front</a> + <a href="adtcont__-TIntegerQueueAdt.html#PopFront">PopFront</a>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#ExtractItem">ExtractItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CanExtract"><hr></a>
+
+<h2>TIntegerQueueAdt.CanExtract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CanExtract : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CanExtract">TIntegerContainerAdt.CanExtract</a>
+<h3>Source</h3>
+adtcont.pas on line 1893
+</p><p>
+
+<h3>Description</h3>
+ Implemented with not Empty.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#CanExtract">CanExtract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TIntegerQueueAdt.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#IsDefinedOrder">TIntegerContainerAdt.IsDefinedOrder</a>
+<h3>Source</h3>
+adtcont.pas on line 1895
+</p><p>
+
+<h3>Description</h3>
+ Returns false.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushBack"><hr></a>
+
+<h2>TIntegerQueueAdt.PushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushBack(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1877
+</p><p>
+
+<h3>Description</h3>
+ Pushes <span class="local_symbol">aitem</span> at the back.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopFront"><hr></a>
+
+<h2>TIntegerQueueAdt.PopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopFront; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 1879
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item at the front of the queue.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

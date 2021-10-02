@@ -1,0 +1,1007 @@
+<html>
+<head>
+<title>Reference for TSingleListIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TSingleListIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSingleListIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TForwardIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+<h3>Source</h3>
+adtlist.pas on line 366
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a singly linked list (<a href="adtlist__-TSingleList.html">TSingleList</a>).
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a new iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of <span class="local_symbol">self</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Retrieves the item stored at the position pointed by the iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as <a href="adtlist__-TSingleListIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes items from the range [self, finish).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if <span class="local_symbol">pos</span> points to the same position as <span class="local_symbol">self</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the container into which <span class="local_symbol">self</span> points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if <span class="local_symbol">self</span> is the first iterator - the start iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if <span class="local_symbol">self</span> is the 'one beyond last' iterator - the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Advances the iterator to the next item.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Assigns aitem to the item at the position pointed to by the iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the item pointed to by <span class="local_symbol">self</span> with the one pointed to by the argument.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts an item before the position of <span class="local_symbol">self</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TSingleListIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(xnode : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PSingleListNode">PSingleListNode</a></span></span><span class="program_code">; list : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TSingleList.html">TSingleList</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Create">TIterator.Create</a>
+<h3>Source</h3>
+adtlist.pas on line 372
+</p><p>
+
+<h3>Description</h3>
+ Creates a new iterator. <span class="local_symbol">list</span> Is the owner of <span class="local_symbol">xnode</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TSingleListIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#CopySelf">TIterator.CopySelf</a>
+<h3>Source</h3>
+adtlist.pas on line 374
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of <span class="local_symbol">self</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TSingleListIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#GetItem">TIterator.GetItem</a>
+<h3>Source</h3>
+adtlist.pas on line 379
+</p><p>
+
+<h3>Description</h3>
+ Retrieves the item stored at the position pointed by the iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TSingleListIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Extract">TForwardIterator.Extract</a>
+<h3>Source</h3>
+adtlist.pas on line 387
+</p><p>
+
+<h3>Description</h3>
+ The same as <a href="adtlist__-TSingleListIterator.html#Delete">Delete</a> but returns the item instead of disposing it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TSingleListIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(afinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Delete">TForwardIterator.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 392
+</p><p>
+
+<h3>Description</h3>
+ Deletes items from the range [self, finish). After the deletion the iterator points to finish. Invalidates all other iterators (in general). Returns the number of items deleted. After the deletion the iterator points to <span class="local_symbol">afinish</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TSingleListIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Equal">TIterator.Equal</a>
+<h3>Source</h3>
+adtlist.pas on line 398
+</p><p>
+
+<h3>Description</h3>
+ Returns true if <span class="local_symbol">pos</span> points to the same position as <span class="local_symbol">self</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TSingleListIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Owner">TIterator.Owner</a>
+<h3>Source</h3>
+adtlist.pas on line 400
+</p><p>
+
+<h3>Description</h3>
+ Returns the container into which <span class="local_symbol">self</span> points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TSingleListIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#IsStart">TForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtlist.pas on line 403
+</p><p>
+
+<h3>Description</h3>
+ Returns true if <span class="local_symbol">self</span> is the first iterator - the start iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TSingleListIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#IsFinish">TForwardIterator.IsFinish</a>
+<h3>Source</h3>
+adtlist.pas on line 406
+</p><p>
+
+<h3>Description</h3>
+ Returns true if <span class="local_symbol">self</span> is the 'one beyond last' iterator - the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TSingleListIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Advance">TForwardIterator.Advance</a>
+<h3>Source</h3>
+adtlist.pas on line 376
+</p><p>
+
+<h3>Description</h3>
+ Advances the iterator to the next item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TSingleListIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#SetItem">TIterator.SetItem</a>
+<h3>Source</h3>
+adtlist.pas on line 382
+</p><p>
+
+<h3>Description</h3>
+ Assigns aitem to the item at the position pointed to by the iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TSingleListIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#ExchangeItem">TIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtlist.pas on line 385
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the item pointed to by <span class="local_symbol">self</span> with the one pointed to by the argument.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TSingleListIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Insert">TForwardIterator.Insert</a>
+<h3>Source</h3>
+adtlist.pas on line 396
+</p><p>
+
+<h3>Description</h3>
+ Inserts an item before the position of <span class="local_symbol">self</span>. Leaves <span class="local_symbol">self</span> pointing to after the inserted item (unchanged).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TSingleListIterator.html">TSingleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

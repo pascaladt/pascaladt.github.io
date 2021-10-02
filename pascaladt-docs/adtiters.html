@@ -1,0 +1,7635 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtiters</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtmem.html">adtmem</a>, <a href="adtcontbase.html">adtcontbase</a>
+</p><p>
+
+<h3>Description</h3>
+ All abstract iterator classes are defined in this file, as well as some basic routines dealing with them..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIterator.html">TIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A base class for all iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TOutputIterator.html">TOutputIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence allowing to write items into the sequence.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIterator.html">TForwardIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward and backward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing random access.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TDefinedOrderIterator.html">TDefinedOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ { An iterator into a string } TStringIterator = class (TRandomAccessIterator) public { returns the character from the position pointed by self } function GetChar : CharType.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TSetIterator.html">TSetIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TTreeTraversalIterator.html">TTreeTraversalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TLevelOrderIterator.html">TLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TLevelOrderIterator is derived from TTreeTraversalIterator and indirectly from TBidirectionalIterator instead of directly from TForwardIterator in order to provide it with an interface common with other traversal iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TBasicTreeIterator.html">TBasicTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A generic tree iterator interface, a base class for all tree iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TReverseIterator.html">TReverseIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TForwardIteratorRange.html">TForwardIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TSetIteratorRange.html">TSetIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of two set iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringIterator.html">TStringIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A base class for all iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringOutputIterator.html">TStringOutputIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence allowing to write items into the sequence.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward and backward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing random access.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringDefinedOrderIterator.html">TStringDefinedOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ { An iterator into a string } TStringStringIterator = class (TStringRandomAccessIterator) public { returns the character from the position pointed by self } function GetChar : CharType.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringTreeTraversalIterator.html">TStringTreeTraversalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringLevelOrderIterator.html">TStringLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TStringLevelOrderIterator is derived from TStringTreeTraversalIterator and indirectly from TStringBidirectionalIterator instead of directly from TStringForwardIterator in order to provide it with an interface common with other traversal iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringBasicTreeIterator.html">TStringBasicTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A generic tree iterator interface, a base class for all tree iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringForwardIteratorRange.html">TStringForwardIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TStringSetIteratorRange.html">TStringSetIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of two set iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A base class for all iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerOutputIterator.html">TIntegerOutputIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence allowing to write items into the sequence.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing to move forward and backward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a sequence of items allowing random access.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ { An iterator into a string } TIntegerStringIterator = class (TIntegerRandomAccessIterator) public { returns the character from the position pointed by self } function GetChar : CharType.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html">TIntegerTreeTraversalIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TIntegerLevelOrderIterator is derived from TIntegerTreeTraversalIterator and indirectly from TIntegerBidirectionalIterator instead of directly from TIntegerForwardIterator in order to provide it with an interface common with other traversal iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A generic tree iterator interface, a base class for all tree iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerReverseIterator.html">TIntegerReverseIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerForwardIteratorRange.html">TIntegerForwardIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerSetIteratorRange.html">TIntegerSetIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A pair of two set iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less___overloaded___0">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___0">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___0">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___1">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___2">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___3">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___4">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___5">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___6">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___7">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___8">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___9">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___10">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___11">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___0">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___1">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___2">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev___overloaded___0">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance___overloaded___0">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PreOrder">PreOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PostOrder">PostOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to postorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#InOrder">InOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to inorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#LevelOrder">LevelOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less___overloaded___1">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less___overloaded___2">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance___overloaded___1">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TStringRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance___overloaded___2">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TStringRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___1">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___2">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___12">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___13">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___14">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___15">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___16">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___17">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___18">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___19">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___20">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___21">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___22">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___23">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___24">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___3">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___4">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___5">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___6">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev___overloaded___1">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev___overloaded___2">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance___overloaded___1">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance___overloaded___2">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PreOrder___overloaded___0">PreOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PostOrder___overloaded___0">PostOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to postorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#InOrder___overloaded___0">InOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to inorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#LevelOrder___overloaded___0">LevelOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less___overloaded___3">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Less___overloaded___4">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance___overloaded___3">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TIntegerRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Advance___overloaded___4">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TIntegerRandomAccessIterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___3">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___4">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Decrements an iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___25">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___26">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___27">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___28">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___29">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___30">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___31">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___32">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___33">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___34">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___35">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___36">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___37">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Handy functions to copy iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___7">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___8">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___9">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Next___overloaded___10">Next</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the next item in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev___overloaded___3">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Prev___overloaded___4">Prev</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the previous item in the collection .
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance___overloaded___3">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#Distance___overloaded___4">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the distance between two iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PreOrder___overloaded___1">PreOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#PostOrder___overloaded___1">PostOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to postorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#InOrder___overloaded___1">InOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to inorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#LevelOrder___overloaded___1">LevelOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CheckIteratorRange">CheckIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Checks if the iterators represent a valid range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CheckIteratorRange___overloaded___0">CheckIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Checks if the iterators represent a valid range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#CheckIteratorRange___overloaded___1">CheckIteratorRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Checks if the iterators represent a valid range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TForwardIteratorPair">TForwardIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as TForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TSetIteratorPair">TSetIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TStringForwardIteratorPair">TStringForwardIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as TStringForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TStringSetIteratorPair">TStringSetIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TIntegerForwardIteratorPair">TIntegerForwardIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as TIntegerForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters.html#TIntegerSetIteratorPair">TIntegerSetIteratorPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Less"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 655
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less___overloaded___0"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 656
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less___overloaded___0">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 662
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___0"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 664
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 668
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat___overloaded___0"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 670
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___0">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 675
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___0"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 676
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___0">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___1"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 677
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___1">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___2"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 679
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___2">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___3"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBasicTreeIterator.html">TBasicTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBasicTreeIterator.html">TBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 681
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___3">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___4"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TTreeTraversalIterator.html">TTreeTraversalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TTreeTraversalIterator.html">TTreeTraversalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 682
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___4">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___5"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 684
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___5">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___6"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 685
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___6">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___7"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 686
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___7">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___8"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TLevelOrderIterator.html">TLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TLevelOrderIterator.html">TLevelOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 687
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___8">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___9"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TDefinedOrderIterator.html">TDefinedOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TDefinedOrderIterator.html">TDefinedOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 688
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___9">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___10"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 690
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___10">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___11"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TReverseIterator.html">TReverseIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TReverseIterator.html">TReverseIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 691
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___11">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 696
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___0"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 698
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___0">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___1"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 700
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___1">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___2"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 702
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___2">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 706
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev___overloaded___0"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 708
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev___overloaded___0">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 714
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance___overloaded___0"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TRandomAccessIterator.html">TRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 718
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance___overloaded___0">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrder"><hr></a>
+
+<h2>PreOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 724
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PreOrder">PreOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrder"><hr></a>
+
+<h2>PostOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 727
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to postorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PostOrder">PostOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrder"><hr></a>
+
+<h2>InOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 730
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to inorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#InOrder">InOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LevelOrder"><hr></a>
+
+<h2>LevelOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LevelOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TLevelOrderIterator.html">TLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TLevelOrderIterator.html">TLevelOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 733
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#LevelOrder">LevelOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less___overloaded___1"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1183
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less___overloaded___1">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less___overloaded___2"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1184
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less___overloaded___2">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___1"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1190
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TStringRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TStringRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance___overloaded___1">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___2"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1192
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TStringRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TStringRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance___overloaded___2">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat___overloaded___1"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1196
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___1">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat___overloaded___2"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1198
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___2">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___12"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1203
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___12">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___13"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1204
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___13">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___14"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1205
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___14">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___15"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1207
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___15">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___16"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBasicTreeIterator.html">TStringBasicTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBasicTreeIterator.html">TStringBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1209
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___16">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___17"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringTreeTraversalIterator.html">TStringTreeTraversalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringTreeTraversalIterator.html">TStringTreeTraversalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1210
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___17">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___18"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1212
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___18">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___19"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1213
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___19">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___20"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1214
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___20">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___21"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringLevelOrderIterator.html">TStringLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringLevelOrderIterator.html">TStringLevelOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1215
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___21">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___22"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringDefinedOrderIterator.html">TStringDefinedOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringDefinedOrderIterator.html">TStringDefinedOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1216
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___22">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___23"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1218
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___23">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___24"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringReverseIterator.html">TStringReverseIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1219
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___24">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___3"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1224
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___3">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___4"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1226
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___4">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___5"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1228
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___5">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___6"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1230
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___6">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev___overloaded___1"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1234
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev___overloaded___1">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev___overloaded___2"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1236
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev___overloaded___2">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance___overloaded___1"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1242
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance___overloaded___1">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance___overloaded___2"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1246
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance___overloaded___2">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrder___overloaded___0"><hr></a>
+
+<h2>PreOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPreOrderIterator.html">TStringPreOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1252
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PreOrder___overloaded___0">PreOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrder___overloaded___0"><hr></a>
+
+<h2>PostOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringPostOrderIterator.html">TStringPostOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1255
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to postorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PostOrder___overloaded___0">PostOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrder___overloaded___0"><hr></a>
+
+<h2>InOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringInOrderIterator.html">TStringInOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1258
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to inorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#InOrder___overloaded___0">InOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LevelOrder___overloaded___0"><hr></a>
+
+<h2>LevelOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LevelOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringLevelOrderIterator.html">TStringLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringLevelOrderIterator.html">TStringLevelOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1261
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#LevelOrder___overloaded___0">LevelOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less___overloaded___3"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1711
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less___overloaded___3">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less___overloaded___4"><hr></a>
+
+<h2>Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos1, pos2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1712
+</p><p>
+
+<h3>Description</h3>
+ Tests if pos1 is nearer to the beginning of the container than pos2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Less___overloaded___4">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___3"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1718
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TIntegerRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TIntegerRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance___overloaded___3">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___4"><hr></a>
+
+<h2>Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Advance(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1720
+</p><p>
+
+<h3>Description</h3>
+ Increments iter by step, either by invoking Advance method appropriate number of times or using the member routine (if iter is TIntegerRandomAccessIterator). Returns iter (<em>not</em> a copy of it).
+</p><p>
+
+<h3>Complexity</h3>
+ O(1) if iter is TIntegerRandomAccessIterator, O(n) otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Advance___overloaded___4">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat___overloaded___3"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1724
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___3">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat___overloaded___4"><hr></a>
+
+<h2>Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Retreat(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; step : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1726
+</p><p>
+
+<h3>Description</h3>
+ Decrements an iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Retreat___overloaded___4">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___25"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1731
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___25">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___26"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1732
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___26">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___27"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1733
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___27">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___28"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1735
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___28">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___29"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1737
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___29">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___30"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerTreeTraversalIterator.html">TIntegerTreeTraversalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerTreeTraversalIterator.html">TIntegerTreeTraversalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1738
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___30">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___31"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1740
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___31">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___32"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1741
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___32">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___33"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1742
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___33">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___34"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1743
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___34">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___35"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1744
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___35">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___36"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1746
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___36">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___37"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerReverseIterator.html">TIntegerReverseIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerReverseIterator.html">TIntegerReverseIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1747
+</p><p>
+
+<h3>Description</h3>
+ Handy functions to copy iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CopyOf___overloaded___37">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___7"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1752
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___7">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___8"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1754
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___8">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___9"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1756
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___9">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Next___overloaded___10"><hr></a>
+
+<h2>Next</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Next(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1758
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the next item in the collection. The returned iterator is a copy. The old one remains unchanged.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Next___overloaded___10">Next</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev___overloaded___3"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1762
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev___overloaded___3">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Prev___overloaded___4"><hr></a>
+
+<h2>Prev</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Prev(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1764
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the previous item in the collection .
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Prev___overloaded___4">Prev</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance___overloaded___3"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1770
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance___overloaded___3">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance___overloaded___4"><hr></a>
+
+<h2>Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter1, iter2 : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1774
+</p><p>
+
+<h3>Description</h3>
+ Returns the distance between two iterators. The second iterator must be reachable from the first one.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#Distance___overloaded___4">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrder___overloaded___1"><hr></a>
+
+<h2>PreOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPreOrderIterator.html">TIntegerPreOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1780
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator pointing to the next node according to preorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PreOrder___overloaded___1">PreOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrder___overloaded___1"><hr></a>
+
+<h2>PostOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerPostOrderIterator.html">TIntegerPostOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1783
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to postorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#PostOrder___overloaded___1">PostOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrder___overloaded___1"><hr></a>
+
+<h2>InOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerInOrderIterator.html">TIntegerInOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1786
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to inorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#InOrder___overloaded___1">InOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LevelOrder___overloaded___1"><hr></a>
+
+<h2>LevelOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LevelOrder(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> node : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1789
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator to the next node according to levelorder traversal order.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#LevelOrder___overloaded___1">LevelOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CheckIteratorRange"><hr></a>
+
+<h2>CheckIteratorRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> CheckIteratorRange(start, finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 740
+</p><p>
+
+<h3>Description</h3>
+ Checks if the iterators represent a valid range. If in debug mode then simply performs some rudimentary O(1) checks. If in test mode then checks the whole range (O(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CheckIteratorRange">CheckIteratorRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CheckIteratorRange___overloaded___0"><hr></a>
+
+<h2>CheckIteratorRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> CheckIteratorRange(start, finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringForwardIterator.html">TStringForwardIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1268
+</p><p>
+
+<h3>Description</h3>
+ Checks if the iterators represent a valid range. If in debug mode then simply performs some rudimentary O(1) checks. If in test mode then checks the whole range (O(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CheckIteratorRange___overloaded___0">CheckIteratorRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CheckIteratorRange___overloaded___1"><hr></a>
+
+<h2>CheckIteratorRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> CheckIteratorRange(start, finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1796
+</p><p>
+
+<h3>Description</h3>
+ Checks if the iterators represent a valid range. If in debug mode then simply performs some rudimentary O(1) checks. If in test mode then checks the whole range (O(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#CheckIteratorRange___overloaded___1">CheckIteratorRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TForwardIteratorPair"><hr></a>
+
+<h2>TForwardIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TForwardIteratorPair = TForwardIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 626
+</p><p>
+
+<h3>Description</h3>
+ The same as TForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TForwardIteratorPair">TForwardIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TSetIteratorPair"><hr></a>
+
+<h2>TSetIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSetIteratorPair = TSetIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 652
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TSetIteratorPair">TSetIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringForwardIteratorPair"><hr></a>
+
+<h2>TStringForwardIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringForwardIteratorPair = TStringForwardIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1154
+</p><p>
+
+<h3>Description</h3>
+ The same as TStringForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TStringForwardIteratorPair">TStringForwardIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringSetIteratorPair"><hr></a>
+
+<h2>TStringSetIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringSetIteratorPair = TStringSetIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1180
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TStringSetIteratorPair">TStringSetIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerForwardIteratorPair"><hr></a>
+
+<h2>TIntegerForwardIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerForwardIteratorPair = TIntegerForwardIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1682
+</p><p>
+
+<h3>Description</h3>
+ The same as TIntegerForwardIteratorRange, but the iterators do not necessarily denote a range.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TIntegerForwardIteratorPair">TIntegerForwardIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerSetIteratorPair"><hr></a>
+
+<h2>TIntegerSetIteratorPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSetIteratorPair = TIntegerSetIteratorRange;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtiters.pas on line 1708
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters.html#TIntegerSetIteratorPair">TIntegerSetIteratorPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

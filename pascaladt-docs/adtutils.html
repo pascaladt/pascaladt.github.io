@@ -1,0 +1,1636 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtutils</h1>
+
+</p><p>
+
+<h3>Description</h3>
+ This unit presents a few basic, simple utilities like Min, Max, Exchange, ...
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Min">Min</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the smaller of two integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Min___overloaded___0">Min</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the smallest of three integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Min3">Min3</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the smallest of three integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Max">Max</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the larger of two integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Max___overloaded___0">Max</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the largest of three integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#Max3">Max3</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the largest of three integers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#IsValidIndex">IsValidIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the index is valid assuming it points into a zero-based container of size size.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#IsValidIndexLow">IsValidIndexLow</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the index is valid assuming it points into a low-based container of size size.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#FloorLog2">FloorLog2</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the largest number smaller than the base 2 logarithm of n.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#CeilLog2">CeilLog2</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the smallest number larger than the base 2 logarithm of n.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#SafeMove">SafeMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangeItem___overloaded___0">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#SafeMove___overloaded___0">SafeMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangeItem___overloaded___1">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#SafeMove___overloaded___1">SafeMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangePtr">ExchangePtr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the values of two pointers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangeByte">ExchangeByte</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges two one-byte values.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#ExchangeData">ExchangeData</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the values of two variables, each <span class="local_symbol">size</span> bytes long.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#TPair">TPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a pair of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#TStringPair">TStringPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a pair of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#TIntegerPair">TIntegerPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a pair of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#PPair">PPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#PStringPair">PStringPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtutils.html#PIntegerPair">PIntegerPair</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Min"><hr></a>
+
+<h2>Min</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Min(v1, v2 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 319
+</p><p>
+
+<h3>Description</h3>
+ Returns the smaller of two integers.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Min">Min</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Min___overloaded___0"><hr></a>
+
+<h2>Min</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Min(v1, v2, v3 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 330
+</p><p>
+
+<h3>Description</h3>
+ Returns the smallest of three integers. If your compiler does not support overloading use the second routine.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Min___overloaded___0">Min</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Min3"><hr></a>
+
+<h2>Min3</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Min3(v1, v2, v3 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 336
+</p><p>
+
+<h3>Description</h3>
+ Returns the smallest of three integers. If your compiler does not support overloading use the second routine.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Min3">Min3</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Max"><hr></a>
+
+<h2>Max</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Max(v1, v2 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 340
+</p><p>
+
+<h3>Description</h3>
+ Returns the larger of two integers.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Max">Max</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Max___overloaded___0"><hr></a>
+
+<h2>Max</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Max(v1, v2, v3 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 350
+</p><p>
+
+<h3>Description</h3>
+ Returns the largest of three integers.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Max___overloaded___0">Max</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Max3"><hr></a>
+
+<h2>Max3</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Max3(v1, v2, v3 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 356
+</p><p>
+
+<h3>Description</h3>
+ Returns the largest of three integers.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#Max3">Max3</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsValidIndex"><hr></a>
+
+<h2>IsValidIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsValidIndex(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 376
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the index is valid assuming it points into a zero-based container of size size.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#IsValidIndex">IsValidIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsValidIndexLow"><hr></a>
+
+<h2>IsValidIndexLow</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsValidIndexLow(index, low : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 383
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the index is valid assuming it points into a low-based container of size size.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#IsValidIndexLow">IsValidIndexLow</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FloorLog2"><hr></a>
+
+<h2>FloorLog2</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FloorLog2(n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 390
+</p><p>
+
+<h3>Description</h3>
+ Returns the largest number smaller than the base 2 logarithm of n. If n is 0 EInvalidArgument is raised.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#FloorLog2">FloorLog2</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CeilLog2"><hr></a>
+
+<h2>CeilLog2</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CeilLog2(n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 393
+</p><p>
+
+<h3>Description</h3>
+ Returns the smallest number larger than the base 2 logarithm of n. If n is 0 EInvalidArgument is raised.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#CeilLog2">CeilLog2</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> item1, item2 : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 244
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SafeMove"><hr></a>
+
+<h2>SafeMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SafeMove(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> src, dest : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; num : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 245
+</p><p>
+
+<h3>Description</h3>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#SafeMove">SafeMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem___overloaded___0"><hr></a>
+
+<h2>ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> item1, item2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 280
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangeItem___overloaded___0">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SafeMove___overloaded___0"><hr></a>
+
+<h2>SafeMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SafeMove(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> src, dest : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; num : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 281
+</p><p>
+
+<h3>Description</h3>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#SafeMove___overloaded___0">SafeMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem___overloaded___1"><hr></a>
+
+<h2>ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> item1, item2 : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 316
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangeItem___overloaded___1">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SafeMove___overloaded___1"><hr></a>
+
+<h2>SafeMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SafeMove(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> src, dest : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; num : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 317
+</p><p>
+
+<h3>Description</h3>
+ This is needed to correctly move AnsiStrings/interfaces/records containing them.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#SafeMove___overloaded___1">SafeMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangePtr"><hr></a>
+
+<h2>ExchangePtr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangePtr(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> p1, p2); </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 360
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the values of two pointers.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangePtr">ExchangePtr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeByte"><hr></a>
+
+<h2>ExchangeByte</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeByte(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b1, b2); </span><span class="program_code"><span class="keyword">inline</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 366
+</p><p>
+
+<h3>Description</h3>
+ Exchanges two one-byte values.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangeByte">ExchangeByte</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeData"><hr></a>
+
+<h2>ExchangeData</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeData(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> v1, v2; size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 372
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the values of two variables, each <span class="local_symbol">size</span> bytes long.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#ExchangeData">ExchangeData</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TPair"><hr></a>
+
+<h2>TPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TPair = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> First, Second : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 239
+</p><p>
+
+<h3>Description</h3>
+ Represents a pair of items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#TPair">TPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringPair"><hr></a>
+
+<h2>TStringPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringPair = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> First, Second : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 275
+</p><p>
+
+<h3>Description</h3>
+ Represents a pair of items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#TStringPair">TStringPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerPair"><hr></a>
+
+<h2>TIntegerPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerPair = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> First, Second : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 311
+</p><p>
+
+<h3>Description</h3>
+ Represents a pair of items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#TIntegerPair">TIntegerPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PPair"><hr></a>
+
+<h2>PPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PPair = ^TPair;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 242
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#PPair">PPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringPair"><hr></a>
+
+<h2>PStringPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringPair = ^TStringPair;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 278
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#PStringPair">PStringPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerPair"><hr></a>
+
+<h2>PIntegerPair</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerPair = ^TIntegerPair;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtutils.pas on line 314
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtutils.html#PIntegerPair">PIntegerPair</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtutils.html">adtutils</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

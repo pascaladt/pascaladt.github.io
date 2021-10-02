@@ -1,0 +1,999 @@
+<html>
+<head>
+<title>Reference for TDoubleListIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TDoubleListIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TDoubleListIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TBidirectionalIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TBidirectionalIterator.html">TBidirectionalIterator</a>
+<h3>Source</h3>
+adtlist.pas on line 524
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a doubly linked list.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates new iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TDoubleListIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(xnode : </span><span class="program_code"><span class="global_symbol"><a href="adtlist.html#PDoubleListNode">PDoubleListNode</a></span></span><span class="program_code">; list : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TDoubleList.html">TDoubleList</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Create">TIterator.Create</a>
+<h3>Source</h3>
+adtlist.pas on line 530
+</p><p>
+
+<h3>Description</h3>
+ Creates new iterator. The list is the owner of xnode.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TDoubleListIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#CopySelf">TIterator.CopySelf</a>
+<h3>Source</h3>
+adtlist.pas on line 531
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TDoubleListIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Equal">TIterator.Equal</a>
+<h3>Source</h3>
+adtlist.pas on line 534
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TDoubleListIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#GetItem">TIterator.GetItem</a>
+<h3>Source</h3>
+adtlist.pas on line 535
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TDoubleListIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Extract">TForwardIterator.Extract</a>
+<h3>Source</h3>
+adtlist.pas on line 538
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TDoubleListIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(afinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TForwardIterator.html">TForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Delete">TForwardIterator.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 539
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TDoubleListIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Owner">TIterator.Owner</a>
+<h3>Source</h3>
+adtlist.pas on line 542
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TDoubleListIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#IsStart">TForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtlist.pas on line 543
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TDoubleListIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#IsFinish">TForwardIterator.IsFinish</a>
+<h3>Source</h3>
+adtlist.pas on line 544
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TDoubleListIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Advance">TForwardIterator.Advance</a>
+<h3>Source</h3>
+adtlist.pas on line 532
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TDoubleListIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBidirectionalIterator.html#Retreat">TBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtlist.pas on line 533
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TDoubleListIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#SetItem">TIterator.SetItem</a>
+<h3>Source</h3>
+adtlist.pas on line 536
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TDoubleListIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#ExchangeItem">TIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtlist.pas on line 537
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TDoubleListIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TForwardIterator.html#Insert">TForwardIterator.Insert</a>
+<h3>Source</h3>
+adtlist.pas on line 541
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TDoubleListIterator.html">TDoubleListIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

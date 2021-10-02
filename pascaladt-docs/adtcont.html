@@ -1,0 +1,1457 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtcont</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtfunct.html">adtfunct</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, sysutils
+</p><p>
+
+<h3>Description</h3>
+ This unit provides abstract base classes (interfaces) for many different types of containers. It also introduces some concrete wrapper (adaptor) classes.
+</p><p>
+ * Note on qualifiers *
+</p><p>
+ The const qualifier before an iterator, when the iterator does not denote a range, means that neither the value pointed to by the iterator nor the iterator itself is changed by the routine. It doesn't mean however that nothing in the container structure can be changed. The lack of this qualifier means that the routine might invalidate the iterator, change its item's value or make it point somewhere else, but it doesn't have to. It basically depends on the implementation. The const qualifiers before two (or sometimes one) iterators denoting a range mean that the range is not changed by the routine, i.e. neither the values of the items in the range nor the relative order of the items are changed. The iterators themselves are also not changed. Other things may be changed. The const qualifier before a string means that the string is not changed by the routine. The const qualifier is always used before an interface for efficiency reasons. This is to avoid calling _AddRef every time the routine is invoked.
+</p><p>
+ * Notes on ownership issues *
+</p><p>
+ When a pointer is inserted into a container it is owned by it only after the insertion is successfully completed. It will be than automatically disposed by the container. However, if an exception is raised the insertion is not yet completed and a pointer passed as an argument is not owned by the container. It must be disposed by the calling code. The reason for such behaviour is not to make any any user data 'sink' without trace in case of an exception. This eventuality should be handled with a try ... Except block around suitable parts of code which would dispose or otherwise handle any pointers not inserted due to an exception..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TDefinedOrderContainerAdt.html">TDefinedOrderContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If a class inherits from TDefinedOrderContainerAdt it implies that it has an internally defined order of items, but it's not the other way round.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TPriorityQueueAdt.html">TPriorityQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a priority queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TSetAdt.html">TSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a set or a multiset.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TSortedSetAdt.html">TSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set or multiset with sorted item.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A sorted set that supports Concatenate and Split operations, so it can be used as a concatenable priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set that uses hashing.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TBasicTreeAdt.html">TBasicTreeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TQueueAdt.html">TQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TDequeAdt.html">TDequeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a double-ended queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TListAdt.html">TListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a sequential list of items supporting forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TDoubleListAdt.html">TDoubleListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TDoubleListAdt is essentially TListAdt with support for bidirectional iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TRandomAccessContainerAdt.html">TRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a container with random access to items..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TArrayAdt.html">TArrayAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents an array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TRandomAccessContainerIterator.html">TRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A class used as a base class for most random access iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringDefinedOrderContainerAdt.html">TStringDefinedOrderContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If a class inherits from TStringDefinedOrderContainerAdt it implies that it has an internally defined order of items, but it's not the other way round.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringPriorityQueueAdt.html">TStringPriorityQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a priority queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringSetAdt.html">TStringSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a set or a multiset.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringSortedSetAdt.html">TStringSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set or multiset with sorted item.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringConcatenableSortedSetAdt.html">TStringConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A sorted set that supports Concatenate and Split operations, so it can be used as a concatenable priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringHashSetAdt.html">TStringHashSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set that uses hashing.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringBasicTreeAdt.html">TStringBasicTreeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringQueueAdt.html">TStringQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringDequeAdt.html">TStringDequeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a double-ended queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringListAdt.html">TStringListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a sequential list of items supporting forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringDoubleListAdt.html">TStringDoubleListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TStringDoubleListAdt is essentially TStringListAdt with support for bidirectional iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html">TStringRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a container with random access to items..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringArrayAdt.html">TStringArrayAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents an array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TStringRandomAccessContainerIterator.html">TStringRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A class used as a base class for most random access iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerDefinedOrderContainerAdt.html">TIntegerDefinedOrderContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If a class inherits from TIntegerDefinedOrderContainerAdt it implies that it has an internally defined order of items, but it's not the other way round.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html">TIntegerPriorityQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a priority queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerSetAdt.html">TIntegerSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a set or a multiset.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerSortedSetAdt.html">TIntegerSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set or multiset with sorted item.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerConcatenableSortedSetAdt.html">TIntegerConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A sorted set that supports Concatenate and Split operations, so it can be used as a concatenable priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerHashSetAdt.html">TIntegerHashSetAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A set that uses hashing.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerBasicTreeAdt.html">TIntegerBasicTreeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerQueueAdt.html">TIntegerQueueAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerDequeAdt.html">TIntegerDequeAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An abstract interface of a double-ended queue..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerListAdt.html">TIntegerListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a sequential list of items supporting forward iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerDoubleListAdt.html">TIntegerDoubleListAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TIntegerDoubleListAdt is essentially TIntegerListAdt with support for bidirectional iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents a container with random access to items..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerArrayAdt.html">TIntegerArrayAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Represents an array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A class used as a base class for most random access iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#CopyOf___overloaded___38">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#CopyOf___overloaded___39">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#TStackAdt">TStackAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ There are no separate stacks for the sake of simplicity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#TStringStackAdt">TStringStackAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ There are no separate stacks for the sake of simplicity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont.html#TIntegerStackAdt">TIntegerStackAdt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ There are no separate stacks for the sake of simplicity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="CopyOf"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TRandomAccessContainerIterator.html">TRandomAccessContainerIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TRandomAccessContainerIterator.html">TRandomAccessContainerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 867
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___38"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TStringRandomAccessContainerIterator.html">TStringRandomAccessContainerIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TStringRandomAccessContainerIterator.html">TStringRandomAccessContainerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 1493
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#CopyOf___overloaded___38">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___39"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 2119
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#CopyOf___overloaded___39">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStackAdt"><hr></a>
+
+<h2>TStackAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStackAdt = TDequeAdt;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 658
+</p><p>
+
+<h3>Description</h3>
+ There are no separate stacks for the sake of simplicity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#TStackAdt">TStackAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringStackAdt"><hr></a>
+
+<h2>TStringStackAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringStackAdt = TStringDequeAdt;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 1284
+</p><p>
+
+<h3>Description</h3>
+ There are no separate stacks for the sake of simplicity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#TStringStackAdt">TStringStackAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerStackAdt"><hr></a>
+
+<h2>TIntegerStackAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerStackAdt = TIntegerDequeAdt;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtcont.pas on line 1910
+</p><p>
+
+<h3>Description</h3>
+ There are no separate stacks for the sake of simplicity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont.html#TIntegerStackAdt">TIntegerStackAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

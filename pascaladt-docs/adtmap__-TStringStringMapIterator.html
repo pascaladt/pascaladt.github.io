@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>Reference for TStringStringMapIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringStringMapIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringStringMapIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringBidirectionalIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html">TStringBidirectionalIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtmap__-TStringStringMapAdaptorIterator.html">TStringStringMapAdaptorIterator</a>
+<h3>Source</h3>
+adtmap.pas on line 1594
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a map. The iterator into a map represents a position that is composed of two things: the key and the item. In order to retrieve the key additional Key function is introduced. Because maps are containers with internally-defined order of items, the modifying operations work differently than specified in the ancestor classes. SetItem, GetItem and ExchangeItem operate only on items without keys associated with them. Insert raises EDefinedOrder, but there is a new version of Insert available that takes two arguments - the key and the item - and inserts them at a proper place in the map (associating the item with the key) and moves to the newly created position or to finish if the item could not be associated. Delete works as expected.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">TContainerAdt.IsDefinedOrder</a>, <a href="adtiters__-TDefinedOrderIterator.html">TDefinedOrderIterator</a>, <a href="adtiters__-TSetIterator.html">TSetIterator</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Key">Key</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the key at the current position.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Raises EDefinedOrder.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts into the map (associates aitem with akey) and moves to the newly inserted position or to finish if the item could not be inserted.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Key"><hr></a>
+
+<h2>TStringStringMapIterator.Key</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmap.pas on line 1597
+</p><p>
+
+<h3>Description</h3>
+ Returns the key at the current position.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Key">Key</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringStringMapIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Insert">TStringForwardIterator.Insert</a>
+<h3>Source</h3>
+adtmap.pas on line 1599
+</p><p>
+
+<h3>Description</h3>
+ Raises EDefinedOrder.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TStringStringMapIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(akey : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Insert">TStringForwardIterator.Insert</a>
+<h3>Source</h3>
+adtmap.pas on line 1603
+</p><p>
+
+<h3>Description</h3>
+ Inserts into the map (associates aitem with akey) and moves to the newly inserted position or to finish if the item could not be inserted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

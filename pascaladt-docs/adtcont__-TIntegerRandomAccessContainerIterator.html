@@ -1,0 +1,1613 @@
+<html>
+<head>
+<title>Reference for TIntegerRandomAccessContainerIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerRandomAccessContainerIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerRandomAccessContainerIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerRandomAccessIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtqueue__-TIntegerCircularDequeIterator.html">TIntegerCircularDequeIterator</a>, <a href="adtarray__-TIntegerPascalArrayIterator.html">TIntegerPascalArrayIterator</a>, <a href="adtarray__-TIntegerArrayIterator.html">TIntegerArrayIterator</a>, <a href="adtqueue__-TIntegerSegDequeIterator.html">TIntegerSegDequeIterator</a>
+<h3>Source</h3>
+adtcont.pas on line 2054
+</p><p>
+
+<h3>Description</h3>
+ A class used as a base class for most random access iterators. The only abstract methods left in this class are TIntegerIterator.ExchangeItemsAt and <a href="adtiters__-TIntegerIterator.html#CopySelf">TIntegerIterator.CopySelf</a>.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Distance">Distance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Computes the distance between pos and self (pos - self).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self and pos both point to the same item in the same collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Less">Less</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is closer to the beginning of the collection than pos.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns element from the position pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#GetItemAt">GetItemAt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item at index self.Index + i (i may be negative).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes at most n items beginning with start, less if the end of the container is reached.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Index">Index</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns index of iterator within container into which it points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the container into which self points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the first iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the 'one beyond last' iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the element at the position pointed to by iterator to Elem;.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#SetItemAt">SetItemAt</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the item at index self.Index + i.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the item pointed to by self with the one pointed to by the argument.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Goes one position forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Goes one position forward.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves self by i positions.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves iter one position back.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">aitem</span> into the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#FIndex">FIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+field
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#FCont">FCont</a>
+</p>
+</td>
+<td width="15%">
+<p>
+field
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(ind : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#Create">TIntegerIterator.Create</a>
+<h3>Source</h3>
+adtcont.pas on line 2060
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Distance"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Distance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Distance(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Distance">TIntegerRandomAccessIterator.Distance</a>
+<h3>Source</h3>
+adtcont.pas on line 2063
+</p><p>
+
+<h3>Description</h3>
+ Computes the distance between pos and self (pos - self).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Distance">Distance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#Equal">TIntegerIterator.Equal</a>
+<h3>Source</h3>
+adtcont.pas on line 2067
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self and pos both point to the same item in the same collection.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Less"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Less</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Less(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Less">TIntegerRandomAccessIterator.Less</a>
+<h3>Source</h3>
+adtcont.pas on line 2070
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is closer to the beginning of the collection than pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Less">Less</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#GetItem">TIntegerIterator.GetItem</a>
+<h3>Source</h3>
+adtcont.pas on line 2072
+</p><p>
+
+<h3>Description</h3>
+ Returns element from the position pointed by self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItemAt"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.GetItemAt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItemAt(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#GetItemAt">TIntegerRandomAccessIterator.GetItemAt</a>
+<h3>Source</h3>
+adtcont.pas on line 2077
+</p><p>
+
+<h3>Description</h3>
+ Returns the item at index self.Index + i (i may be negative).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#GetItemAt">GetItemAt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Extract">TIntegerForwardIterator.Extract</a>
+<h3>Source</h3>
+adtcont.pas on line 2099
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Delete">TIntegerRandomAccessIterator.Delete</a>, <a href="adtiters__-TIntegerForwardIterator.html#Delete">TIntegerForwardIterator.Delete</a>
+<h3>Source</h3>
+adtcont.pas on line 2104
+</p><p>
+
+<h3>Description</h3>
+ Deletes at most n items beginning with start, less if the end of the container is reached. Returns the number of items actually deleted. After the deletion self points to the next item after the deleted sequence.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Index"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Index</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Index">TIntegerRandomAccessIterator.Index</a>
+<h3>Source</h3>
+adtcont.pas on line 2107
+</p><p>
+
+<h3>Description</h3>
+ Returns index of iterator within container into which it points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Index">Index</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#Owner">TIntegerIterator.Owner</a>
+<h3>Source</h3>
+adtcont.pas on line 2109
+</p><p>
+
+<h3>Description</h3>
+ Returns the container into which self points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#IsStart">TIntegerForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtcont.pas on line 2111
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the first iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#IsFinish">TIntegerForwardIterator.IsFinish</a>
+<h3>Source</h3>
+adtcont.pas on line 2113
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the 'one beyond last' iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(Aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#SetItem">TIntegerIterator.SetItem</a>
+<h3>Source</h3>
+adtcont.pas on line 2075
+</p><p>
+
+<h3>Description</h3>
+ Sets the element at the position pointed to by iterator to Elem;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItemAt"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.SetItemAt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItemAt(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#SetItemAt">TIntegerRandomAccessIterator.SetItemAt</a>
+<h3>Source</h3>
+adtcont.pas on line 2079
+</p><p>
+
+<h3>Description</h3>
+ Sets the item at index self.Index + i.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#SetItemAt">SetItemAt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#ExchangeItem">TIntegerIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtcont.pas on line 2082
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the item pointed to by self with the one pointed to by the argument.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Advance">TIntegerRandomAccessIterator.Advance</a>, <a href="adtiters__-TIntegerForwardIterator.html#Advance">TIntegerForwardIterator.Advance</a>
+<h3>Source</h3>
+adtcont.pas on line 2087
+</p><p>
+
+<h3>Description</h3>
+ Goes one position forward. Second declaration only for compilers that do not support overloading.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AdvanceOnePosition"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.AdvanceOnePosition</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> AdvanceOnePosition; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#AdvanceOnePosition">TIntegerRandomAccessIterator.AdvanceOnePosition</a>, <a href="adtiters__-TIntegerForwardIterator.html#AdvanceOnePosition">TIntegerForwardIterator.AdvanceOnePosition</a>
+<h3>Source</h3>
+adtcont.pas on line 2089
+</p><p>
+
+<h3>Description</h3>
+ Goes one position forward. Second declaration only for compilers that do not support overloading.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance___overloaded___0"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance(i : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Advance">TIntegerRandomAccessIterator.Advance</a>, <a href="adtiters__-TIntegerForwardIterator.html#Advance">TIntegerForwardIterator.Advance</a>
+<h3>Source</h3>
+adtcont.pas on line 2093
+</p><p>
+
+<h3>Description</h3>
+ Moves self by i positions.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Advance___overloaded___0">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerRandomAccessIterator.html#Retreat">TIntegerRandomAccessIterator.Retreat</a>, <a href="adtiters__-TIntegerBidirectionalIterator.html#Retreat">TIntegerBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtcont.pas on line 2095
+</p><p>
+
+<h3>Description</h3>
+ Moves iter one position back.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Insert">TIntegerForwardIterator.Insert</a>
+<h3>Source</h3>
+adtcont.pas on line 2098
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">aitem</span> into the container. After insertion the iterator points to the same index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FIndex"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.FIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">FIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 2056
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#FIndex">FIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FCont"><hr></a>
+
+<h2>TIntegerRandomAccessContainerIterator.FCont</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">FCont : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 2057
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html#FCont">FCont</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerIterator.html">TIntegerRandomAccessContainerIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

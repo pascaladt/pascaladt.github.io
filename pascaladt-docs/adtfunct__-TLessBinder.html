@@ -1,0 +1,447 @@
+<html>
+<head>
+<title>Reference for TLessBinder</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TLessBinder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TLessBinder = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TFunctor, IUnaryPredicate)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtfunct__-TFunctor.html">TFunctor</a>
+<h3>Implemented interface</h3>
+<a href="adtfunct__-IUnaryPredicate.html">IUnaryPredicate</a>
+<h3>Source</h3>
+adtfunct.pas on line 387
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The TxxxBinder functors are provided purely for efficiency reasons.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The TxxxBinder functors are provided purely for efficiency reasons.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The TxxxBinder functors are provided purely for efficiency reasons.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Test">Test</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The TxxxBinder functors are provided purely for efficiency reasons.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Item">Item</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The TxxxBinder functors are provided purely for efficiency reasons.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TLessBinder.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> c : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IBinaryComparer.html">IBinaryComparer</a></span></span><span class="program_code">; p : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Create">TFunctor.Create</a>
+<h3>Source</h3>
+adtfunct.pas on line 393
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create___overloaded___0"><hr></a>
+
+<h2>TLessBinder.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> c : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IBinaryComparer.html">IBinaryComparer</a></span></span><span class="program_code">; p : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> disp : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Create">TFunctor.Create</a>
+<h3>Source</h3>
+adtfunct.pas on line 394
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TLessBinder.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Destroy">TFunctor.Destroy</a>
+<h3>Source</h3>
+adtfunct.pas on line 396
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Test"><hr></a>
+
+<h2>TLessBinder.Test</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Test(p : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-IUnaryPredicate.html#Test">IUnaryPredicate.Test</a>
+<h3>Source</h3>
+adtfunct.pas on line 397
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Test">Test</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Item"><hr></a>
+
+<h2>TLessBinder.Item</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> aitem2 </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> aitem2;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtfunct.pas on line 398
+</p><p>
+
+<h3>Description</h3>
+ The TxxxBinder functors are provided purely for efficiency reasons. They perfrom the same work as the functor obtained from the consequent application of Txxx (TLess, TEqual, ...) and then TBind2nd. The pointer passed to the constructor is not owned by the object and not disposed with its destruction unless you provide a disposer. ;
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html#Item">Item</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct__-TLessBinder.html">TLessBinder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtfunct.html">adtfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

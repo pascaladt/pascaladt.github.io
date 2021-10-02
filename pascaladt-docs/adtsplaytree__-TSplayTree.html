@@ -1,0 +1,1173 @@
+<html>
+<head>
+<title>Reference for TSplayTree</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TSplayTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSplayTree = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TBinarySearchTreeBase)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html">TBinarySearchTreeBase</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 250
+</p><p>
+
+<h3>Description</h3>
+ A splay tree. Guarantees amortized O(log(n)) complexity for all set operations. This data structure is very fast when a small number of all items is accessed most of the time, which is usually the case. However, if you know that the items are going to be distributed randomly, it would be better to use another structure with the worst-case O(log(n)) time, such as the AVL-tree, or the red-black tree..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a splay tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Has">Has</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Amortized O(log(n)), worst-case O(n).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items in the set equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> into the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but uses <span class="local_symbol">pos</span> as a hint where to insert.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes all items equal to <span class="local_symbol">ptr</span> from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at <span class="local_symbol">pos</span> from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#LowerBoundNode">LowerBoundNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first node with item &gt;= aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> at proper position in the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TSplayTree.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Create">TBinarySearchTreeBase.Create</a>, <a href="adtcont__-TSetAdt.html#Create">TSetAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 277
+</p><p>
+
+<h3>Description</h3>
+ Creates a splay tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TSplayTree.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtsplaytree__-TSplayTree.html">TSplayTree</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#CreateCopy">TBinarySearchTreeBase.CreateCopy</a>, <a href="adtcont__-TSetAdt.html#CreateCopy">TSetAdt.CreateCopy</a>, <a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 279
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. Uses itemCopier to copy items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TSplayTree.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">TContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 282
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Has"><hr></a>
+
+<h2>TSplayTree.Has</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Has(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Has">TBinarySearchTreeBase.Has</a>, <a href="adtcont__-TSetAdt.html#Has">TSetAdt.Has</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 288
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Has">Has</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>TSplayTree.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Count">TBinarySearchTreeBase.Count</a>, <a href="adtcont__-TSetAdt.html#Count">TSetAdt.Count</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 291
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items in the set equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TSplayTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Insert">TBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 296
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> into the set. Returns true if self was inserted, or false if it cannot be inserted (this happens for non-multi (without repeated items) set when item equal to <span class="local_symbol">ptr</span> is already in the set).
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TSplayTree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Insert">TBinarySearchTreeBase.Insert</a>, <a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 299
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but uses <span class="local_symbol">pos</span> as a hint where to insert.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TSplayTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Delete">TBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 304
+</p><p>
+
+<h3>Description</h3>
+ Removes all items equal to <span class="local_symbol">ptr</span> from the set. Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(m*log(n)) where m is the number of deleted items, worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>TSplayTree.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#LowerBound">TBinarySearchTreeBase.LowerBound</a>, <a href="adtcont__-TSetAdt.html#LowerBound">TSetAdt.LowerBound</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 309
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>TSplayTree.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#UpperBound">TBinarySearchTreeBase.UpperBound</a>, <a href="adtcont__-TSetAdt.html#UpperBound">TSetAdt.UpperBound</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 312
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>TSplayTree.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIteratorRange.html">TSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#EqualRange">TBinarySearchTreeBase.EqualRange</a>, <a href="adtcont__-TSetAdt.html#EqualRange">TSetAdt.EqualRange</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 316
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(log(n)), worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TSplayTree.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 285
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TSplayTree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#Delete">TBinarySearchTreeBase.Delete</a>, <a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 306
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at <span class="local_symbol">pos</span> from the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBoundNode"><hr></a>
+
+<h2>TSplayTree.LowerBoundNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBoundNode(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#LowerBoundNode">TBinarySearchTreeBase.LowerBoundNode</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 267
+</p><p>
+
+<h3>Description</h3>
+ Returns the first node with item &gt;= aitem. Starts searching from node. Node can be nil.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#LowerBoundNode">LowerBoundNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertNode"><hr></a>
+
+<h2>TSplayTree.InsertNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InsertNode(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtbstree__-TBinarySearchTreeBase.html#InsertNode">TBinarySearchTreeBase.InsertNode</a>
+<h3>Source</h3>
+adtsplaytree.pas on line 272
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> at proper position in the tree. Starts searching from node. Returns the newly created node or nil if <span class="local_symbol">ptr</span> could not be inserted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree__-TSplayTree.html">TSplayTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsplaytree.html">adtsplaytree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

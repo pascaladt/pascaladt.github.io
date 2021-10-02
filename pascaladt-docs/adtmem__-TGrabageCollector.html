@@ -1,0 +1,621 @@
+<html>
+<head>
+<title>Reference for TGrabageCollector</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TGrabageCollector</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TGrabageCollector = </span><span class="program_code"><span class="keyword">class</span></span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtmem.pas on line 231
+</p><p>
+
+<h3>Description</h3>
+ A quasi-(grabage collector). This is used in container classes to keep track of their iterators. The idea is that each container object creates its own TGrabageCollector and uses it to track its iterators. When a container is destroyed or all iterators are invalidated by some operation, it calls FreeObjects to destroy all iterators. Each iterator calls UnregisterObject in its destructor, so that it is also safe (and efficient) to destroy them manually. This will work as long as you don't destroy (or otherwise use) 'grabage-collected' objects in another grabage-collected object's destructor. If you do this the behaviour is undefined!!!
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#RegisterObject">RegisterObject</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Registers obj in grabage collector.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#UnregisterObject">UnregisterObject</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Unregisters the object associated with the given handle.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#GetObject">GetObject</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns object corresponding to the given handle..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#FreeObjects">FreeObjects</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Destroys all registered objects.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#IsInGrabageCollector">IsInGrabageCollector</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the piece of code which calls it was invoked from inside this grabage collector.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#RegisteredObjects">RegisteredObjects</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TGrabageCollector.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 251
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TGrabageCollector.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 252
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RegisterObject"><hr></a>
+
+<h2>TGrabageCollector.RegisterObject</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RegisterObject(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> obj : </span><span class="program_code"><span class="global_symbol">TObject</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtmem.html#TCollectorObjectHandle">TCollectorObjectHandle</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 257
+</p><p>
+
+<h3>Description</h3>
+ Registers obj in grabage collector. Returns handle which can be later used to unregister the object. Do NOT call this method when obj is already registered within any grabage collector!.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#RegisterObject">RegisterObject</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UnregisterObject"><hr></a>
+
+<h2>TGrabageCollector.UnregisterObject</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UnregisterObject(handle : </span><span class="program_code"><span class="global_symbol"><a href="adtmem.html#TCollectorObjectHandle">TCollectorObjectHandle</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">TObject</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 260
+</p><p>
+
+<h3>Description</h3>
+ Unregisters the object associated with the given handle. Returns the unregistered object..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#UnregisterObject">UnregisterObject</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetObject"><hr></a>
+
+<h2>TGrabageCollector.GetObject</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetObject(handle : </span><span class="program_code"><span class="global_symbol"><a href="adtmem.html#TCollectorObjectHandle">TCollectorObjectHandle</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">TObject</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 262
+</p><p>
+
+<h3>Description</h3>
+ Returns object corresponding to the given handle..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#GetObject">GetObject</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FreeObjects"><hr></a>
+
+<h2>TGrabageCollector.FreeObjects</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> FreeObjects;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 265
+</p><p>
+
+<h3>Description</h3>
+ Destroys all registered objects. All handles that had been returned from RegisterObject are no longer valid.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#FreeObjects">FreeObjects</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsInGrabageCollector"><hr></a>
+
+<h2>TGrabageCollector.IsInGrabageCollector</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> IsInGrabageCollector : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> IsInMethod;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 272
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the piece of code which calls it was invoked from inside this grabage collector. Htis may be useful to avoid destroying grabage-collected objects in a destructor of another grabage-collected object, when the destructor is invoked from a grabage collector, but to destroy them otherwise.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#IsInGrabageCollector">IsInGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RegisteredObjects"><hr></a>
+
+<h2>TGrabageCollector.RegisteredObjects</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> RegisteredObjects : </span><span class="program_code"><span class="global_symbol">Cardinal</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FRegistered;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmem.pas on line 274
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html#RegisteredObjects">RegisteredObjects</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmem.html">adtmem</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

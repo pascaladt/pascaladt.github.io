@@ -1,0 +1,1831 @@
+<html>
+<head>
+<title>Reference for T23Tree</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>T23Tree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">T23Tree = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TConcatenableSortedSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a>
+<h3>Source</h3>
+adt23tree.pas on line 259
+</p><p>
+
+<h3>Description</h3>
+ 2-3 tree is a data structure that provides all set operations with worst-case O(log(n)) time. However, the complicated implementation of the methods (and thus large constant factors) make splay trees or AVL-trees better choices for ordinary usage as a set. Nevertheless, 2-3 trees support the additional Concatenate and Split operations which make it possible to use them also as concatenable priority queues..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Destroys the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the start iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Has">Has</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the given item is present in the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items in the set equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as below, but uses pos as a hint where to insert.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes all items equal to aitem from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt;= aitem, or Finish if container is empty (for TSortedSetAdt).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt; aitem, or Finish if container is empty (for TSortedSetAdt).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#First">First</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item according to ItemComparer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#ExtractFirst">ExtractFirst</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the first item from the tree and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Split">Split</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Splits itself into two trees according to the item aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns number of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at pos from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Concatenate">Concatenate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Concatenates aset with self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the container - removes all items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>T23Tree.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Create">TSetAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adt23tree.pas on line 334
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>T23Tree.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adt23tree__-T23Tree.html">T23Tree</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#CreateCopy">TSetAdt.CreateCopy</a>, <a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adt23tree.pas on line 337
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. ItemCopier may be nil only if cont is empty.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>T23Tree.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Destroy">TContainerAdt.Destroy</a>
+<h3>Source</h3>
+adt23tree.pas on line 340
+</p><p>
+
+<h3>Description</h3>
+ Destroys the tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>T23Tree.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">TContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adt23tree.pas on line 347
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>T23Tree.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Start">TSetAdt.Start</a>
+<h3>Source</h3>
+adt23tree.pas on line 352
+</p><p>
+
+<h3>Description</h3>
+ Returns the start iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>T23Tree.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Finish">TSetAdt.Finish</a>
+<h3>Source</h3>
+adt23tree.pas on line 354
+</p><p>
+
+<h3>Description</h3>
+ Returns the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Has"><hr></a>
+
+<h2>T23Tree.Has</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Has(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Has">TSetAdt.Has</a>
+<h3>Source</h3>
+adt23tree.pas on line 357
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the given item is present in the set.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Has">Has</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>T23Tree.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Count">TSetAdt.Count</a>
+<h3>Source</h3>
+adt23tree.pas on line 360
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items in the set equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>T23Tree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adt23tree.pas on line 364
+</p><p>
+
+<h3>Description</h3>
+ The same as below, but uses pos as a hint where to insert.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(n) if you give a wrong hint, usually O(1) if aitem is to be inserted just before/after pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>T23Tree.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adt23tree.pas on line 372
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the set. Returns true if self was inserted, or false if it cannot be inserted (this happens for non-multi (without repeated items) set when item equal to aitem is already in the set). If the item is not inserted it is not owned by the container and not disposed!
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>T23Tree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adt23tree.pas on line 379
+</p><p>
+
+<h3>Description</h3>
+ Removes all items equal to aitem from the set. Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(m*log(n)), where m is the number of deleted items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>T23Tree.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#LowerBound">TSetAdt.LowerBound</a>
+<h3>Source</h3>
+adt23tree.pas on line 382
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt;= aitem, or Finish if container is empty (for TSortedSetAdt).
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>T23Tree.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#UpperBound">TSetAdt.UpperBound</a>
+<h3>Source</h3>
+adt23tree.pas on line 385
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt; aitem, or Finish if container is empty (for TSortedSetAdt).
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>T23Tree.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIteratorRange.html">TSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#EqualRange">TSetAdt.EqualRange</a>
+<h3>Source</h3>
+adt23tree.pas on line 389
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="First"><hr></a>
+
+<h2>T23Tree.First</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> First : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSortedSetAdt.html#First">TSortedSetAdt.First</a>
+<h3>Source</h3>
+adt23tree.pas on line 391
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item according to ItemComparer.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#First">First</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractFirst"><hr></a>
+
+<h2>T23Tree.ExtractFirst</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractFirst : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSortedSetAdt.html#ExtractFirst">TSortedSetAdt.ExtractFirst</a>
+<h3>Source</h3>
+adt23tree.pas on line 394
+</p><p>
+
+<h3>Description</h3>
+ Removes the first item from the tree and returns it.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcont__-TSortedSetAdt.html#DeleteFirst">DeleteFirst</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#ExtractFirst">ExtractFirst</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Split"><hr></a>
+
+<h2>T23Tree.Split</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Split(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Split">TConcatenableSortedSetAdt.Split</a>
+<h3>Source</h3>
+adt23tree.pas on line 405
+</p><p>
+
+<h3>Description</h3>
+ Splits itself into two trees according to the item aitem. Every item smaller than or equal to aitem is left in the original tree, and every item larger than aitem goes to the newly created tree which is returned by this function.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Split">Split</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>T23Tree.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Empty">TContainerAdt.Empty</a>
+<h3>Source</h3>
+adt23tree.pas on line 410
+</p><p>
+
+<h3>Description</h3>
+ Returns true if container is empty. Equivalent to Size = 0, but may be faster.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>T23Tree.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Size">TContainerAdt.Size</a>
+<h3>Source</h3>
+adt23tree.pas on line 412
+</p><p>
+
+<h3>Description</h3>
+ Returns number of items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LogStatus"><hr></a>
+
+<h2>T23Tree.LogStatus</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> LogStatus(mName : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#LogStatus">TContainerAdt.LogStatus</a>
+<h3>Source</h3>
+adt23tree.pas on line 343
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>T23Tree.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+<h3>Source</h3>
+adt23tree.pas on line 350
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>T23Tree.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adt23tree.pas on line 375
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at pos from the set.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Concatenate"><hr></a>
+
+<h2>T23Tree.Concatenate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Concatenate(aset : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Concatenate">TConcatenableSortedSetAdt.Concatenate</a>
+<h3>Source</h3>
+adt23tree.pas on line 399
+</p><p>
+
+<h3>Description</h3>
+ Concatenates aset with self. Every item in one of the concatenated sets must be larger than or equal to every item in the other one. Aset is destroyed.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Concatenate">Concatenate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>T23Tree.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Clear">TContainerAdt.Clear</a>
+<h3>Source</h3>
+adt23tree.pas on line 407
+</p><p>
+
+<h3>Description</h3>
+ Clears the container - removes all items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

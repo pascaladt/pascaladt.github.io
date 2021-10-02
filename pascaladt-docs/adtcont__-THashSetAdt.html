@@ -1,0 +1,1373 @@
+<html>
+<head>
+<title>Reference for THashSetAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>THashSetAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">THashSetAdt = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TSetAdt.html">TSetAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adthash__-THashTable.html">THashTable</a>
+<h3>Source</h3>
+adtcont.pas on line 508
+</p><p>
+
+<h3>Description</h3>
+ A set that uses hashing.
+</p><p>
+
+<h3>See also</h3>
+<a href="adthash.html">adthash</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#NeedsHasher">NeedsHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the minimal allowed capacity for the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Rehashes the set making it approximately 2^EX times larger (i.e. the capacity is increased (decreased)).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Hasher">Hasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the hasher used to hash items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the capacity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MaxFillRatio">MaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Maximal value of (Size/Capacity)*100%.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MinFillRatio">MinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but minimal value.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#AutoShrink">AutoShrink</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If true then the table's capacity is decreased by half each time Size/Capacity goes below MinFillRatio.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the capacity that should be used for table with approximately 2^ex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ By default calls Rehash.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="NeedsHasher"><hr></a>
+
+<h2>THashSetAdt.NeedsHasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">class</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NeedsHasher : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#NeedsHasher">TSetAdt.NeedsHasher</a>
+<h3>Source</h3>
+adtcont.pas on line 538
+</p><p>
+
+<h3>Description</h3>
+ Returns true.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#NeedsHasher">NeedsHasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MinCapacity"><hr></a>
+
+<h2>THashSetAdt.MinCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> MinCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 548
+</p><p>
+
+<h3>Description</h3>
+ Returns the minimal allowed capacity for the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LogStatus"><hr></a>
+
+<h2>THashSetAdt.LogStatus</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> LogStatus(mname : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#LogStatus">TContainerAdt.LogStatus</a>
+<h3>Source</h3>
+adtcont.pas on line 535
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Rehash"><hr></a>
+
+<h2>THashSetAdt.Rehash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Rehash(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 546
+</p><p>
+
+<h3>Description</h3>
+ Rehashes the set making it approximately 2^EX times larger (i.e. the capacity is increased (decreased)). Ex may be negative, but the resulting capacity of the set cannot be less than its minimal allowed value.
+</p><p>
+
+<h3>Precondition</h3>
+ Capacity * 2^ex &gt;= MinCapacity.
+</p><p>
+
+<h3>Postcondition</h3>
+ Capacity = approx. Old Capacity * 2^ex.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Hasher"><hr></a>
+
+<h2>THashSetAdt.Hasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Hasher : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IHasher.html">IHasher</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FHasher </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> FHasher;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 550
+</p><p>
+
+<h3>Description</h3>
+ Returns the hasher used to hash items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Hasher">Hasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Capacity"><hr></a>
+
+<h2>THashSetAdt.Capacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetCapacity </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetCapacity;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 557
+</p><p>
+
+<h3>Description</h3>
+ Returns the capacity. In hash sets it is not necessarily the maximal number of items allowed, but rather the number of free buckets or slots or whatever that influences the performance of the set. When assigning to this property the set rehashes itself to have the capacity closest to the given value.
+</p><p>
+
+<h3>Invariant</h3>
+ Capacity &gt;= MinCapacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MaxFillRatio"><hr></a>
+
+<h2>THashSetAdt.MaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> MaxFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetMaxFillRatio </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetMaxFillRatio;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 561
+</p><p>
+
+<h3>Description</h3>
+ Maximal value of (Size/Capacity)*100%. The default is 80%. This shouldn't be less than 50%
+</p><p>
+
+<h3>Invariant</h3>
+ MaxFillRatio &gt;= 50%.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MaxFillRatio">MaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MinFillRatio"><hr></a>
+
+<h2>THashSetAdt.MinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> MinFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetMinFillRatio </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetMinFillRatio;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 565
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but minimal value. The default is 10%. This should be larger than MaxFillRatio/2.
+</p><p>
+
+<h3>Invariant</h3>
+ MinFillRatio &gt; MaxFillRatio/2.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#MinFillRatio">MinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AutoShrink"><hr></a>
+
+<h2>THashSetAdt.AutoShrink</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> AutoShrink : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FAutoShrink </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> FAutoShrink;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 569
+</p><p>
+
+<h3>Description</h3>
+ If true then the table's capacity is decreased by half each time Size/Capacity goes below MinFillRatio. This may be useful for sparing memory. False by default.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#AutoShrink">AutoShrink</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>THashSetAdt.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Create">TSetAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adtcont.pas on line 516
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>THashSetAdt.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-THashSetAdt.html">THashSetAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#CreateCopy">TSetAdt.CreateCopy</a>, <a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtcont.pas on line 517
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>THashSetAdt.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 523
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CalculateCapacity"><hr></a>
+
+<h2>THashSetAdt.CalculateCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CalculateCapacity(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 527
+</p><p>
+
+<h3>Description</h3>
+ Returns the capacity that should be used for table with approximately 2^ex. This simply converts FTableSize to FCapacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMaxFillRatio"><hr></a>
+
+<h2>THashSetAdt.GetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMaxFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 528
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMinFillRatio"><hr></a>
+
+<h2>THashSetAdt.GetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMinFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 530
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BasicSwap"><hr></a>
+
+<h2>THashSetAdt.BasicSwap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BasicSwap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#BasicSwap">TSetAdt.BasicSwap</a>, <a href="adtcontbase__-TContainerAdt.html#BasicSwap">TContainerAdt.BasicSwap</a>
+<h3>Source</h3>
+adtcont.pas on line 520
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetCapacity"><hr></a>
+
+<h2>THashSetAdt.SetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetCapacity(cap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 522
+</p><p>
+
+<h3>Description</h3>
+ By default calls Rehash.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMaxFillRatio"><hr></a>
+
+<h2>THashSetAdt.SetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMaxFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 529
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMinFillRatio"><hr></a>
+
+<h2>THashSetAdt.SetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMinFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 531
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

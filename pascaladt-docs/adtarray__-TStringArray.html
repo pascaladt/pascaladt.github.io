@@ -1,0 +1,2211 @@
+<html>
+<head>
+<title>Reference for TStringArray</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringArray = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringArrayAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TStringArrayAdt.html">TStringArrayAdt</a>
+<h3>Source</h3>
+adtarray.pas on line 465
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ AfirstIndex is the base index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but assumes <span class="local_symbol">afirstIndex</span> = 0.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of <span class="local_symbol">cont</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Destroyes the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator pointing to the first element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the one beyond last element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the start iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at the given index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes n items beginning with start.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Back">Back</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at the back.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Front">Front</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at the front.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#LowIndex">LowIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the lowest index in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#HighIndex">HighIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the highest index in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#SetLowIndex">SetLowIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the lowest (first) index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Swaps self with <span class="local_symbol">cont</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the element at the given index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts item at index, i.e. the new element will be at position index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes element at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes aitem at the front.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the element at the back of the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the element at the front of the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the container - removes all items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the current capacity of the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the capacity to cap, but only if cap is bigger than the current capacity.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringArray.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(afirstIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringListAdt.html#Create">TStringListAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtarray.pas on line 480
+</p><p>
+
+<h3>Description</h3>
+ AfirstIndex is the base index. I.e. the first index at which the array starts.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create___overloaded___0"><hr></a>
+
+<h2>TStringArray.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringListAdt.html#Create">TStringListAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtarray.pas on line 482
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but assumes <span class="local_symbol">afirstIndex</span> = 0.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TStringArray.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtarray__-TStringArray.html">TStringArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#CreateCopy">TStringContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtarray.pas on line 485
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of <span class="local_symbol">cont</span>. If <span class="local_symbol">itemCopier</span> = nil then does not copy the items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TStringArray.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Destroy">TStringContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtarray.pas on line 488
+</p><p>
+
+<h3>Description</h3>
+ Destroyes the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessStart"><hr></a>
+
+<h2>TStringArray.RandomAccessStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#RandomAccessStart">TStringRandomAccessContainerAdt.RandomAccessStart</a>
+<h3>Source</h3>
+adtarray.pas on line 490
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator pointing to the first element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessFinish"><hr></a>
+
+<h2>TStringArray.RandomAccessFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringRandomAccessIterator.html">TStringRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#RandomAccessFinish">TStringRandomAccessContainerAdt.RandomAccessFinish</a>
+<h3>Source</h3>
+adtarray.pas on line 492
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the one beyond last element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TStringArray.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtarray__-TStringArrayIterator.html">TStringArrayIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtarray.pas on line 494
+</p><p>
+
+<h3>Description</h3>
+ Returns the start iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TStringArray.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtarray__-TStringArrayIterator.html">TStringArrayIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtarray.pas on line 496
+</p><p>
+
+<h3>Description</h3>
+ Returns the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TStringArray.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#CopySelf">TStringContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtarray.pas on line 498
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TStringArray.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#GetItem">TStringRandomAccessContainerAdt.GetItem</a>
+<h3>Source</h3>
+adtarray.pas on line 503
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at the given index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TStringArray.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(astart : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#Delete">TStringRandomAccessContainerAdt.Delete</a>, <a href="adtcont__-TStringListAdt.html#Delete">TStringListAdt.Delete</a>
+<h3>Source</h3>
+adtarray.pas on line 515
+</p><p>
+
+<h3>Description</h3>
+ Deletes n items beginning with start.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TStringArray.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#Extract">TStringRandomAccessContainerAdt.Extract</a>, <a href="adtcont__-TStringListAdt.html#Extract">TStringListAdt.Extract</a>
+<h3>Source</h3>
+adtarray.pas on line 519
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it. Returns the removed item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Back"><hr></a>
+
+<h2>TStringArray.Back</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Back : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringDequeAdt.html#Back">TStringDequeAdt.Back</a>
+<h3>Source</h3>
+adtarray.pas on line 530
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at the back.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Back">Back</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Front"><hr></a>
+
+<h2>TStringArray.Front</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Front : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringQueueAdt.html#Front">TStringQueueAdt.Front</a>
+<h3>Source</h3>
+adtarray.pas on line 532
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at the front.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Front">Front</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TStringArray.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Empty">TStringContainerAdt.Empty</a>
+<h3>Source</h3>
+adtarray.pas on line 537
+</p><p>
+
+<h3>Description</h3>
+ Returns true if container is empty. Equivalent to Size = 0, but may be faster.
+</p><p>
+
+<h3>Complexity</h3>
+ Guaranteed worst-case O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TStringArray.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Size">TStringContainerAdt.Size</a>
+<h3>Source</h3>
+adtarray.pas on line 541
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items.
+</p><p>
+
+<h3>Complexity</h3>
+ Guaranteed average, amortized or worst-case O(1) and never more than worst-case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowIndex"><hr></a>
+
+<h2>TStringArray.LowIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#LowIndex">TStringRandomAccessContainerAdt.LowIndex</a>
+<h3>Source</h3>
+adtarray.pas on line 543
+</p><p>
+
+<h3>Description</h3>
+ Returns the lowest index in the collection.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#LowIndex">LowIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="HighIndex"><hr></a>
+
+<h2>TStringArray.HighIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> HighIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#HighIndex">TStringRandomAccessContainerAdt.HighIndex</a>
+<h3>Source</h3>
+adtarray.pas on line 545
+</p><p>
+
+<h3>Description</h3>
+ Returns the highest index in the collection.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#HighIndex">HighIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetLowIndex"><hr></a>
+
+<h2>TStringArray.SetLowIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SetLowIndex(ind : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtarray.pas on line 547
+</p><p>
+
+<h3>Description</h3>
+ Sets the lowest (first) index. Returns the old one;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#SetLowIndex">SetLowIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TStringArray.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Swap">TStringContainerAdt.Swap</a>
+<h3>Source</h3>
+adtarray.pas on line 501
+</p><p>
+
+<h3>Description</h3>
+ Swaps self with <span class="local_symbol">cont</span>.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Swap">TStringContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TStringArray.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#SetItem">TStringRandomAccessContainerAdt.SetItem</a>
+<h3>Source</h3>
+adtarray.pas on line 505
+</p><p>
+
+<h3>Description</h3>
+ Sets the element at the given index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringArray.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#Insert">TStringRandomAccessContainerAdt.Insert</a>, <a href="adtcont__-TStringListAdt.html#Insert">TStringListAdt.Insert</a>
+<h3>Source</h3>
+adtarray.pas on line 509
+</p><p>
+
+<h3>Description</h3>
+ Inserts item at index, i.e. the new element will be at position index. Items from range &lt;index,finish) are moved rightwards..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TStringArray.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#Delete">TStringRandomAccessContainerAdt.Delete</a>, <a href="adtcont__-TStringListAdt.html#Delete">TStringListAdt.Delete</a>
+<h3>Source</h3>
+adtarray.pas on line 513
+</p><p>
+
+<h3>Description</h3>
+ Deletes element at index. All items after index are moved leftwards.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushBack"><hr></a>
+
+<h2>TStringArray.PushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushBack(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringQueueAdt.html#PushBack">TStringQueueAdt.PushBack</a>
+<h3>Source</h3>
+adtarray.pas on line 521
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushFront"><hr></a>
+
+<h2>TStringArray.PushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushFront(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringDequeAdt.html#PushFront">TStringDequeAdt.PushFront</a>
+<h3>Source</h3>
+adtarray.pas on line 523
+</p><p>
+
+<h3>Description</h3>
+ Pushes aitem at the front.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopBack"><hr></a>
+
+<h2>TStringArray.PopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopBack; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringDequeAdt.html#PopBack">TStringDequeAdt.PopBack</a>
+<h3>Source</h3>
+adtarray.pas on line 525
+</p><p>
+
+<h3>Description</h3>
+ Deletes the element at the back of the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopFront"><hr></a>
+
+<h2>TStringArray.PopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopFront; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringQueueAdt.html#PopFront">TStringQueueAdt.PopFront</a>
+<h3>Source</h3>
+adtarray.pas on line 528
+</p><p>
+
+<h3>Description</h3>
+ Deletes the element at the front of the container.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TStringArray.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Clear">TStringContainerAdt.Clear</a>
+<h3>Source</h3>
+adtarray.pas on line 534
+</p><p>
+
+<h3>Description</h3>
+ Clears the container - removes all items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>TStringArray.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#GetCapacity">TStringRandomAccessContainerAdt.GetCapacity</a>
+<h3>Source</h3>
+adtarray.pas on line 472
+</p><p>
+
+<h3>Description</h3>
+ Returns the current capacity of the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetCapacity"><hr></a>
+
+<h2>TStringArray.SetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetCapacity(cap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringRandomAccessContainerAdt.html#SetCapacity">TStringRandomAccessContainerAdt.SetCapacity</a>
+<h3>Source</h3>
+adtarray.pas on line 475
+</p><p>
+
+<h3>Description</h3>
+ Sets the capacity to cap, but only if cap is bigger than the current capacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

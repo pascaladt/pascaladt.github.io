@@ -1,0 +1,567 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtavltree</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtmem.html">adtmem</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, <a href="adtcont.html">adtcont</a>, <a href="adtbintree.html">adtbintree</a>, <a href="adtbstree.html">adtbstree</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides the AVL-tree (<a href="adtavltree__-TAvlTree.html">TAvlTree</a>). The AVL-tree is a data structure allowing all set operations to be performed in worst-case O(log(n)) time and it keeps items sorted..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TAvlTree.html">TAvlTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a set using the AVL-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TStringAvlTree.html">TStringAvlTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a set using the AVL-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree__-TIntegerAvlTree.html">TIntegerAvlTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a set using the AVL-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#TAvlTreeNode">TAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#TStringAvlTreeNode">TStringAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#TIntegerAvlTreeNode">TIntegerAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#PAvlTreeNode">PAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#PStringAvlTreeNode">PStringAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtavltree.html#PIntegerAvlTreeNode">PIntegerAvlTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="TAvlTreeNode"><hr></a>
+
+<h2>TAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TAvlTreeNode = </span><span class="program_code"><span class="keyword">packed</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftChild, RightChild : </span><span class="program_code"><span class="global_symbol"><a href="adtavltree.html#PAvlTreeNode">PAvlTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> bf : </span><span class="program_code"><span class="global_symbol"><a href="adtopers.html#-">-</a></span></span><span class="program_code"> 1..1;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 246
+</p><p>
+
+<h3>Description</h3>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtbintree.html#TBinaryTreeNode">TBinaryTreeNode</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#TAvlTreeNode">TAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringAvlTreeNode"><hr></a>
+
+<h2>TStringAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringAvlTreeNode = </span><span class="program_code"><span class="keyword">packed</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftChild, RightChild : </span><span class="program_code"><span class="global_symbol"><a href="adtavltree.html#PStringAvlTreeNode">PStringAvlTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> bf : </span><span class="program_code"><span class="global_symbol"><a href="adtopers.html#-">-</a></span></span><span class="program_code"> 1..1;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 350
+</p><p>
+
+<h3>Description</h3>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtbintree.html#TStringBinaryTreeNode">TStringBinaryTreeNode</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#TStringAvlTreeNode">TStringAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerAvlTreeNode"><hr></a>
+
+<h2>TIntegerAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerAvlTreeNode = </span><span class="program_code"><span class="keyword">packed</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftChild, RightChild : </span><span class="program_code"><span class="global_symbol"><a href="adtavltree.html#PIntegerAvlTreeNode">PIntegerAvlTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> bf : </span><span class="program_code"><span class="global_symbol"><a href="adtopers.html#-">-</a></span></span><span class="program_code"> 1..1;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 454
+</p><p>
+
+<h3>Description</h3>
+ This record should be packed to prevent the compiler from re-arranging the order of the fields.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtbintree.html#TIntegerBinaryTreeNode">TIntegerBinaryTreeNode</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#TIntegerAvlTreeNode">TIntegerAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PAvlTreeNode"><hr></a>
+
+<h2>PAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PAvlTreeNode = ^TAvlTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 243
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#PAvlTreeNode">PAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringAvlTreeNode"><hr></a>
+
+<h2>PStringAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringAvlTreeNode = ^TStringAvlTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 347
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#PStringAvlTreeNode">PStringAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerAvlTreeNode"><hr></a>
+
+<h2>PIntegerAvlTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerAvlTreeNode = ^TIntegerAvlTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtavltree.pas on line 451
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtavltree.html#PIntegerAvlTreeNode">PIntegerAvlTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtavltree.html">adtavltree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

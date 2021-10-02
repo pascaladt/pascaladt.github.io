@@ -1,0 +1,1045 @@
+<html>
+<head>
+<title>Reference for TIntegerBinomialQueue</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerBinomialQueue</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerBinomialQueue = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerPriorityQueueAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html">TIntegerPriorityQueueAdt</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 594
+</p><p>
+
+<h3>Description</h3>
+ Implements a binomial priority queue. A binomial priority queue is a data structure allowing to perform all concatenable priority queue operations in O(log(n)). In contrast to an ordinary heap, where the <a href="adtbinomqueue__-TIntegerBinomialQueue.html#Merge">Merge</a> operation takes O(n) time, in a binomial queue it may be performed in O(log(n)) time. On the other hand, the <a href="adtbinomqueue__-TIntegerBinomialQueue.html#First">First</a> operation takes O(log(n)) time instead of O(1) like in an ordinary heap. However, you amy always pre-fetch and cache the item if you find it necessary;.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the start iterator into the binomial queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#First">First</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ O(log(n));.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#ExtractFirst">ExtractFirst</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item with the highest priority, i.e. the one that comes first in a chain of comparisons, e.g. if you use integers as items and &lt; as comparison this would be actually the smallest integer in the queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ O(log(n));.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Merge">Merge</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ <span class="local_symbol">aqueue</span> Must be a TIntegerBinomialQueue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerBinomialQueue.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#Create">TIntegerPriorityQueueAdt.Create</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#Create">TIntegerContainerAdt.Create</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 630
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TIntegerBinomialQueue.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#CreateCopy">TIntegerPriorityQueueAdt.CreateCopy</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#CreateCopy">TIntegerContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 631
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TIntegerBinomialQueue.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Destroy">TIntegerContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 633
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TIntegerBinomialQueue.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtbinomqueue__-TIntegerBinomialQueueIterator.html">TIntegerBinomialQueueIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbinomqueue.pas on line 635
+</p><p>
+
+<h3>Description</h3>
+ Returns the start iterator into the binomial queue.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TIntegerBinomialQueue.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtbinomqueue__-TIntegerBinomialQueueIterator.html">TIntegerBinomialQueueIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbinomqueue.pas on line 637
+</p><p>
+
+<h3>Description</h3>
+ Returns the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerBinomialQueue.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CopySelf">TIntegerContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 638
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="First"><hr></a>
+
+<h2>TIntegerBinomialQueue.First</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> First : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#First">TIntegerPriorityQueueAdt.First</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 647
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#First">First</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractFirst"><hr></a>
+
+<h2>TIntegerBinomialQueue.ExtractFirst</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractFirst : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#ExtractFirst">TIntegerPriorityQueueAdt.ExtractFirst</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 653
+</p><p>
+
+<h3>Description</h3>
+ Removes the item with the highest priority, i.e. the one that comes first in a chain of comparisons, e.g. if you use integers as items and &lt; as comparison this would be actually the smallest integer in the queue. Returns the removed item.
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n)).
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcont__-TSortedSetAdt.html#DeleteFirst">DeleteFirst</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#ExtractFirst">ExtractFirst</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TIntegerBinomialQueue.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Empty">TIntegerContainerAdt.Empty</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 658
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TIntegerBinomialQueue.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Size">TIntegerContainerAdt.Size</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 659
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TIntegerBinomialQueue.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 641
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerBinomialQueue.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#Insert">TIntegerPriorityQueueAdt.Insert</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 644
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Merge"><hr></a>
+
+<h2>TIntegerBinomialQueue.Merge</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Merge(aqueue : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TIntegerPriorityQueueAdt.html">TIntegerPriorityQueueAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#Merge">TIntegerPriorityQueueAdt.Merge</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 656
+</p><p>
+
+<h3>Description</h3>
+ <span class="local_symbol">aqueue</span> Must be a TIntegerBinomialQueue.
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n)).
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcont__-TIntegerPriorityQueueAdt.html#Merge">TIntegerPriorityQueueAdt.Merge</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Merge">Merge</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TIntegerBinomialQueue.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Clear">TIntegerContainerAdt.Clear</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 657
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

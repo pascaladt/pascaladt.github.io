@@ -1,0 +1,671 @@
+<html>
+<head>
+<title>Reference for TIntegerDefinedOrderIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerDefinedOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerDefinedOrderIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerBidirectionalIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>, <a href="adtbinomqueue__-TIntegerBinomialQueueIterator.html">TIntegerBinomialQueueIterator</a>
+<h3>Source</h3>
+adtiters.pas on line 1492
+</p><p>
+
+<h3>Description</h3>
+ { An iterator into a string } TIntegerStringIterator = class (TIntegerRandomAccessIterator) public { returns the character from the position pointed by self } function GetChar : CharType. Virtual. Abstract. { Sets the character at the position pointed to by the iterator to aitem } procedure SetChar(c : CharType). Virtual. Abstract. { Returns the item from the position pointed by self } function GetItem : Integer. Override. { Sets the item at the position pointed to by the iterator to aitem } procedure SetItem(aitem : Integer). Override. End.
+</p><p>
+ An iterator into a defined-order container. The container may be a set, a map, a priority queue or anything with a fixed, internal order of items. Syntatically, TIntegerDefinedOrderIterator is the same as <a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a>, but most of the modifying methods work differently as it points into a container with a defined order of items. <a href="adtiters__-TIntegerDefinedOrderIterator.html#ExchangeItem">ExchangeItem</a> Raises an exception - <a href="adtexcept__-EDefinedOrder.html">EDefinedOrder</a>. <a href="adtiters__-TIntegerDefinedOrderIterator.html#Insert">Insert</a> Does not insert before a position, but at the proper place in the container and moves to the newly inserted item or to finish if the item could not be inserted. <a href="adtiters__-TIntegerDefinedOrderIterator.html#SetItem">SetItem</a> Works like <a href="adtiters__-TIntegerDefinedOrderIterator.html#Delete">Delete</a> + <a href="adtiters__-TIntegerDefinedOrderIterator.html#Insert">Insert</a>. If the item returned by <a href="adtiters__-TIntegerDefinedOrderIterator.html#GetItem">GetItem</a> (or the <a href="adtiters__-TIntegerDefinedOrderIterator.html#Item">Item</a> property) is changed in a way that changes its place in the container (i.e you the key or whatever your comparison functor uses is changed), then <a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a> should be called immediately. Other methods work as usual.
+</p><p>
+ Note that it is possible to use iterator of this type with many PascalAdt algorithms (and that's why it inherits from <a href="adtiters__-TIntegerBidirectionalIterator.html">TIntegerBidirectionalIterator</a>, although it violates some of its method specifications). However, you should always make sure that the algorithm is not marked as a non-definded-order-iterator-only-algorithm.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#IsDefinedOrder">TIntegerContainerAdt.IsDefinedOrder</a>, <a href="adtcont__-TIntegerDefinedOrderContainerAdt.html">TIntegerDefinedOrderContainerAdt</a>, <a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>, <a href="adtmap__-TMapIterator.html">TMapIterator</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item from the position pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at the current position from the container and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Raises <a href="adtexcept__-EDefinedOrder.html">EDefinedOrder</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> at a proper place in the container and moves to the newly inserted item, or to finish if the item could not be inserted.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Assigns <span class="local_symbol">ptr</span> to the item at the position pointed by the iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the current item to its proper place in the container, if its not already in its proper place.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Item">Item</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#GetItem">TIntegerIterator.GetItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1508
+</p><p>
+
+<h3>Description</h3>
+ Returns the item from the position pointed by self. If you change the returned item in such a way that its key/order within the container is changed, then you have to call <a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a> before attempting to use the container or the iterator.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Extract">TIntegerForwardIterator.Extract</a>
+<h3>Source</h3>
+adtiters.pas on line 1529
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at the current position from the container and returns it. The iterator is moved either to the <em>beginning</em> of the container or to the next item. This because the container probably has to be reorganised after deletion to keep the order of items, and thus it may not always be possible, in general, to find such a position from which the iteration through the items could be continued without visiting any already visited items and still visiting all items not yet visited.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#ExchangeItem">TIntegerIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1495
+</p><p>
+
+<h3>Description</h3>
+ Raises <a href="adtexcept__-EDefinedOrder.html">EDefinedOrder</a>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Insert">TIntegerForwardIterator.Insert</a>
+<h3>Source</h3>
+adtiters.pas on line 1499
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> at a proper place in the container and moves to the newly inserted item, or to finish if the item could not be inserted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#SetItem">TIntegerIterator.SetItem</a>
+<h3>Source</h3>
+adtiters.pas on line 1502
+</p><p>
+
+<h3>Description</h3>
+ Assigns <span class="local_symbol">ptr</span> to the item at the position pointed by the iterator. Calls <a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a> automatically.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ResetItem"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.ResetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ResetItem; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtiters.pas on line 1519
+</p><p>
+
+<h3>Description</h3>
+ Moves the current item to its proper place in the container, if its not already in its proper place. This should be called whenever any operation changes an item returned by GetItem in such a way that its key/priority/order within container is changed. If you change the key of an item returned by GetItem and not call this method, then the behaviour is undefined. Moves the iterator so that it still points to the item, although the item changes its position. Note that due to this behaviour you may miss visiting some items or visit some others twice.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#GetItem">GetItem</a>, <a href="adtiters__-TIntegerDefinedOrderIterator.html#Extract">Extract</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#ResetItem">ResetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Delete">TIntegerForwardIterator.Delete</a>
+<h3>Source</h3>
+adtiters.pas on line 1532
+</p><p>
+
+<h3>Description</h3>
+ The same as <a href="adtiters__-TIntegerDefinedOrderIterator.html#Extract">Extract</a>, but deletes the item instead of returning it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Item"><hr></a>
+
+<h2>TIntegerDefinedOrderIterator.Item</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetItem </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetItem;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#Item">TIntegerIterator.Item</a>
+<h3>Source</h3>
+adtiters.pas on line 1533
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Item">Item</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

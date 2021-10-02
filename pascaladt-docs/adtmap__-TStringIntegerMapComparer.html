@@ -1,0 +1,301 @@
+<html>
+<head>
+<title>Reference for TStringIntegerMapComparer</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringIntegerMapComparer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringIntegerMapComparer = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TFunctor, IBinaryComparer)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtfunct__-TFunctor.html">TFunctor</a>
+<h3>Implemented interface</h3>
+<a href="adtfunct__-IBinaryComparer.html">IBinaryComparer</a>
+<h3>Source</h3>
+adtmap.pas on line 2049
+</p><p>
+
+<h3>Description</h3>
+ The comparer that should be used with <a href="adtmap__-TStringIntegerMap.html">TStringIntegerMap</a>.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a map comparer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#Compare">Compare</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Compares the keys of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#KeyComparer">KeyComparer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html">TStringIntegerMapComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringIntegerMapComparer.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> keycmp : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringBinaryComparer.html">IStringBinaryComparer</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-TFunctor.html#Create">TFunctor.Create</a>
+<h3>Source</h3>
+adtmap.pas on line 2055
+</p><p>
+
+<h3>Description</h3>
+ Creates a map comparer. <span class="local_symbol">keycmp</span> Should compare keys;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html">TStringIntegerMapComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Compare"><hr></a>
+
+<h2>TStringIntegerMapComparer.Compare</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Compare(aitem1, aitem2 : </span><span class="program_code"><span class="global_symbol">TObject</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtfunct__-IBinaryComparer.html#Compare">IBinaryComparer.Compare</a>
+<h3>Source</h3>
+adtmap.pas on line 2057
+</p><p>
+
+<h3>Description</h3>
+ Compares the keys of items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#Compare">Compare</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html">TStringIntegerMapComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KeyComparer"><hr></a>
+
+<h2>TStringIntegerMapComparer.KeyComparer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> KeyComparer : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringBinaryComparer.html">IStringBinaryComparer</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> fkeycmp </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> fkeycmp;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtmap.pas on line 2058
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html#KeyComparer">KeyComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringIntegerMapComparer.html">TStringIntegerMapComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

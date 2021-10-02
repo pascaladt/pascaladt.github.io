@@ -1,0 +1,1695 @@
+<html>
+<head>
+<title>Reference for TBinaryTreeIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TBinaryTreeIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TBinaryTreeIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TBasicTreeIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TBasicTreeIterator.html">TBasicTreeIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 422
+</p><p>
+
+<h3>Description</h3>
+ An iterator into TBinaryTree.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Argnode is the node at which iterator will point.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an exact copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if iter and self point at the same node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns Item from the position pointed by self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the iterator together with its sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#SubTreeSize">SubTreeSize</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of nodes (items) in the subtree of self (self included).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a pre-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a post-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an in-order iterator pointing at the same item as self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns container into which self points.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsLeaf">IsLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the iterator points to a leaf.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsRoot">IsRoot</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the iterator points to the root.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsLeftChild">IsLeftChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the node is the left child of its parent.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsRightChild">IsRightChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the node is the right child of its parent.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#HasLeftChild">HasLeftChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the node has a left child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#HasRightChild">HasRightChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the node has a right child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the Item at the position pointed to by iterator to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the item pointed to by self with the one pointed to by the argument.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToParent">GoToParent</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves self to its parent.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToLeftChild">GoToLeftChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to point at its left child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToRightChild">GoToRightChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves iterator to point at its right child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InsertAsLeftChild">InsertAsLeftChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem as the left child of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InsertAsRightChild">InsertAsRightChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem as the right child of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TBinaryTreeIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(argnode : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PBinaryTreeNode">PBinaryTreeNode</a></span></span><span class="program_code">; tree : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree__-TBinaryTree.html">TBinaryTree</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Create">TIterator.Create</a>
+<h3>Source</h3>
+adtbintree.pas on line 430
+</p><p>
+
+<h3>Description</h3>
+ Argnode is the node at which iterator will point. Tree is the owner of this node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TBinaryTreeIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#CopySelf">TIterator.CopySelf</a>
+<h3>Source</h3>
+adtbintree.pas on line 432
+</p><p>
+
+<h3>Description</h3>
+ Returns an exact copy of self. I.e. copies all the data.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TBinaryTreeIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Equal">TIterator.Equal</a>
+<h3>Source</h3>
+adtbintree.pas on line 434
+</p><p>
+
+<h3>Description</h3>
+ Returns true if iter and self point at the same node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TBinaryTreeIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#GetItem">TIterator.GetItem</a>
+<h3>Source</h3>
+adtbintree.pas on line 436
+</p><p>
+
+<h3>Description</h3>
+ Returns Item from the position pointed by self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="DeleteSubTree"><hr></a>
+
+<h2>TBinaryTreeIterator.DeleteSubTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> DeleteSubTree : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#DeleteSubTree">TBasicTreeIterator.DeleteSubTree</a>
+<h3>Source</h3>
+adtbintree.pas on line 458
+</p><p>
+
+<h3>Description</h3>
+ Removes the iterator together with its sub-tree.
+</p><p>
+
+<h3>Complexity</h3>
+ O(m), where m is the number of items in the sub-tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#DeleteSubTree">DeleteSubTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SubTreeSize"><hr></a>
+
+<h2>TBinaryTreeIterator.SubTreeSize</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SubTreeSize : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#SubTreeSize">TBasicTreeIterator.SubTreeSize</a>
+<h3>Source</h3>
+adtbintree.pas on line 461
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of nodes (items) in the subtree of self (self included).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#SubTreeSize">SubTreeSize</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PreOrderIterator"><hr></a>
+
+<h2>TBinaryTreeIterator.PreOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PreOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPreOrderIterator.html">TPreOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#PreOrderIterator">TBasicTreeIterator.PreOrderIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 463
+</p><p>
+
+<h3>Description</h3>
+ Returns a pre-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#PreOrderIterator">PreOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PostOrderIterator"><hr></a>
+
+<h2>TBinaryTreeIterator.PostOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PostOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TPostOrderIterator.html">TPostOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#PostOrderIterator">TBasicTreeIterator.PostOrderIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 465
+</p><p>
+
+<h3>Description</h3>
+ Returns a post-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#PostOrderIterator">PostOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InOrderIterator"><hr></a>
+
+<h2>TBinaryTreeIterator.InOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InOrderIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TInOrderIterator.html">TInOrderIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#InOrderIterator">TBasicTreeIterator.InOrderIterator</a>
+<h3>Source</h3>
+adtbintree.pas on line 467
+</p><p>
+
+<h3>Description</h3>
+ Returns an in-order iterator pointing at the same item as self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InOrderIterator">InOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TBinaryTreeIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#Owner">TIterator.Owner</a>
+<h3>Source</h3>
+adtbintree.pas on line 469
+</p><p>
+
+<h3>Description</h3>
+ Returns container into which self points.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsLeaf"><hr></a>
+
+<h2>TBinaryTreeIterator.IsLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsLeaf : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#IsLeaf">TBasicTreeIterator.IsLeaf</a>
+<h3>Source</h3>
+adtbintree.pas on line 471
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the iterator points to a leaf.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsLeaf">IsLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsRoot"><hr></a>
+
+<h2>TBinaryTreeIterator.IsRoot</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsRoot : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#IsRoot">TBasicTreeIterator.IsRoot</a>
+<h3>Source</h3>
+adtbintree.pas on line 473
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the iterator points to the root.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsRoot">IsRoot</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsLeftChild"><hr></a>
+
+<h2>TBinaryTreeIterator.IsLeftChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsLeftChild : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 476
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the node is the left child of its parent. False for the root.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsLeftChild">IsLeftChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsRightChild"><hr></a>
+
+<h2>TBinaryTreeIterator.IsRightChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsRightChild : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 479
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the node is the right child of its parent. False for the root.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#IsRightChild">IsRightChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="HasLeftChild"><hr></a>
+
+<h2>TBinaryTreeIterator.HasLeftChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> HasLeftChild : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 481
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the node has a left child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#HasLeftChild">HasLeftChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="HasRightChild"><hr></a>
+
+<h2>TBinaryTreeIterator.HasRightChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> HasRightChild : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 483
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the node has a right child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#HasRightChild">HasRightChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TBinaryTreeIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#SetItem">TIterator.SetItem</a>
+<h3>Source</h3>
+adtbintree.pas on line 438
+</p><p>
+
+<h3>Description</h3>
+ Sets the Item at the position pointed to by iterator to aitem.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TBinaryTreeIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIterator.html">TIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIterator.html#ExchangeItem">TIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtbintree.pas on line 441
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the item pointed to by self with the one pointed to by the argument.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToParent"><hr></a>
+
+<h2>TBinaryTreeIterator.GoToParent</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToParent; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TBasicTreeIterator.html#GoToParent">TBasicTreeIterator.GoToParent</a>
+<h3>Source</h3>
+adtbintree.pas on line 443
+</p><p>
+
+<h3>Description</h3>
+ Moves self to its parent.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToParent">GoToParent</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToLeftChild"><hr></a>
+
+<h2>TBinaryTreeIterator.GoToLeftChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToLeftChild;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 445
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to point at its left child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToLeftChild">GoToLeftChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GoToRightChild"><hr></a>
+
+<h2>TBinaryTreeIterator.GoToRightChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> GoToRightChild;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 447
+</p><p>
+
+<h3>Description</h3>
+ Moves iterator to point at its right child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#GoToRightChild">GoToRightChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsLeftChild"><hr></a>
+
+<h2>TBinaryTreeIterator.InsertAsLeftChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsLeftChild(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 451
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem as the left child of self. Previous left child becomes the left child of the new node. Advances to newly inserted item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InsertAsLeftChild">InsertAsLeftChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertAsRightChild"><hr></a>
+
+<h2>TBinaryTreeIterator.InsertAsRightChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> InsertAsRightChild(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbintree.pas on line 455
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem as the right child of self. Previous righ child becomes the right child of the new node. Advances to newly inserted item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html#InsertAsRightChild">InsertAsRightChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree__-TBinaryTreeIterator.html">TBinaryTreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbintree.html">adtbintree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,639 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adt23tree</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtcont.html">adtcont</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtiters.html">adtiters</a>, <a href="adtmem.html">adtmem</a>, <a href="adtdarray.html">adtdarray</a>, <a href="adtutils.html">adtutils</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides an implementation of a 2-3 tree - a data structure that provides all set operations with the worst-case O(log(n)) time and can be used as a concatenable priority queue..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ 2-3 tree is a data structure that provides all set operations with worst-case O(log(n)) time.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-T23TreeIterator.html">T23TreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-TString23Tree.html">TString23Tree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ 2-3 tree is a data structure that provides all set operations with worst-case O(log(n)) time.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-TString23TreeIterator.html">TString23TreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-TInteger23Tree.html">TInteger23Tree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ 2-3 tree is a data structure that provides all set operations with worst-case O(log(n)) time.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree__-TInteger23TreeIterator.html">TInteger23TreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#T23TreeNode">T23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#TString23TreeNode">TString23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#TInteger23TreeNode">TInteger23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#P23TreeNode">P23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#PString23TreeNode">PString23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adt23tree.html#PInteger23TreeNode">PInteger23TreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="T23TreeNode"><hr></a>
+
+<h2>T23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">T23TreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent : </span><span class="program_code"><span class="global_symbol"><a href="adt23tree.html#P23TreeNode">P23TreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Child : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[1..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> P23TreeNode;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> LowItem : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[2..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> ItemType;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StoredItems : </span><span class="program_code"><span class="global_symbol">1</span></span><span class="program_code">..2;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 244
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#T23TreeNode">T23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TString23TreeNode"><hr></a>
+
+<h2>TString23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TString23TreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent : </span><span class="program_code"><span class="global_symbol"><a href="adt23tree.html#PString23TreeNode">PString23TreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Child : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[1..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> PString23TreeNode;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> LowItem : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[2..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> String;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StoredItems : </span><span class="program_code"><span class="global_symbol">1</span></span><span class="program_code">..2;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 472
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#TString23TreeNode">TString23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TInteger23TreeNode"><hr></a>
+
+<h2>TInteger23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TInteger23TreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent : </span><span class="program_code"><span class="global_symbol"><a href="adt23tree.html#PInteger23TreeNode">PInteger23TreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Child : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[1..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> PInteger23TreeNode;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> LowItem : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code">[2..3]</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Integer;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StoredItems : </span><span class="program_code"><span class="global_symbol">1</span></span><span class="program_code">..2;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 700
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#TInteger23TreeNode">TInteger23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="P23TreeNode"><hr></a>
+
+<h2>P23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">P23TreeNode = ^T23TreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 243
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#P23TreeNode">P23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PString23TreeNode"><hr></a>
+
+<h2>PString23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PString23TreeNode = ^TString23TreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 471
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#PString23TreeNode">PString23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PInteger23TreeNode"><hr></a>
+
+<h2>PInteger23TreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PInteger23TreeNode = ^TInteger23TreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adt23tree.pas on line 699
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adt23tree.html#PInteger23TreeNode">PInteger23TreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adt23tree.html">adt23tree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

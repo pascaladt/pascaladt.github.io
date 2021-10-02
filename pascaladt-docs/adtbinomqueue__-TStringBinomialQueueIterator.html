@@ -1,0 +1,1055 @@
+<html>
+<head>
+<title>Reference for TStringBinomialQueueIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringBinomialQueueIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringBinomialQueueIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringDefinedOrderIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html">TStringDefinedOrderIterator</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 498
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a binomial priority queue. Since <a href="adtbinomqueue__-TStringBinomialQueue.html">TStringBinomialQueue</a> is a defined-order container, some methods of this iterator work a bit different than usual.
+</p><p>
+
+<h3>See also</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html">TStringDefinedOrderIterator</a>, <a href="adtcont__-TStringDefinedOrderContainerAdt.html">TStringDefinedOrderContainerAdt</a>, <a href="adtcontbase__-TStringContainerAdt.html#IsDefinedOrder">TStringContainerAdt.IsDefinedOrder</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the item at the position of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at the current position from the binomial queue and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Worst-case O(log(n)).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the item at the current position.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ResetItem">ResetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This should be called whenever any operation changes an item returned by <a href="adtbinomqueue__-TStringBinomialQueueIterator.html#GetItem">GetItem</a> in such a way that its priority is changed.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Raises EDefinedOrder.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> into the queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(anode : </span><span class="program_code"><span class="global_symbol"><a href="adtbinomqueue.html#PStringBinomialTreeNode">PStringBinomialTreeNode</a></span></span><span class="program_code">; atreeindex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; acont : </span><span class="program_code"><span class="global_symbol"><a href="adtbinomqueue__-TStringBinomialQueue.html">TStringBinomialQueue</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Create">TStringIterator.Create</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 511
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TStringBinomialQueueIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#CopySelf">TStringIterator.CopySelf</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 513
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Equal"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Equal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Equal(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> Pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Equal">TStringIterator.Equal</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 514
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Equal">Equal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TStringBinomialQueueIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#GetItem">TStringDefinedOrderIterator.GetItem</a>, <a href="adtiters__-TStringIterator.html#GetItem">TStringIterator.GetItem</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 518
+</p><p>
+
+<h3>Description</h3>
+ Returns the item at the position of self. If you wish to change the returned item in a way that changes its item, then don't forget to call <a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ResetItem">ResetItem</a>;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#Extract">TStringDefinedOrderIterator.Extract</a>, <a href="adtiters__-TStringForwardIterator.html#Extract">TStringForwardIterator.Extract</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 543
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at the current position from the binomial queue and returns it. Moves <span class="local_symbol">self</span> to the <em>first</em> item in the container.
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TStringBinomialQueueIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#IsStart">TStringForwardIterator.IsStart</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 546
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsFinish"><hr></a>
+
+<h2>TStringBinomialQueueIterator.IsFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsFinish : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#IsFinish">TStringForwardIterator.IsFinish</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 547
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#IsFinish">IsFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Owner"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Owner</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Owner : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringIterator.html#Owner">TStringIterator.Owner</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 548
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Owner">Owner</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TStringBinomialQueueIterator.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#SetItem">TStringDefinedOrderIterator.SetItem</a>, <a href="adtiters__-TStringIterator.html#SetItem">TStringIterator.SetItem</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 523
+</p><p>
+
+<h3>Description</h3>
+ Sets the item at the current position. Calls <a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ResetItem">ResetItem</a> after setting the item.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)^2), if the new item has higher priority than the old one then worst-case O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ResetItem"><hr></a>
+
+<h2>TStringBinomialQueueIterator.ResetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ResetItem; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#ResetItem">TStringDefinedOrderIterator.ResetItem</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 532
+</p><p>
+
+<h3>Description</h3>
+ This should be called whenever any operation changes an item returned by <a href="adtbinomqueue__-TStringBinomialQueueIterator.html#GetItem">GetItem</a> in such a way that its priority is changed. If you change the priority of an item returned by GetItem and not call this method, then the behaviour is undefined. Moves the iterator so that it still points to the item, although the item changes its position.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(log(n)^2), if the new item has higher priority than the old one then worst-case O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ResetItem">ResetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeItem"><hr></a>
+
+<h2>TStringBinomialQueueIterator.ExchangeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeItem(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringIterator.html">TStringIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#ExchangeItem">TStringDefinedOrderIterator.ExchangeItem</a>, <a href="adtiters__-TStringIterator.html#ExchangeItem">TStringIterator.ExchangeItem</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 534
+</p><p>
+
+<h3>Description</h3>
+ Raises EDefinedOrder.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#ExchangeItem">ExchangeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringForwardIterator.html#Advance">TStringForwardIterator.Advance</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 535
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringBidirectionalIterator.html#Retreat">TStringBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 536
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringBinomialQueueIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TStringDefinedOrderIterator.html#Insert">TStringDefinedOrderIterator.Insert</a>, <a href="adtiters__-TStringForwardIterator.html#Insert">TStringForwardIterator.Insert</a>
+<h3>Source</h3>
+adtbinomqueue.pas on line 539
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> into the queue. Makes <span class="local_symbol">self</span> point to the newly inserted item.
+</p><p>
+
+<h3>Complexity</h3>
+ O(log(n));.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

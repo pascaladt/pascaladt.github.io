@@ -1,0 +1,1749 @@
+<html>
+<head>
+<title>Reference for TIntegerXorList</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerXorList</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerXorList = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerDoubleListAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TIntegerDoubleListAdt.html">TIntegerDoubleListAdt</a>
+<h3>Source</h3>
+adtlist.pas on line 1486
+</p><p>
+
+<h3>Description</h3>
+ Implements a XOR list. A XOR list is essentially a doubly-linked list, but it uses a dirty trick of xor'ing the next and previous node pointers together, thanks to which it uses the same amount of memory as a singly-linked list. Generally, TIntegerDoubleList should be used, and TIntegerXorList only in critical code where low memory usage is vital..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A copy-constructor.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self, i.e. copies all the data into the new object of then same type.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the first item in the list (the start iterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator pointing to one position after the end of list (the finish iterator).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all items in the range [start,finish).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Front">Front</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Back">Back</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns false.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts <span class="local_symbol">ptr</span> at the position <span class="local_symbol">pos</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item pointed to by the iterator pos.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Move">Move</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Move___overloaded___0">Move</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TIntegerXorList.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Create">TIntegerListAdt.Create</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#Create">TIntegerContainerAdt.Create</a>
+<h3>Source</h3>
+adtlist.pas on line 1516
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TIntegerXorList.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CreateCopy">TIntegerContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtlist.pas on line 1519
+</p><p>
+
+<h3>Description</h3>
+ A copy-constructor. Creates self as a copy of cont. Uses itemCopier to copy items from cont.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TIntegerXorList.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Destroy">TIntegerContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtlist.pas on line 1521
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerXorList.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#CopySelf">TIntegerContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtlist.pas on line 1524
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self, i.e. copies all the data into the new object of then same type.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ForwardStart"><hr></a>
+
+<h2>TIntegerXorList.ForwardStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#ForwardStart">TIntegerListAdt.ForwardStart</a>
+<h3>Source</h3>
+adtlist.pas on line 1528
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ForwardFinish"><hr></a>
+
+<h2>TIntegerXorList.ForwardFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#ForwardFinish">TIntegerListAdt.ForwardFinish</a>
+<h3>Source</h3>
+adtlist.pas on line 1529
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TIntegerXorList.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerXorListIterator.html">TIntegerXorListIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtlist.pas on line 1532
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the first item in the list (the start iterator).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TIntegerXorList.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtlist__-TIntegerXorListIterator.html">TIntegerXorListIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtlist.pas on line 1535
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator pointing to one position after the end of list (the finish iterator).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TIntegerXorList.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(astart, afinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 1543
+</p><p>
+
+<h3>Description</h3>
+ Deletes all items in the range [start,finish). Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n), where n is the number of items in the range.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerXorList.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Extract">TIntegerListAdt.Extract</a>
+<h3>Source</h3>
+adtlist.pas on line 1544
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Front"><hr></a>
+
+<h2>TIntegerXorList.Front</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Front : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#Front">TIntegerQueueAdt.Front</a>
+<h3>Source</h3>
+adtlist.pas on line 1548
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Front">Front</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Back"><hr></a>
+
+<h2>TIntegerXorList.Back</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Back : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#Back">TIntegerDequeAdt.Back</a>
+<h3>Source</h3>
+adtlist.pas on line 1549
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Back">Back</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TIntegerXorList.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Empty">TIntegerContainerAdt.Empty</a>
+<h3>Source</h3>
+adtlist.pas on line 1555
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TIntegerXorList.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Size">TIntegerContainerAdt.Size</a>
+<h3>Source</h3>
+adtlist.pas on line 1556
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TIntegerXorList.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#IsDefinedOrder">TIntegerQueueAdt.IsDefinedOrder</a>, <a href="adtcontbase__-TIntegerContainerAdt.html#IsDefinedOrder">TIntegerContainerAdt.IsDefinedOrder</a>
+<h3>Source</h3>
+adtlist.pas on line 1558
+</p><p>
+
+<h3>Description</h3>
+ Returns false.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TIntegerXorList.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TIntegerContainerAdt.html">TIntegerContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>
+<h3>Source</h3>
+adtlist.pas on line 1527
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Swap">TIntegerContainerAdt.Swap</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerXorList.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Insert">TIntegerListAdt.Insert</a>
+<h3>Source</h3>
+adtlist.pas on line 1537
+</p><p>
+
+<h3>Description</h3>
+ Inserts <span class="local_symbol">ptr</span> at the position <span class="local_symbol">pos</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerXorList.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtlist.pas on line 1539
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item pointed to by the iterator pos.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Move"><hr></a>
+
+<h2>TIntegerXorList.Move</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Move(Source, Dest : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Move">TIntegerListAdt.Move</a>
+<h3>Source</h3>
+adtlist.pas on line 1545
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Move">Move</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Move___overloaded___0"><hr></a>
+
+<h2>TIntegerXorList.Move</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Move(SourceStart, SourceFinish, Dest : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Move">TIntegerListAdt.Move</a>
+<h3>Source</h3>
+adtlist.pas on line 1546
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Move___overloaded___0">Move</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushBack"><hr></a>
+
+<h2>TIntegerXorList.PushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushBack(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#PushBack">TIntegerQueueAdt.PushBack</a>
+<h3>Source</h3>
+adtlist.pas on line 1550
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PushBack">PushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopBack"><hr></a>
+
+<h2>TIntegerXorList.PopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopBack; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#PopBack">TIntegerDequeAdt.PopBack</a>
+<h3>Source</h3>
+adtlist.pas on line 1551
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PopBack">PopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PushFront"><hr></a>
+
+<h2>TIntegerXorList.PushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PushFront(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerDequeAdt.html#PushFront">TIntegerDequeAdt.PushFront</a>
+<h3>Source</h3>
+adtlist.pas on line 1552
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PushFront">PushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PopFront"><hr></a>
+
+<h2>TIntegerXorList.PopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> PopFront; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerQueueAdt.html#PopFront">TIntegerQueueAdt.PopFront</a>
+<h3>Source</h3>
+adtlist.pas on line 1553
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#PopFront">PopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TIntegerXorList.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TIntegerContainerAdt.html#Clear">TIntegerContainerAdt.Clear</a>
+<h3>Source</h3>
+adtlist.pas on line 1554
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist__-TIntegerXorList.html">TIntegerXorList</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlist.html">adtlist</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

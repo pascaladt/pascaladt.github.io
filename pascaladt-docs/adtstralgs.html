@@ -1,0 +1,1300 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtstralgs</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtdarray.html">adtdarray</a>, sysutils
+</p><p>
+
+<h3>Description</h3>
+ This unit provides various string algorithms, including the Knuth-Morris-Pratt, Boyer-Moore and Karp-Miller-Rosenberg algorithms..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#Reverse">Reverse</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reverses a substring [start..finish-1] in <span class="local_symbol">str</span> so that it becomes its own 'mirror reflection'.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#Replace">Replace</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Replaces the first occurence of one of the characters from <span class="local_symbol">chars</span> in <span class="local_symbol">str</span> with <span class="local_symbol">c</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#ReplaceAll">ReplaceAll</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Replaces all occurences of one of the characters from <span class="local_symbol">chars</span> in <span class="local_symbol">str</span> with <span class="local_symbol">c</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#FindSubstr">FindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Finds <span class="local_symbol">str2</span> in <span class="local_symbol">str1</span>, starting from startIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#FindSubstr___overloaded___0">FindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as above, but assumes startIndex = 1.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#CountSubstrings">CountSubstrings</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Counts the occurences of <span class="local_symbol">str2</span> in <span class="local_symbol">str1</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#NaiveFindSubstr">NaiveFindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ 'Naive', straight-forward substring search algorithm.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#KmpComputeTable">KmpComputeTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Computes the table needed by KmpFindSubstr.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#KmpFindSubstr">KmpFindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first index at which <span class="local_symbol">str2</span> is found in str1.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#KmpReverseComputeTable">KmpReverseComputeTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Computes a table needed by KmpReverseFindSubstr.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#KmpReverseFindSubstr">KmpReverseFindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as KmpFind but searches from the back of <span class="local_symbol">str1</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#BmComputeTable">BmComputeTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Computes the table needed by the Boyer-Moore algorithm.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#BmFindSubstr">BmFindSubstr</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Uses the Boyer-Moore algorithm to check whether <span class="local_symbol">str2</span> is a substring of str1.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#KmrFindSubstrings">KmrFindSubstrings</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements the Karp-Miller-Rosenberg algorithm for computing the equivalence classes of all substrings with length len in str.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#TKmpTable">TKmpTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#TKmpReverseTable">TKmpReverseTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#TBmTable">TBmTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#TCardinalArray">TCardinalArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtstralgs.html#TCharSet">TCharSet</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Reverse"><hr></a>
+
+<h2>Reverse</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Reverse(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; start, finish : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 226
+</p><p>
+
+<h3>Description</h3>
+ Reverses a substring [start..finish-1] in <span class="local_symbol">str</span> so that it becomes its own 'mirror reflection'. E.g. for <span class="local_symbol">str</span> = 'abcdef' and start = 2, finish = 6 we get Result = 'aedcbf'.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n);.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#Reverse">Reverse</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Replace"><hr></a>
+
+<h2>Replace</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Replace(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; chars : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TCharSet">TCharSet</a></span></span><span class="program_code">; c : </span><span class="program_code"><span class="global_symbol">Char</span></span><span class="program_code">; startIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 230
+</p><p>
+
+<h3>Description</h3>
+ Replaces the first occurence of one of the characters from <span class="local_symbol">chars</span> in <span class="local_symbol">str</span> with <span class="local_symbol">c</span>. Returns the position of the character replaced or -1 if none was replaced.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#Replace">Replace</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ReplaceAll"><hr></a>
+
+<h2>ReplaceAll</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ReplaceAll(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; chars : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TCharSet">TCharSet</a></span></span><span class="program_code">; c : </span><span class="program_code"><span class="global_symbol">Char</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 234
+</p><p>
+
+<h3>Description</h3>
+ Replaces all occurences of one of the characters from <span class="local_symbol">chars</span> in <span class="local_symbol">str</span> with <span class="local_symbol">c</span>. Returns the result.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#ReplaceAll">ReplaceAll</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FindSubstr"><hr></a>
+
+<h2>FindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; startIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 238
+</p><p>
+
+<h3>Description</h3>
+ Finds <span class="local_symbol">str2</span> in <span class="local_symbol">str1</span>, starting from startIndex. Returns the index of the position at which <span class="local_symbol">str2</span> is found or -1 if it is not found.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n);.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#FindSubstr">FindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FindSubstr___overloaded___0"><hr></a>
+
+<h2>FindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 241
+</p><p>
+
+<h3>Description</h3>
+ The same as above, but assumes startIndex = 1.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#FindSubstr___overloaded___0">FindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CountSubstrings"><hr></a>
+
+<h2>CountSubstrings</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CountSubstrings(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> tab : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TKmpTable">TKmpTable</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 245
+</p><p>
+
+<h3>Description</h3>
+ Counts the occurences of <span class="local_symbol">str2</span> in <span class="local_symbol">str1</span>. Overlapping occurences <em>are</em> included. Uses <span class="local_symbol">tab</span> as the table. Uses the Knuth-Morris-Pratt algorithm (KmpFindSubstr).
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#CountSubstrings">CountSubstrings</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NaiveFindSubstr"><hr></a>
+
+<h2>NaiveFindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NaiveFindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; startIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 252
+</p><p>
+
+<h3>Description</h3>
+ 'Naive', straight-forward substring search algorithm.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(n^2).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#NaiveFindSubstr">NaiveFindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KmpComputeTable"><hr></a>
+
+<h2>KmpComputeTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> KmpComputeTable(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TKmpTable">TKmpTable</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 257
+</p><p>
+
+<h3>Description</h3>
+ Computes the table needed by KmpFindSubstr. This should be called for the string searched, and may be later used in many different searches.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#KmpComputeTable">KmpComputeTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KmpFindSubstr"><hr></a>
+
+<h2>KmpFindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> KmpFindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; startIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> table : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TKmpTable">TKmpTable</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 263
+</p><p>
+
+<h3>Description</h3>
+ Returns the first index at which <span class="local_symbol">str2</span> is found in str1. Starts searching forward from startIndex. If <span class="local_symbol">str2</span> is not found then returns -1. The table parameter should be the table generated by KmpComputeTable for <span class="local_symbol">str2</span>. The algorithm used is the Knuth-Morris-Pratt algorithm.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#KmpFindSubstr">KmpFindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KmpReverseComputeTable"><hr></a>
+
+<h2>KmpReverseComputeTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> KmpReverseComputeTable(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TKmpReverseTable">TKmpReverseTable</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 266
+</p><p>
+
+<h3>Description</h3>
+ Computes a table needed by KmpReverseFindSubstr.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n);.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#KmpReverseComputeTable">KmpReverseComputeTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KmpReverseFindSubstr"><hr></a>
+
+<h2>KmpReverseFindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> KmpReverseFindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; finishIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> table : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TKmpReverseTable">TKmpReverseTable</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 268
+</p><p>
+
+<h3>Description</h3>
+ The same as KmpFind but searches from the back of <span class="local_symbol">str1</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#KmpReverseFindSubstr">KmpReverseFindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BmComputeTable"><hr></a>
+
+<h2>BmComputeTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> BmComputeTable(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TBmTable">TBmTable</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 272
+</p><p>
+
+<h3>Description</h3>
+ Computes the table needed by the Boyer-Moore algorithm.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n);.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#BmComputeTable">BmComputeTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BmFindSubstr"><hr></a>
+
+<h2>BmFindSubstr</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> BmFindSubstr(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str1, str2 : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; startIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> table : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TBmTable">TBmTable</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 278
+</p><p>
+
+<h3>Description</h3>
+ Uses the Boyer-Moore algorithm to check whether <span class="local_symbol">str2</span> is a substring of str1. Although the worst-case complexity is O(n), in most cases this algorithm is better than the Knuth-Morris-Pratt algorithm. However, computing the table takes longer.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#BmFindSubstr">BmFindSubstr</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="KmrFindSubstrings"><hr></a>
+
+<h2>KmrFindSubstrings</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> KmrFindSubstrings(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> str : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; start, finish : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; len : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtstralgs.html#TCardinalArray">TCardinalArray</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 289
+</p><p>
+
+<h3>Description</h3>
+ Implements the Karp-Miller-Rosenberg algorithm for computing the equivalence classes of all substrings with length len in str. If the table returned contains the same number at index i and j, it means that the substrings of length len starting at i and at j are equal. Only positions from [start,finish-len) in the returned array contain valid indices !! Others are undefined. Len is the desired length of substrings, should be &gt; 1. Start and finish designate the range in which the search is performed.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n*log(n)).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#KmrFindSubstrings">KmrFindSubstrings</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TKmpTable"><hr></a>
+
+<h2>TKmpTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TKmpTable = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> IndexType;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 215
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#TKmpTable">TKmpTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TKmpReverseTable"><hr></a>
+
+<h2>TKmpReverseTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TKmpReverseTable = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> IndexType;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 216
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#TKmpReverseTable">TKmpReverseTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TBmTable"><hr></a>
+
+<h2>TBmTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TBmTable = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> IndexType;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 217
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#TBmTable">TBmTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TCardinalArray"><hr></a>
+
+<h2>TCardinalArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TCardinalArray = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Cardinal;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 218
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#TCardinalArray">TCardinalArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TCharSet"><hr></a>
+
+<h2>TCharSet</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TCharSet = </span><span class="program_code"><span class="keyword">set</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Char;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtstralgs.pas on line 219
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtstralgs.html#TCharSet">TCharSet</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtstralgs.html">adtstralgs</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,1819 @@
+<html>
+<head>
+<title>Reference for TContainerAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TContainerAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TContainerAdt = </span><span class="program_code"><span class="keyword">class</span></span></nobr>
+
+<h3>Visibility</h3>
+global
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtcont__-TDefinedOrderContainerAdt.html">TDefinedOrderContainerAdt</a>, <a href="adtcont__-TQueueAdt.html">TQueueAdt</a>, <a href="adtcont__-TBasicTreeAdt.html">TBasicTreeAdt</a>, <a href="adtcont__-TPriorityQueueAdt.html">TPriorityQueueAdt</a>
+<h3>Source</h3>
+adtcontbase.pas on line 254
+</p><p>
+
+<h3>Description</h3>
+ The base class for all PascalAdt containers. PascalAdt containers store pointers to objects or variables. The items in any such container should satisfy two requirements: (1) nil pointers cannot be stored, (2) no two equal pointer values should be stored in one container, i.e. the objects/variables pointed to may be equal but not the pointers themselves. The second requirement must be satisfied only for sets and maps, i.e. descendants of TSetAdt or TMapAdt (see <a href="adtcont.html">adtcont</a>.pas;.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#FormatItem">FormatItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Formats aitem for displaying it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf___overloaded___0">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Calls CopySelf with the identity functor.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#InsertItem">InsertItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem somewhere into the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#ExtractItem">ExtractItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Size = old Size - 1.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CanExtract">CanExtract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if an item may be extracted by ExtractItem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the container has a well-defined, internal order of items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Writes out some information about the container to the log file.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Swaps the content with <span class="local_symbol">cont</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the container - removes all items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#DisposeItem">DisposeItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ If OwnsItems is true and Disposer &lt;&gt; nil and aitem &lt;&gt; nil then this procedure invokes Disposer to dispose the given Item.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#OwnsItems">OwnsItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Indicates whether Items are automatically deleted when removed from the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#GrabageCollector">GrabageCollector</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the grabage collector used to keep track of iterators.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#ItemDisposer">ItemDisposer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Gives the functor used to destroy items (nil if none is set).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates self as a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#GetDisposer">GetDisposer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#SetDisposer">SetDisposer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Swaps basic functors, everything except for the items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#WriteLog">WriteLog</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Writes some information about the container to the log.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#WriteLog___overloaded___0">WriteLog</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Writes some information about the container to the log.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TContainerAdt.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 281
+</p><p>
+
+<h3>Description</h3>
+ Deletes all items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FormatItem"><hr></a>
+
+<h2>TContainerAdt.FormatItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FormatItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 287
+</p><p>
+
+<h3>Description</h3>
+ Formats aitem for displaying it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#FormatItem">FormatItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TContainerAdt.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 298
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self. Copies all the data into the new object of then same type. Uses ItemCopier to copy items. This functor should return exact copy of item, i.e. the new object that can be modified and destroyed without changing the original one. If the passed copier is nil then the items should not be copied, but only an empty container of the same type as self and using the same disposer, comparer, hasher, etc.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf___overloaded___0"><hr></a>
+
+<h2>TContainerAdt.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 301
+</p><p>
+
+<h3>Description</h3>
+ Calls CopySelf with the identity functor.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf___overloaded___0">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertItem"><hr></a>
+
+<h2>TContainerAdt.InsertItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InsertItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 322
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem somewhere into the container. Returns true if successful, false if aitem could not be inserted.
+</p><p>
+
+<h3>Postcondition</h3>
+ Result implies Size = old Size + 1.
+</p><p>
+
+<h3>Postcondition</h3>
+ Not Result implies Size = old Size.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#InsertItem">InsertItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExtractItem"><hr></a>
+
+<h2>TContainerAdt.ExtractItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ExtractItem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 326
+</p><p>
+
+<h3>Description</h3>
+ Removes some item from the container and returns it.
+</p><p>
+
+<h3>Precondition</h3>
+ CanExtract.
+</p><p>
+
+<h3>Postcondition</h3>
+ Size = old Size - 1.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#ExtractItem">ExtractItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CanExtract"><hr></a>
+
+<h2>TContainerAdt.CanExtract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CanExtract : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 330
+</p><p>
+
+<h3>Description</h3>
+ Returns true if an item may be extracted by ExtractItem. This is not necessarily equivalent to not Empty.
+</p><p>
+
+<h3>Postcondition</h3>
+ Empty implies not Result.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CanExtract">CanExtract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TContainerAdt.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 336
+</p><p>
+
+<h3>Description</h3>
+ Returns true if container is empty. Equivalent to Size = 0, but may be faster.
+</p><p>
+
+<h3>Complexity</h3>
+ Guaranteed worst-case O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TContainerAdt.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 340
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items.
+</p><p>
+
+<h3>Complexity</h3>
+ Guaranteed average, amortized or worst-case O(1) and never more than worst-case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsDefinedOrder"><hr></a>
+
+<h2>TContainerAdt.IsDefinedOrder</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsDefinedOrder : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 358
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the container has a well-defined, internal order of items. Examples of such containers are THeap, TSet, ... You cannot insert at any position you wish, because there is a well-defined, fixed relationship between the items' values and their positions. That's why such containers cannot be sorted or applied any algorithms that change the order of items. ExchangeItem, SetItem, Insert and Delete methods of these containers' iterators usually raise exceptions or perform some different action than desribed for general, abstract iterator interfaces. They should not be used in any generic routines which use these methods, and expect them to work as desribed. All algorithms that cannot be used with iterators into defined-order containers are marked so in their description. It is a programming error to pass such iterators to these routines, and the behaviour is undefined (possibly assertion failed if compiling in DEBUG mode, but not always)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#IsDefinedOrder">IsDefinedOrder</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LogStatus"><hr></a>
+
+<h2>TContainerAdt.LogStatus</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> LogStatus(mname : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 285
+</p><p>
+
+<h3>Description</h3>
+ Writes out some information about the container to the log file.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TContainerAdt.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 317
+</p><p>
+
+<h3>Description</h3>
+ Swaps the content with <span class="local_symbol">cont</span>. The types of items used by both containers should be the same if the containers are not of the same type. If they are the types of items may be different. If self and <span class="local_symbol">cont</span> are of the same type then it takes O(1) time, otherwise O(m+n) time and O(min(m,n)) memory, where n and m are the sizes of the containers (using the default implementation). If <span class="local_symbol">cont</span> and self are of different types then no guarantee is made on the order of items in the swapped containers. In other words, they are only guaranteed to exchange items, but where the items will be in the internal structure of the containers cannot be determined. The default implementation of this method is not entirely exception safe if InsertItem or ExtractItem in any of the containers raise exceptions. It does not leak anything but may destroy some user data in case of an exception;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TContainerAdt.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 333
+</p><p>
+
+<h3>Description</h3>
+ Clears the container - removes all items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+<h3>Postcondition</h3>
+ Empty.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="DisposeItem"><hr></a>
+
+<h2>TContainerAdt.DisposeItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> DisposeItem(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 361
+</p><p>
+
+<h3>Description</h3>
+ If OwnsItems is true and Disposer &lt;&gt; nil and aitem &lt;&gt; nil then this procedure invokes Disposer to dispose the given Item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#DisposeItem">DisposeItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="OwnsItems"><hr></a>
+
+<h2>TContainerAdt.OwnsItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> OwnsItems : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FOwnsItems </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetOwnsItems;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 364
+</p><p>
+
+<h3>Description</h3>
+ Indicates whether Items are automatically deleted when removed from the container. Always true on creation of the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#OwnsItems">OwnsItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GrabageCollector"><hr></a>
+
+<h2>TContainerAdt.GrabageCollector</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> GrabageCollector : </span><span class="program_code"><span class="global_symbol"><a href="adtmem__-TGrabageCollector.html">TGrabageCollector</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FGrabageCollector;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 366
+</p><p>
+
+<h3>Description</h3>
+ Returns the grabage collector used to keep track of iterators.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#GrabageCollector">GrabageCollector</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ItemDisposer"><hr></a>
+
+<h2>TContainerAdt.ItemDisposer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> ItemDisposer : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetDisposer </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetDisposer;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcontbase.pas on line 370
+</p><p>
+
+<h3>Description</h3>
+ Gives the functor used to destroy items (nil if none is set). Remember that this functor is still owned by the container and will be destroyed automatically with it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#ItemDisposer">ItemDisposer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TContainerAdt.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 262
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TContainerAdt.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 265
+</p><p>
+
+<h3>Description</h3>
+ Creates self as a copy of cont. This should be called by every 'copy-constructor' of a descendant container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetDisposer"><hr></a>
+
+<h2>TContainerAdt.GetDisposer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetDisposer : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 270
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#GetDisposer">GetDisposer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetOwnsItems"><hr></a>
+
+<h2>TContainerAdt.SetOwnsItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetOwnsItems(b : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 268
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetDisposer"><hr></a>
+
+<h2>TContainerAdt.SetDisposer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetDisposer(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 269
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#SetDisposer">SetDisposer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BasicSwap"><hr></a>
+
+<h2>TContainerAdt.BasicSwap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BasicSwap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 272
+</p><p>
+
+<h3>Description</h3>
+ Swaps basic functors, everything except for the items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#BasicSwap">BasicSwap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="WriteLog"><hr></a>
+
+<h2>TContainerAdt.WriteLog</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> WriteLog(msg : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 275
+</p><p>
+
+<h3>Description</h3>
+ Writes some information about the container to the log.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#WriteLog">WriteLog</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="WriteLog___overloaded___0"><hr></a>
+
+<h2>TContainerAdt.WriteLog</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> WriteLog; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcontbase.pas on line 276
+</p><p>
+
+<h3>Description</h3>
+ Writes some information about the container to the log.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html#WriteLog___overloaded___0">WriteLog</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcontbase.html">adtcontbase</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

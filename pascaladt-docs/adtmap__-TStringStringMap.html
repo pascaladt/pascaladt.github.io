@@ -1,0 +1,2093 @@
+<html>
+<head>
+<title>Reference for TStringStringMap</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringStringMap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringStringMap = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringStringMapAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtmap__-TStringStringMapAdt.html">TStringStringMapAdt</a>
+<h3>Source</h3>
+adtmap.pas on line 1676
+</p><p>
+
+<h3>Description</h3>
+ Adapts the general set interface to implement a map.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ <span class="local_symbol">aset</span> Is a set for storing objects.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Calls the above constructor with aset = THashTable.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of <span class="local_symbol">cont</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Destroys itself.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CreateCopier">CreateCopier</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copier suitable for use by CopySelf method or the copy constructor.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the start iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Has">Has</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Find">Find</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator starting the range of items associated with <span class="local_symbol">key</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator that ends a range of items associated with <span class="local_symbol">key</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the range &lt;LowerBound, UpperBound).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#IsSorted">IsSorted</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if items in the map are in sorted order (defined by the keys they are associated with).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Associate">Associate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetKeyHasher">SetKeyHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#GetRepeatedItems">GetRepeatedItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#GetKeyComparer">GetKeyComparer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetRepeatedItems">SetRepeatedItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetKeyComparer">SetKeyComparer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringStringMap.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(aset : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TSetAdt.html">TSetAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Create">TStringStringMapAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtmap.pas on line 1706
+</p><p>
+
+<h3>Description</h3>
+ <span class="local_symbol">aset</span> Is a set for storing objects. Appropriate disposers and comparers are automatically chosen in the constructor, basing on the type of the map. If you need to use non-standard ones set them later via Item/KeyDisposer/Comparer.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create___overloaded___0"><hr></a>
+
+<h2>TStringStringMap.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Create">TStringStringMapAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtmap.pas on line 1708
+</p><p>
+
+<h3>Description</h3>
+ Calls the above constructor with aset = THashTable.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TStringStringMap.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMap.html">TStringStringMap</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> mapCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#CreateCopy">TStringStringMapAdt.CreateCopy</a>, <a href="adtcontbase__-TStringContainerAdt.html#CreateCopy">TStringContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtmap.pas on line 1710
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of <span class="local_symbol">cont</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TStringStringMap.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Destroy">TStringContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtmap.pas on line 1713
+</p><p>
+
+<h3>Description</h3>
+ Destroys itself.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopier"><hr></a>
+
+<h2>TStringStringMap.CreateCopier</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">class</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CreateCopier(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> keyCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapAdtCopier.html">TStringStringMapAdtCopier</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#CreateCopier">TStringStringMapAdt.CreateCopier</a>
+<h3>Source</h3>
+adtmap.pas on line 1698
+</p><p>
+
+<h3>Description</h3>
+ Returns a copier suitable for use by CopySelf method or the copy constructor. Only the functor returned by this function can be passed to these methods as only it knows the internal structure of the map and how to copy both key and item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CreateCopier">CreateCopier</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TStringStringMap.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> mapCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#CopySelf">TStringStringMapAdt.CopySelf</a>, <a href="adtcontbase__-TStringContainerAdt.html#CopySelf">TStringContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adtmap.pas on line 1716
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of self. The item copier must be one returned from CreateCopier.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TStringStringMap.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Start">TStringStringMapAdt.Start</a>
+<h3>Source</h3>
+adtmap.pas on line 1720
+</p><p>
+
+<h3>Description</h3>
+ Returns the start iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TStringStringMap.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Finish">TStringStringMapAdt.Finish</a>
+<h3>Source</h3>
+adtmap.pas on line 1722
+</p><p>
+
+<h3>Description</h3>
+ Returns the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Has"><hr></a>
+
+<h2>TStringStringMap.Has</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Has(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Has">TStringStringMapAdt.Has</a>
+<h3>Source</h3>
+adtmap.pas on line 1723
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Has">Has</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Find"><hr></a>
+
+<h2>TStringStringMap.Find</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Find(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Find">TStringStringMapAdt.Find</a>
+<h3>Source</h3>
+adtmap.pas on line 1724
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Find">Find</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>TStringStringMap.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Count">TStringStringMapAdt.Count</a>
+<h3>Source</h3>
+adtmap.pas on line 1725
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringStringMap.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">; key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Insert">TStringStringMapAdt.Insert</a>
+<h3>Source</h3>
+adtmap.pas on line 1727
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TStringStringMap.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Insert">TStringStringMapAdt.Insert</a>
+<h3>Source</h3>
+adtmap.pas on line 1730
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TStringStringMap.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Delete">TStringStringMapAdt.Delete</a>
+<h3>Source</h3>
+adtmap.pas on line 1733
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>TStringStringMap.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#LowerBound">TStringStringMapAdt.LowerBound</a>
+<h3>Source</h3>
+adtmap.pas on line 1736
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator starting the range of items associated with <span class="local_symbol">key</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>TStringStringMap.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#UpperBound">TStringStringMapAdt.UpperBound</a>
+<h3>Source</h3>
+adtmap.pas on line 1739
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator that ends a range of items associated with <span class="local_symbol">key</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>TStringStringMap.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIteratorRange.html">TStringStringMapIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#EqualRange">TStringStringMapAdt.EqualRange</a>
+<h3>Source</h3>
+adtmap.pas on line 1742
+</p><p>
+
+<h3>Description</h3>
+ Returns the range &lt;LowerBound, UpperBound). Works faster than calling these two functions separately..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TStringStringMap.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Empty">TStringContainerAdt.Empty</a>
+<h3>Source</h3>
+adtmap.pas on line 1744
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TStringStringMap.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Size">TStringContainerAdt.Size</a>
+<h3>Source</h3>
+adtmap.pas on line 1745
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsSorted"><hr></a>
+
+<h2>TStringStringMap.IsSorted</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsSorted : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#IsSorted">TStringStringMapAdt.IsSorted</a>
+<h3>Source</h3>
+adtmap.pas on line 1750
+</p><p>
+
+<h3>Description</h3>
+ Returns true if items in the map are in sorted order (defined by the keys they are associated with). Checks if the underlying TSetAdt is a TSortedSetAdt.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#IsSorted">IsSorted</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>TStringStringMap.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TStringContainerAdt.html">TStringContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Swap">TStringStringMapAdt.Swap</a>, <a href="adtcontbase__-TStringContainerAdt.html#Swap">TStringContainerAdt.Swap</a>
+<h3>Source</h3>
+adtmap.pas on line 1718
+</p><p>
+
+<h3>See also</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Swap">TStringStringMapAdt.Swap</a>, 
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Associate"><hr></a>
+
+<h2>TStringStringMap.Associate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Associate(key : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Associate">TStringStringMapAdt.Associate</a>
+<h3>Source</h3>
+adtmap.pas on line 1726
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Associate">Associate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TStringStringMap.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtmap__-TStringStringMapIterator.html">TStringStringMapIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#Delete">TStringStringMapAdt.Delete</a>
+<h3>Source</h3>
+adtmap.pas on line 1732
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TStringStringMap.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Clear">TStringContainerAdt.Clear</a>
+<h3>Source</h3>
+adtmap.pas on line 1743
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetKeyHasher"><hr></a>
+
+<h2>TStringStringMap.SetKeyHasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetKeyHasher(akeyhasher : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringHasher.html">IStringHasher</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#SetKeyHasher">TStringStringMapAdt.SetKeyHasher</a>
+<h3>Source</h3>
+adtmap.pas on line 1746
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetKeyHasher">SetKeyHasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetRepeatedItems"><hr></a>
+
+<h2>TStringStringMap.GetRepeatedItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetRepeatedItems : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#GetRepeatedItems">TStringStringMapAdt.GetRepeatedItems</a>
+<h3>Source</h3>
+adtmap.pas on line 1689
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#GetRepeatedItems">GetRepeatedItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetKeyComparer"><hr></a>
+
+<h2>TStringStringMap.GetKeyComparer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetKeyComparer : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringBinaryComparer.html">IStringBinaryComparer</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#GetKeyComparer">TStringStringMapAdt.GetKeyComparer</a>
+<h3>Source</h3>
+adtmap.pas on line 1691
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#GetKeyComparer">GetKeyComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetOwnsItems"><hr></a>
+
+<h2>TStringStringMap.SetOwnsItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetOwnsItems(b : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#SetOwnsItems">TStringContainerAdt.SetOwnsItems</a>
+<h3>Source</h3>
+adtmap.pas on line 1687
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetRepeatedItems"><hr></a>
+
+<h2>TStringStringMap.SetRepeatedItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetRepeatedItems(b : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#SetRepeatedItems">TStringStringMapAdt.SetRepeatedItems</a>
+<h3>Source</h3>
+adtmap.pas on line 1688
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetRepeatedItems">SetRepeatedItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetKeyComparer"><hr></a>
+
+<h2>TStringStringMap.SetKeyComparer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetKeyComparer(cmp : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringBinaryComparer.html">IStringBinaryComparer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtmap__-TStringStringMapAdt.html#SetKeyComparer">TStringStringMapAdt.SetKeyComparer</a>
+<h3>Source</h3>
+adtmap.pas on line 1690
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html#SetKeyComparer">SetKeyComparer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap__-TStringStringMap.html">TStringStringMap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtmap.html">adtmap</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

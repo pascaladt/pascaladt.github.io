@@ -1,0 +1,327 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtlog</h1>
+
+<h3>Uses in interface</h3>
+sysutils, classes
+</p><p>
+
+<h3>Description</h3>
+ This unit provides logging facilities. All routines here work only when compiled in the debug mode, otherwise they do nothing..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlog.html#pascal_adt_log_file_name">pascal_adt_log_file_name</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlog.html#SetLogStream">SetLogStream</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets <span class="local_symbol">newstream</span> to be the current logging stream.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlog.html#WriteLogStream">WriteLogStream</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Writes a specified message to the logging stream.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtlog.html#OpenLogStream">OpenLogStream</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Opens pascal_adt_log_file_name as a log stream.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlog.html">adtlog</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="pascal_adt_log_file_name"><hr></a>
+
+<h2>pascal_adt_log_file_name</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">pascal_adt_log_file_name = 'pascaladt.log';</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlog.pas on line 215
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlog.html#pascal_adt_log_file_name">pascal_adt_log_file_name</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlog.html">adtlog</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetLogStream"><hr></a>
+
+<h2>SetLogStream</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetLogStream(newstream : </span><span class="program_code"><span class="global_symbol">TStream</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlog.pas on line 219
+</p><p>
+
+<h3>Description</h3>
+ Sets <span class="local_symbol">newstream</span> to be the current logging stream. The old logging stream is destroyed;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlog.html#SetLogStream">SetLogStream</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlog.html">adtlog</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="WriteLogStream"><hr></a>
+
+<h2>WriteLogStream</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> WriteLogStream(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> msg : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlog.pas on line 221
+</p><p>
+
+<h3>Description</h3>
+ Writes a specified message to the logging stream. Appends newline;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlog.html#WriteLogStream">WriteLogStream</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlog.html">adtlog</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="OpenLogStream"><hr></a>
+
+<h2>OpenLogStream</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> OpenLogStream;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtlog.pas on line 224
+</p><p>
+
+<h3>Description</h3>
+ Opens pascal_adt_log_file_name as a log stream. Makes a backup if this file exists. Destroys the previous stream..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtlog.html#OpenLogStream">OpenLogStream</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtlog.html">adtlog</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

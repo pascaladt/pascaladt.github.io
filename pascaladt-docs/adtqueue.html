@@ -1,0 +1,660 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtqueue</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtmem.html">adtmem</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, <a href="adtcont.html">adtcont</a>, <a href="adtdarray.html">adtdarray</a>, <a href="adtsegarray.html">adtsegarray</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides two implementations of double-ended queues - <a href="adtqueue__-TCircularDeque.html">TCircularDeque</a> and <a href="adtqueue__-TSegDeque.html">TSegDeque</a>. There is also a type <a href="adtqueue.html#TDeque">TDeque</a> present, which is equivalent to <a href="adtqueue__-TSegDeque.html">TSegDeque</a> - the best implementation of a double-ended queue for most uses.
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TCircularDeque.html">TCircularDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based circular double-ended queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TCircularDequeIterator.html">TCircularDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TSegDeque.html">TSegDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based deque using segments.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TSegDequeIterator.html">TSegDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TStringCircularDeque.html">TStringCircularDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based circular double-ended queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TStringCircularDequeIterator.html">TStringCircularDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TStringSegDeque.html">TStringSegDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based deque using segments.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TStringSegDequeIterator.html">TStringSegDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerCircularDeque.html">TIntegerCircularDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based circular double-ended queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerCircularDequeIterator.html">TIntegerCircularDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDeque.html">TIntegerSegDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a 0-based deque using segments.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue__-TIntegerSegDequeIterator.html">TIntegerSegDequeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue.html#CircularDequeInitialCapacity">CircularDequeInitialCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue.html#SegDequeInitialSegments">SegDequeInitialSegments</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue.html#TDeque">TDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The default deque type.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue.html#TStringDeque">TStringDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The default deque type.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtqueue.html#TIntegerDeque">TIntegerDeque</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The default deque type.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="CircularDequeInitialCapacity"><hr></a>
+
+<h2>CircularDequeInitialCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">CircularDequeInitialCapacity = 128;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtqueue.pas on line 217
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html#CircularDequeInitialCapacity">CircularDequeInitialCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegDequeInitialSegments"><hr></a>
+
+<h2>SegDequeInitialSegments</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">SegDequeInitialSegments = 128;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtqueue.pas on line 218
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html#SegDequeInitialSegments">SegDequeInitialSegments</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TDeque"><hr></a>
+
+<h2>TDeque</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TDeque = TSegDeque;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtqueue.pas on line 378
+</p><p>
+
+<h3>Description</h3>
+ The default deque type.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html#TDeque">TDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringDeque"><hr></a>
+
+<h2>TStringDeque</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringDeque = TStringSegDeque;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtqueue.pas on line 538
+</p><p>
+
+<h3>Description</h3>
+ The default deque type.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html#TStringDeque">TStringDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerDeque"><hr></a>
+
+<h2>TIntegerDeque</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerDeque = TIntegerSegDeque;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtqueue.pas on line 698
+</p><p>
+
+<h3>Description</h3>
+ The default deque type.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtqueue.html#TIntegerDeque">TIntegerDeque</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtqueue.html">adtqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,7052 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtdarray</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtfunct.html">adtfunct</a>, <a href="adtmem.html">adtmem</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit handles low-level memory management via TDynamicArray. For all but the most performance-critical parts of code <a href="adtarray__-TArray.html">TArray</a> or <a href="adtqueue__-TCircularDeque.html">TCircularDeque</a> are more appropriate.
+</p><p>
+ Note: the distinction between normal, const and var parameters is important semantically. Normal parameters mean that the pointer to the array cannot be changed, but the contents of the array can (and probably will) change. Const parameters mean that both the array pointer and the contents will not change, and var parameters imply that both may, and probably will, change..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#daGrowRate">daGrowRate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The factor by which the Size of the array is grown when calling ArrayExpand.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#daMaxMemChunk">daMaxMemChunk</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ When the capacity of TDynamicArray reaches this value it is no longer increased by the factor of daGrowRate, but each time by this amount.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#bufGrowRate">bufGrowRate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as daGrowRate, but applies to TDynamicBuffer..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#bufMaxMemChunk">bufMaxMemChunk</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The same as daMaxMemChunk, but applies to TDynamicBuffer..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayGetItem">ArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns pointer stored at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArraySetItem">ArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at index to elem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopFront">ArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopBack">ArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayGetItem___overloaded___0">ArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns pointer stored at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArraySetItem___overloaded___0">ArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at index to elem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopFront___overloaded___0">ArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopBack___overloaded___0">ArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs___overloaded___0">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem___overloaded___0">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem___overloaded___0">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront___overloaded___0">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack___overloaded___0">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayGetItem___overloaded___1">ArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns pointer stored at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArraySetItem___overloaded___1">ArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at index to elem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopFront___overloaded___1">ArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPopBack___overloaded___1">ArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs___overloaded___1">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem___overloaded___1">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem___overloaded___1">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets item at logical index, treating array as circular.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront___overloaded___1">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the front and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack___overloaded___1">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops element from the back and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayAllocate">ArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a new dynamic array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReallocate">ArrayReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates the array - i.e. sets its capacity..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate">ArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Disposes the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayClear">ArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of the array and sets new capacity and StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayExpand">ArrayExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems">ArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at position index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at <span class="local_symbol">index</span> from the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushFront">ArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushBack">ArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCopy">ArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove">ArrayCircularMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves items circularly.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n elements beginning at logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferAllocate">BufferAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Some rudimentary routines for TDynamicBuffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferReallocate">BufferReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates buffer..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferDeallocate">BufferDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferExpand">BufferExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands buffer to hold at least n more items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferCopy">BufferCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the buffer to another buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayAllocate___overloaded___0">ArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a new dynamic array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReallocate___overloaded___0">ArrayReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates the array - i.e. sets its capacity..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate___overloaded___0">ArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Disposes the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayClear___overloaded___0">ArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of the array and sets new capacity and StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayExpand___overloaded___0">ArrayExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems___overloaded___0">ArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at position index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems___overloaded___0">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at <span class="local_symbol">index</span> from the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushFront___overloaded___0">ArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushBack___overloaded___0">ArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCopy___overloaded___0">ArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor___overloaded___0">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove___overloaded___0">ArrayCircularMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand___overloaded___0">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems___overloaded___0">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves items circularly.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems___overloaded___0">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n elements beginning at logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront___overloaded___0">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack___overloaded___0">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor___overloaded___0">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferAllocate___overloaded___0">BufferAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Some rudimentary routines for TStringDynamicBuffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferReallocate___overloaded___0">BufferReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates buffer..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferDeallocate___overloaded___0">BufferDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferExpand___overloaded___0">BufferExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands buffer to hold at least n more items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferCopy___overloaded___0">BufferCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the buffer to another buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayAllocate___overloaded___1">ArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a new dynamic array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReallocate___overloaded___1">ArrayReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates the array - i.e. sets its capacity..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate___overloaded___1">ArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Disposes the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayClear___overloaded___1">ArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of the array and sets new capacity and StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayExpand___overloaded___1">ArrayExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems___overloaded___1">ArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at position index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems___overloaded___1">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at <span class="local_symbol">index</span> from the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushFront___overloaded___1">ArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayPushBack___overloaded___1">ArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCopy___overloaded___1">ArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor___overloaded___1">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove___overloaded___1">ArrayCircularMove</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand___overloaded___1">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems___overloaded___1">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves items circularly.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems___overloaded___1">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n elements beginning at logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront___overloaded___1">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the front of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack___overloaded___1">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes elem at the back of the array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor___overloaded___1">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies proc to each reserved element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferAllocate___overloaded___1">BufferAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Some rudimentary routines for TIntegerDynamicBuffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferReallocate___overloaded___1">BufferReallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reallocates buffer..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferDeallocate___overloaded___1">BufferDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferExpand___overloaded___1">BufferExpand</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands buffer to hold at least n more items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#BufferCopy___overloaded___1">BufferCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies everything in the buffer to another buffer.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TDynamicArrayRec">TDynamicArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Dynamic array of pointers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TStringDynamicArrayRec">TStringDynamicArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Dynamic array of pointers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TIntegerDynamicArrayRec">TIntegerDynamicArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Dynamic array of pointers.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#PDynamicBuffer">PDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#PStringDynamicBuffer">PStringDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtdarray.html#PIntegerDynamicBuffer">PIntegerDynamicBuffer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="daGrowRate"><hr></a>
+
+<h2>daGrowRate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">daGrowRate = 2;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 226
+</p><p>
+
+<h3>Description</h3>
+ The factor by which the Size of the array is grown when calling ArrayExpand.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#daGrowRate">daGrowRate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="daMaxMemChunk"><hr></a>
+
+<h2>daMaxMemChunk</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">daMaxMemChunk = 256 * 1024;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 230
+</p><p>
+
+<h3>Description</h3>
+ When the capacity of TDynamicArray reaches this value it is no longer increased by the factor of daGrowRate, but each time by this amount.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#daMaxMemChunk">daMaxMemChunk</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="bufGrowRate"><hr></a>
+
+<h2>bufGrowRate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">bufGrowRate = daGrowRate;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 232
+</p><p>
+
+<h3>Description</h3>
+ The same as daGrowRate, but applies to TDynamicBuffer..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#bufGrowRate">bufGrowRate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="bufMaxMemChunk"><hr></a>
+
+<h2>bufMaxMemChunk</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">bufMaxMemChunk = daMaxMemChunk;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 234
+</p><p>
+
+<h3>Description</h3>
+ The same as daMaxMemChunk, but applies to TDynamicBuffer..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#bufMaxMemChunk">bufMaxMemChunk</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayGetItem"><hr></a>
+
+<h2>ArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 331
+</p><p>
+
+<h3>Description</h3>
+ Returns pointer stored at index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayGetItem">ArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArraySetItem"><hr></a>
+
+<h2>ArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArraySetItem(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 335
+</p><p>
+
+<h3>Description</h3>
+ Sets item at index to elem. Returns the item previously stored there..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArraySetItem">ArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopFront"><hr></a>
+
+<h2>ArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopFront(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; iftomove : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 366
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Boolean argument iftomove indicates if items are to be moved left so that a^.StartIndex remains unchanged (true) or if to increase a^.StartIndex without moving the items (false). This takes O(n) time if iftomove = true..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopFront">ArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopBack"><hr></a>
+
+<h2>ArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopBack(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 369
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopBack">ArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularLogicalToAbs"><hr></a>
+
+<h2>ArrayCircularLogicalToAbs</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularLogicalToAbs(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; logindex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 397
+</p><p>
+
+<h3>Description</h3>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularGetItem"><hr></a>
+
+<h2>ArrayCircularGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 401
+</p><p>
+
+<h3>Description</h3>
+ Returns item at logical index, treating array as circular.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularSetItem"><hr></a>
+
+<h2>ArrayCircularSetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularSetItem(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 405
+</p><p>
+
+<h3>Description</h3>
+ Sets item at logical index, treating array as circular. Returns the old item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopFront"><hr></a>
+
+<h2>ArrayCircularPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopFront(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 430
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopBack"><hr></a>
+
+<h2>ArrayCircularPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopBack(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 433
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayGetItem___overloaded___0"><hr></a>
+
+<h2>ArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 562
+</p><p>
+
+<h3>Description</h3>
+ Returns pointer stored at index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayGetItem___overloaded___0">ArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArraySetItem___overloaded___0"><hr></a>
+
+<h2>ArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArraySetItem(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 566
+</p><p>
+
+<h3>Description</h3>
+ Sets item at index to elem. Returns the item previously stored there..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArraySetItem___overloaded___0">ArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopFront___overloaded___0"><hr></a>
+
+<h2>ArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopFront(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; iftomove : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 597
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Boolean argument iftomove indicates if items are to be moved left so that a^.StartIndex remains unchanged (true) or if to increase a^.StartIndex without moving the items (false). This takes O(n) time if iftomove = true..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopFront___overloaded___0">ArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopBack___overloaded___0"><hr></a>
+
+<h2>ArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopBack(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 600
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopBack___overloaded___0">ArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularLogicalToAbs___overloaded___0"><hr></a>
+
+<h2>ArrayCircularLogicalToAbs</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularLogicalToAbs(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; logindex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 628
+</p><p>
+
+<h3>Description</h3>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs___overloaded___0">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularGetItem___overloaded___0"><hr></a>
+
+<h2>ArrayCircularGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 632
+</p><p>
+
+<h3>Description</h3>
+ Returns item at logical index, treating array as circular.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem___overloaded___0">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularSetItem___overloaded___0"><hr></a>
+
+<h2>ArrayCircularSetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularSetItem(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 636
+</p><p>
+
+<h3>Description</h3>
+ Sets item at logical index, treating array as circular. Returns the old item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem___overloaded___0">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopFront___overloaded___0"><hr></a>
+
+<h2>ArrayCircularPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopFront(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 661
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront___overloaded___0">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopBack___overloaded___0"><hr></a>
+
+<h2>ArrayCircularPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopBack(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 664
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack___overloaded___0">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayGetItem___overloaded___1"><hr></a>
+
+<h2>ArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 793
+</p><p>
+
+<h3>Description</h3>
+ Returns pointer stored at index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayGetItem___overloaded___1">ArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArraySetItem___overloaded___1"><hr></a>
+
+<h2>ArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArraySetItem(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 797
+</p><p>
+
+<h3>Description</h3>
+ Sets item at index to elem. Returns the item previously stored there..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArraySetItem___overloaded___1">ArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopFront___overloaded___1"><hr></a>
+
+<h2>ArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopFront(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; iftomove : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 828
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Boolean argument iftomove indicates if items are to be moved left so that a^.StartIndex remains unchanged (true) or if to increase a^.StartIndex without moving the items (false). This takes O(n) time if iftomove = true..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopFront___overloaded___1">ArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPopBack___overloaded___1"><hr></a>
+
+<h2>ArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayPopBack(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 831
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPopBack___overloaded___1">ArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularLogicalToAbs___overloaded___1"><hr></a>
+
+<h2>ArrayCircularLogicalToAbs</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularLogicalToAbs(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; logindex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 859
+</p><p>
+
+<h3>Description</h3>
+ Converts logical index into circular array into an absolute index into the same array (physically).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularLogicalToAbs___overloaded___1">ArrayCircularLogicalToAbs</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularGetItem___overloaded___1"><hr></a>
+
+<h2>ArrayCircularGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 863
+</p><p>
+
+<h3>Description</h3>
+ Returns item at logical index, treating array as circular.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularGetItem___overloaded___1">ArrayCircularGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularSetItem___overloaded___1"><hr></a>
+
+<h2>ArrayCircularSetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularSetItem(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 867
+</p><p>
+
+<h3>Description</h3>
+ Sets item at logical index, treating array as circular. Returns the old item.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularSetItem___overloaded___1">ArrayCircularSetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopFront___overloaded___1"><hr></a>
+
+<h2>ArrayCircularPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopFront(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 892
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the front and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopFront___overloaded___1">ArrayCircularPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPopBack___overloaded___1"><hr></a>
+
+<h2>ArrayCircularPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ArrayCircularPopBack(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 895
+</p><p>
+
+<h3>Description</h3>
+ Pops element from the back and returns it. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPopBack___overloaded___1">ArrayCircularPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayAllocate"><hr></a>
+
+<h2>ArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 309
+</p><p>
+
+<h3>Description</h3>
+ Allocates a new dynamic array. Previous content is lost (but not disposed). No items are reserved for use. Argument StartIndex is the absolute physical index from which the array will begin (you can always reset it by direct manipulation of the array structure).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayAllocate">ArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReallocate"><hr></a>
+
+<h2>ArrayReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 313
+</p><p>
+
+<h3>Description</h3>
+ Reallocates the array - i.e. sets its capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReallocate">ArrayReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayDeallocate"><hr></a>
+
+<h2>ArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 317
+</p><p>
+
+<h3>Description</h3>
+ Disposes the array. If the array is nil than nothing happens. Assings nil to a..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate">ArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayClear"><hr></a>
+
+<h2>ArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 321
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of the array and sets new capacity and StartIndex. Sets Size to zero.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayClear">ArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayExpand"><hr></a>
+
+<h2>ArrayExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 328
+</p><p>
+
+<h3>Description</h3>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk. If capacity &gt;= deMaxMemChunk and StartIndex+Size+n &lt;= capacity + deMaxMemChunk then grows array by deMaxMemChunk, otherwise grows the array by n..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayExpand">ArrayExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReserveItems"><hr></a>
+
+<h2>ArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 342
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at position index. The place for new items is made in the range [index, index + n). All items being previously stored within this range are moved right. The array is reallocated if necessary to hold the new items (by calling Expand)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems">ArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayRemoveItems"><hr></a>
+
+<h2>ArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 348
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at <span class="local_symbol">index</span> from the array. In other words the range of items [index, index + n) is removed. All items after this range are moved left..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushFront"><hr></a>
+
+<h2>ArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; leaveSpaceAtFront : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 355
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. This takes O(n) time when a^.StartIndex = 0. LeaveSpaceAtFront indicates if to leave some more space at the front if StartIndex is 0 - increase StartIndex (true), or if to leave StartIndex unchanged (false)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushFront">ArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushBack"><hr></a>
+
+<h2>ArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 359
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushBack">ArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCopy"><hr></a>
+
+<h2>ArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 375
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items). Re-allocates dest if it's non-nil, allocates new array otherwise. Alloc is used as a new allocator for dest (don't forget to destroy the old one!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCopy">ArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayApplyFunctor"><hr></a>
+
+<h2>ArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 378
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularMove"><hr></a>
+
+<h2>ArrayCircularMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularMove(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; srcIndex, destIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 388
+</p><p>
+
+<h3>Description</h3>
+ Routines treating TDynamicArray as circular.
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove">ArrayCircularMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularExpand"><hr></a>
+
+<h2>ArrayCircularExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 393
+</p><p>
+
+<h3>Description</h3>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularReserveItems"><hr></a>
+
+<h2>ArrayCircularReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 413
+</p><p>
+
+<h3>Description</h3>
+ Reserves items circularly. StartIndex is the absolute index of the first item in the logical circular array. The space for n elements is reserved after index, when there is not enough space at after the index and there is enough space at the beginning some elements are moved to the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularRemoveItems"><hr></a>
+
+<h2>ArrayCircularRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 418
+</p><p>
+
+<h3>Description</h3>
+ Removes n elements beginning at logical index. Treats array as circular with first absolute index = a^.StartIndex..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushFront"><hr></a>
+
+<h2>ArrayCircularPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 422
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushBack"><hr></a>
+
+<h2>ArrayCircularPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 426
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularApplyFunctor"><hr></a>
+
+<h2>ArrayCircularApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 436
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferAllocate"><hr></a>
+
+<h2>BufferAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 447
+</p><p>
+
+<h3>Description</h3>
+ Note: TDynamicBuffers should not used anymore in new code, since dynamic arrays were introduced into the language. They are kept mostly because TSegArray heavily depends on them.
+</p><p>
+ Allocates a buffer of Size = capacity * SizeOf(ItemType)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferAllocate">BufferAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferReallocate"><hr></a>
+
+<h2>BufferReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 450
+</p><p>
+
+<h3>Description</h3>
+ Reallocates buffer..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferReallocate">BufferReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferDeallocate"><hr></a>
+
+<h2>BufferDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 454
+</p><p>
+
+<h3>Description</h3>
+ Deallocates buffer. If buffer is nil than does nothing. Sets b to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferDeallocate">BufferDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferExpand"><hr></a>
+
+<h2>BufferExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 461
+</p><p>
+
+<h3>Description</h3>
+ Expands buffer to hold at least n more items. If capacity &lt; bufMaxMemChunk then the new capacity becomes capacity * bufGrowRate, otherwise it becomes capacity + bufMaxMemChunk. If n + capacity is greater than any of the chosen capacities, it becomes the new capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferExpand">BufferExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferCopy"><hr></a>
+
+<h2>BufferCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 465
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the buffer to another buffer. Re-allocates dest if it's non-nil, allocates new buffer otherwise..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferCopy">BufferCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayAllocate___overloaded___0"><hr></a>
+
+<h2>ArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 540
+</p><p>
+
+<h3>Description</h3>
+ Allocates a new dynamic array. Previous content is lost (but not disposed). No items are reserved for use. Argument StartIndex is the absolute physical index from which the array will begin (you can always reset it by direct manipulation of the array structure).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayAllocate___overloaded___0">ArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReallocate___overloaded___0"><hr></a>
+
+<h2>ArrayReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 544
+</p><p>
+
+<h3>Description</h3>
+ Reallocates the array - i.e. sets its capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReallocate___overloaded___0">ArrayReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayDeallocate___overloaded___0"><hr></a>
+
+<h2>ArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 548
+</p><p>
+
+<h3>Description</h3>
+ Disposes the array. If the array is nil than nothing happens. Assings nil to a..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate___overloaded___0">ArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayClear___overloaded___0"><hr></a>
+
+<h2>ArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 552
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of the array and sets new capacity and StartIndex. Sets Size to zero.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayClear___overloaded___0">ArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayExpand___overloaded___0"><hr></a>
+
+<h2>ArrayExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 559
+</p><p>
+
+<h3>Description</h3>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk. If capacity &gt;= deMaxMemChunk and StartIndex+Size+n &lt;= capacity + deMaxMemChunk then grows array by deMaxMemChunk, otherwise grows the array by n..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayExpand___overloaded___0">ArrayExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReserveItems___overloaded___0"><hr></a>
+
+<h2>ArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 573
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at position index. The place for new items is made in the range [index, index + n). All items being previously stored within this range are moved right. The array is reallocated if necessary to hold the new items (by calling Expand)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems___overloaded___0">ArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayRemoveItems___overloaded___0"><hr></a>
+
+<h2>ArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 579
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at <span class="local_symbol">index</span> from the array. In other words the range of items [index, index + n) is removed. All items after this range are moved left..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems___overloaded___0">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushFront___overloaded___0"><hr></a>
+
+<h2>ArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; leaveSpaceAtFront : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 586
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. This takes O(n) time when a^.StartIndex = 0. LeaveSpaceAtFront indicates if to leave some more space at the front if StartIndex is 0 - increase StartIndex (true), or if to leave StartIndex unchanged (false)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushFront___overloaded___0">ArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushBack___overloaded___0"><hr></a>
+
+<h2>ArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 590
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushBack___overloaded___0">ArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCopy___overloaded___0"><hr></a>
+
+<h2>ArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 606
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items). Re-allocates dest if it's non-nil, allocates new array otherwise. Alloc is used as a new allocator for dest (don't forget to destroy the old one!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCopy___overloaded___0">ArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayApplyFunctor___overloaded___0"><hr></a>
+
+<h2>ArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 609
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor___overloaded___0">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularMove___overloaded___0"><hr></a>
+
+<h2>ArrayCircularMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularMove(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; srcIndex, destIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 619
+</p><p>
+
+<h3>Description</h3>
+ Routines treating TStringDynamicArray as circular.
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove___overloaded___0">ArrayCircularMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularExpand___overloaded___0"><hr></a>
+
+<h2>ArrayCircularExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 624
+</p><p>
+
+<h3>Description</h3>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand___overloaded___0">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularReserveItems___overloaded___0"><hr></a>
+
+<h2>ArrayCircularReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 644
+</p><p>
+
+<h3>Description</h3>
+ Reserves items circularly. StartIndex is the absolute index of the first item in the logical circular array. The space for n elements is reserved after index, when there is not enough space at after the index and there is enough space at the beginning some elements are moved to the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems___overloaded___0">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularRemoveItems___overloaded___0"><hr></a>
+
+<h2>ArrayCircularRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 649
+</p><p>
+
+<h3>Description</h3>
+ Removes n elements beginning at logical index. Treats array as circular with first absolute index = a^.StartIndex..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems___overloaded___0">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushFront___overloaded___0"><hr></a>
+
+<h2>ArrayCircularPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 653
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront___overloaded___0">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushBack___overloaded___0"><hr></a>
+
+<h2>ArrayCircularPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 657
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack___overloaded___0">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularApplyFunctor___overloaded___0"><hr></a>
+
+<h2>ArrayCircularApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TStringDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 667
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor___overloaded___0">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferAllocate___overloaded___0"><hr></a>
+
+<h2>BufferAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 678
+</p><p>
+
+<h3>Description</h3>
+ Note: TDynamicBuffers should not used anymore in new code, since dynamic arrays were introduced into the language. They are kept mostly because TSegArray heavily depends on them.
+</p><p>
+ Allocates a buffer of Size = capacity * SizeOf(String)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferAllocate___overloaded___0">BufferAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferReallocate___overloaded___0"><hr></a>
+
+<h2>BufferReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 681
+</p><p>
+
+<h3>Description</h3>
+ Reallocates buffer..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferReallocate___overloaded___0">BufferReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferDeallocate___overloaded___0"><hr></a>
+
+<h2>BufferDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 685
+</p><p>
+
+<h3>Description</h3>
+ Deallocates buffer. If buffer is nil than does nothing. Sets b to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferDeallocate___overloaded___0">BufferDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferExpand___overloaded___0"><hr></a>
+
+<h2>BufferExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 692
+</p><p>
+
+<h3>Description</h3>
+ Expands buffer to hold at least n more items. If capacity &lt; bufMaxMemChunk then the new capacity becomes capacity * bufGrowRate, otherwise it becomes capacity + bufMaxMemChunk. If n + capacity is greater than any of the chosen capacities, it becomes the new capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferExpand___overloaded___0">BufferExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferCopy___overloaded___0"><hr></a>
+
+<h2>BufferCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 696
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the buffer to another buffer. Re-allocates dest if it's non-nil, allocates new buffer otherwise..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferCopy___overloaded___0">BufferCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayAllocate___overloaded___1"><hr></a>
+
+<h2>ArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 771
+</p><p>
+
+<h3>Description</h3>
+ Allocates a new dynamic array. Previous content is lost (but not disposed). No items are reserved for use. Argument StartIndex is the absolute physical index from which the array will begin (you can always reset it by direct manipulation of the array structure).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayAllocate___overloaded___1">ArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReallocate___overloaded___1"><hr></a>
+
+<h2>ArrayReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 775
+</p><p>
+
+<h3>Description</h3>
+ Reallocates the array - i.e. sets its capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReallocate___overloaded___1">ArrayReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayDeallocate___overloaded___1"><hr></a>
+
+<h2>ArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 779
+</p><p>
+
+<h3>Description</h3>
+ Disposes the array. If the array is nil than nothing happens. Assings nil to a..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayDeallocate___overloaded___1">ArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayClear___overloaded___1"><hr></a>
+
+<h2>ArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 783
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of the array and sets new capacity and StartIndex. Sets Size to zero.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayClear___overloaded___1">ArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayExpand___overloaded___1"><hr></a>
+
+<h2>ArrayExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 790
+</p><p>
+
+<h3>Description</h3>
+ Grows the array by the factor of daGrowRate if StartIndex+Size+n &lt;= capacity*daGrowRate and capacity &lt; deMaxMemChunk. If capacity &gt;= deMaxMemChunk and StartIndex+Size+n &lt;= capacity + deMaxMemChunk then grows array by deMaxMemChunk, otherwise grows the array by n..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayExpand___overloaded___1">ArrayExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayReserveItems___overloaded___1"><hr></a>
+
+<h2>ArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 804
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at position index. The place for new items is made in the range [index, index + n). All items being previously stored within this range are moved right. The array is reallocated if necessary to hold the new items (by calling Expand)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayReserveItems___overloaded___1">ArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayRemoveItems___overloaded___1"><hr></a>
+
+<h2>ArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 810
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at <span class="local_symbol">index</span> from the array. In other words the range of items [index, index + n) is removed. All items after this range are moved left..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayRemoveItems___overloaded___1">ArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushFront___overloaded___1"><hr></a>
+
+<h2>ArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; leaveSpaceAtFront : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 817
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. This takes O(n) time when a^.StartIndex = 0. LeaveSpaceAtFront indicates if to leave some more space at the front if StartIndex is 0 - increase StartIndex (true), or if to leave StartIndex unchanged (false)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushFront___overloaded___1">ArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayPushBack___overloaded___1"><hr></a>
+
+<h2>ArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 821
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayPushBack___overloaded___1">ArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCopy___overloaded___1"><hr></a>
+
+<h2>ArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 837
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the array to another array (i.e. makes an exact copy, even of unreserved items). Re-allocates dest if it's non-nil, allocates new array otherwise. Alloc is used as a new allocator for dest (don't forget to destroy the old one!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCopy___overloaded___1">ArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayApplyFunctor___overloaded___1"><hr></a>
+
+<h2>ArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 840
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayApplyFunctor___overloaded___1">ArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularMove___overloaded___1"><hr></a>
+
+<h2>ArrayCircularMove</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularMove(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; srcIndex, destIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 850
+</p><p>
+
+<h3>Description</h3>
+ Routines treating TIntegerDynamicArray as circular.
+</p><p>
+ Moves elements in the array circularly, i.e. when n + srcIndex &gt;= Capacity the remaining number of elements (n + srcIndex - Capacity + 1) are moved from the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularMove___overloaded___1">ArrayCircularMove</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularExpand___overloaded___1"><hr></a>
+
+<h2>ArrayCircularExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 855
+</p><p>
+
+<h3>Description</h3>
+ Expands array to hold at least n more elements.Treats array as circular starting at index a^.StartIndex.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularExpand___overloaded___1">ArrayCircularExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularReserveItems___overloaded___1"><hr></a>
+
+<h2>ArrayCircularReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularReserveItems(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 875
+</p><p>
+
+<h3>Description</h3>
+ Reserves items circularly. StartIndex is the absolute index of the first item in the logical circular array. The space for n elements is reserved after index, when there is not enough space at after the index and there is enough space at the beginning some elements are moved to the beginning..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularReserveItems___overloaded___1">ArrayCircularReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularRemoveItems___overloaded___1"><hr></a>
+
+<h2>ArrayCircularRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularRemoveItems(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 880
+</p><p>
+
+<h3>Description</h3>
+ Removes n elements beginning at logical index. Treats array as circular with first absolute index = a^.StartIndex..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularRemoveItems___overloaded___1">ArrayCircularRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushFront___overloaded___1"><hr></a>
+
+<h2>ArrayCircularPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushFront(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 884
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the front of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushFront___overloaded___1">ArrayCircularPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularPushBack___overloaded___1"><hr></a>
+
+<h2>ArrayCircularPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularPushBack(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 888
+</p><p>
+
+<h3>Description</h3>
+ Pushes elem at the back of the array. Treats array circularly..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularPushBack___overloaded___1">ArrayCircularPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ArrayCircularApplyFunctor___overloaded___1"><hr></a>
+
+<h2>ArrayCircularApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ArrayCircularApplyFunctor(a : </span><span class="program_code"><span class="global_symbol">TIntegerDynamicArray</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 898
+</p><p>
+
+<h3>Description</h3>
+ Applies proc to each reserved element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#ArrayCircularApplyFunctor___overloaded___1">ArrayCircularApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferAllocate___overloaded___1"><hr></a>
+
+<h2>BufferAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">; capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 909
+</p><p>
+
+<h3>Description</h3>
+ Note: TDynamicBuffers should not used anymore in new code, since dynamic arrays were introduced into the language. They are kept mostly because TSegArray heavily depends on them.
+</p><p>
+ Allocates a buffer of Size = capacity * SizeOf(Integer)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferAllocate___overloaded___1">BufferAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferReallocate___overloaded___1"><hr></a>
+
+<h2>BufferReallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferReallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">; newcap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 912
+</p><p>
+
+<h3>Description</h3>
+ Reallocates buffer..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferReallocate___overloaded___1">BufferReallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferDeallocate___overloaded___1"><hr></a>
+
+<h2>BufferDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 916
+</p><p>
+
+<h3>Description</h3>
+ Deallocates buffer. If buffer is nil than does nothing. Sets b to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferDeallocate___overloaded___1">BufferDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferExpand___overloaded___1"><hr></a>
+
+<h2>BufferExpand</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferExpand(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> b : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 923
+</p><p>
+
+<h3>Description</h3>
+ Expands buffer to hold at least n more items. If capacity &lt; bufMaxMemChunk then the new capacity becomes capacity * bufGrowRate, otherwise it becomes capacity + bufMaxMemChunk. If n + capacity is greater than any of the chosen capacities, it becomes the new capacity..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferExpand___overloaded___1">BufferExpand</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BufferCopy___overloaded___1"><hr></a>
+
+<h2>BufferCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> BufferCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 927
+</p><p>
+
+<h3>Description</h3>
+ Copies everything in the buffer to another buffer. Re-allocates dest if it's non-nil, allocates new buffer otherwise..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#BufferCopy___overloaded___1">BufferCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TDynamicArrayRec"><hr></a>
+
+<h2>TDynamicArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TDynamicArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size, Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> ItemType </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TDynamicArray = ^TDynamicArrayRec;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PDynamicArray = ^TDynamicArray;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TDynamicBufferRec = </span><span class="program_code"><span class="keyword">record</span></span><span class="program_code"> Capacity : SizeType;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> ItemType;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 282
+</p><p>
+
+<h3>Description</h3>
+ Dynamic array of pointers. This is used as a low-level interface to memory for some PascalADT library containers. Memory allocated using this structure is guaranteed to be stored in one block. It is not safe to have multiple dynamic arrays variables pointing to one physical array, since the array may be reallocated and its address changed. Allocator field is the allocator used to allocate and dispose the array. It is <em>not</em> owned by the array and will <em>not</em> be destroyed when it's deallocated, so you have to manage it yourself. If it's nil then GetMem, FreeMem and ReallocMem are used. Indicies are zero-based. StartIndex field is a physical index at which elements start (logical - given by the user - and physical indicies are not the same). The array may be used either as circular or normal. When used as circular all elements which do not exceed the physical upper array boundary are stored from the physical beginning of the array. Routines manipulating array as circular have ArrayCircular- prefix, normal routines have Array- prefix. Don't use this structure directly, but TDynamicArray instead.
+</p><p>
+
+<h3>See also</h3>
+TDynamicArray, TSegArray.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TDynamicArrayRec">TDynamicArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringDynamicArrayRec"><hr></a>
+
+<h2>TStringDynamicArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringDynamicArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size, Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> String </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TStringDynamicArray = ^TStringDynamicArrayRec;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PStringDynamicArray = ^TStringDynamicArray;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TStringDynamicBufferRec = </span><span class="program_code"><span class="keyword">record</span></span><span class="program_code"> Capacity : SizeType;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> String;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 513
+</p><p>
+
+<h3>Description</h3>
+ Dynamic array of pointers. This is used as a low-level interface to memory for some PascalADT library containers. Memory allocated using this structure is guaranteed to be stored in one block. It is not safe to have multiple dynamic arrays variables pointing to one physical array, since the array may be reallocated and its address changed. Allocator field is the allocator used to allocate and dispose the array. It is <em>not</em> owned by the array and will <em>not</em> be destroyed when it's deallocated, so you have to manage it yourself. If it's nil then GetMem, FreeMem and ReallocMem are used. Indicies are zero-based. StartIndex field is a physical index at which elements start (logical - given by the user - and physical indicies are not the same). The array may be used either as circular or normal. When used as circular all elements which do not exceed the physical upper array boundary are stored from the physical beginning of the array. Routines manipulating array as circular have ArrayCircular- prefix, normal routines have Array- prefix. Don't use this structure directly, but TStringDynamicArray instead.
+</p><p>
+
+<h3>See also</h3>
+TStringDynamicArray, TSegArray.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TStringDynamicArrayRec">TStringDynamicArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerDynamicArrayRec"><hr></a>
+
+<h2>TIntegerDynamicArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerDynamicArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> StartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size, Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Integer </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TIntegerDynamicArray = ^TIntegerDynamicArrayRec;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> PIntegerDynamicArray = ^TIntegerDynamicArray;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> TIntegerDynamicBufferRec = </span><span class="program_code"><span class="keyword">record</span></span><span class="program_code"> Capacity : SizeType;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Items : </span><span class="program_code"> </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Integer;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 744
+</p><p>
+
+<h3>Description</h3>
+ Dynamic array of pointers. This is used as a low-level interface to memory for some PascalADT library containers. Memory allocated using this structure is guaranteed to be stored in one block. It is not safe to have multiple dynamic arrays variables pointing to one physical array, since the array may be reallocated and its address changed. Allocator field is the allocator used to allocate and dispose the array. It is <em>not</em> owned by the array and will <em>not</em> be destroyed when it's deallocated, so you have to manage it yourself. If it's nil then GetMem, FreeMem and ReallocMem are used. Indicies are zero-based. StartIndex field is a physical index at which elements start (logical - given by the user - and physical indicies are not the same). The array may be used either as circular or normal. When used as circular all elements which do not exceed the physical upper array boundary are stored from the physical beginning of the array. Routines manipulating array as circular have ArrayCircular- prefix, normal routines have Array- prefix. Don't use this structure directly, but TIntegerDynamicArray instead.
+</p><p>
+
+<h3>See also</h3>
+TIntegerDynamicArray, TSegArray.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TIntegerDynamicArrayRec">TIntegerDynamicArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TDynamicBuffer"><hr></a>
+
+<h2>TDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TDynamicBuffer = ^TDynamicBufferRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 300
+</p><p>
+
+<h3>See also</h3>
+TDynamicBufferRec, TDynamicArray
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PDynamicBuffer"><hr></a>
+
+<h2>PDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PDynamicBuffer = ^TDynamicBuffer;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 302
+</p><p>
+
+<h3>See also</h3>
+<a href="adtdarray.html#TDynamicBuffer">TDynamicBuffer</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#PDynamicBuffer">PDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringDynamicBuffer"><hr></a>
+
+<h2>TStringDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringDynamicBuffer = ^TStringDynamicBufferRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 531
+</p><p>
+
+<h3>See also</h3>
+TStringDynamicBufferRec, TStringDynamicArray
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringDynamicBuffer"><hr></a>
+
+<h2>PStringDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringDynamicBuffer = ^TStringDynamicBuffer;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 533
+</p><p>
+
+<h3>See also</h3>
+<a href="adtdarray.html#TStringDynamicBuffer">TStringDynamicBuffer</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#PStringDynamicBuffer">PStringDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerDynamicBuffer"><hr></a>
+
+<h2>TIntegerDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerDynamicBuffer = ^TIntegerDynamicBufferRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 762
+</p><p>
+
+<h3>See also</h3>
+TIntegerDynamicBufferRec, TIntegerDynamicArray
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerDynamicBuffer"><hr></a>
+
+<h2>PIntegerDynamicBuffer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerDynamicBuffer = ^TIntegerDynamicBuffer;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtdarray.pas on line 764
+</p><p>
+
+<h3>See also</h3>
+<a href="adtdarray.html#TIntegerDynamicBuffer">TIntegerDynamicBuffer</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtdarray.html#PIntegerDynamicBuffer">PIntegerDynamicBuffer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtdarray.html">adtdarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

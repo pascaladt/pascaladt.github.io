@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>Reference for TIntegerSetIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerSetIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSetIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerDefinedOrderIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtbstree__-TIntegerBinarySearchTreeBaseIterator.html">TIntegerBinarySearchTreeBaseIterator</a>, <a href="adt23tree__-TInteger23TreeIterator.html">TInteger23TreeIterator</a>, <a href="adthash__-TIntegerHashTableIterator.html">TIntegerHashTableIterator</a>
+<h3>Source</h3>
+adtiters.pas on line 1541
+</p><p>
+
+<h3>Description</h3>
+ An iterator into a set. It differs from the <a href="adtiters__-TIntegerDefinedOrderIterator.html">TIntegerDefinedOrderIterator</a> only in that it specifies the behaviour of several methods more precisely;.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at the current position from the container and returns it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerSetIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Extract">TIntegerDefinedOrderIterator.Extract</a>, <a href="adtiters__-TIntegerForwardIterator.html#Extract">TIntegerForwardIterator.Extract</a>
+<h3>Source</h3>
+adtiters.pas on line 1547
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at the current position from the container and returns it. The iterator is moved to the next position, and iterating may be continued without missing any items or visiting any items twice.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerSetIterator.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerDefinedOrderIterator.html#Delete">TIntegerDefinedOrderIterator.Delete</a>, <a href="adtiters__-TIntegerForwardIterator.html#Delete">TIntegerForwardIterator.Delete</a>
+<h3>Source</h3>
+adtiters.pas on line 1550
+</p><p>
+
+<h3>Description</h3>
+ The same as <a href="adtiters__-TIntegerSetIterator.html#Extract">Extract</a>, but deletes the item instead of returning it.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters__-TIntegerSetIterator.html">TIntegerSetIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtiters.html">adtiters</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

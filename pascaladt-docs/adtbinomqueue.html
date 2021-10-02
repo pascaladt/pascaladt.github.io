@@ -1,0 +1,738 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtbinomqueue</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtfunct.html">adtfunct</a>, <a href="adtmem.html">adtmem</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, <a href="adtcont.html">adtcont</a>, <a href="adttree.html">adttree</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides the binomial heap priority queues (TBinomialQueue)..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TBinomialQueue.html">TBinomialQueue</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TBinomialQueueIterator.html">TBinomialQueueIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueue.html">TStringBinomialQueue</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TStringBinomialQueueIterator.html">TStringBinomialQueueIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueue.html">TIntegerBinomialQueue</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue__-TIntegerBinomialQueueIterator.html">TIntegerBinomialQueueIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into a binomial priority queue.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TBinomialTreeNode">TBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#PBinomialTreeNode">PBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TBinomialForest">TBinomialForest</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TStringBinomialTreeNode">TStringBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#PStringBinomialTreeNode">PStringBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TStringBinomialForest">TStringBinomialForest</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TIntegerBinomialTreeNode">TIntegerBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#PIntegerBinomialTreeNode">PIntegerBinomialTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbinomqueue.html#TIntegerBinomialForest">TIntegerBinomialForest</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="TBinomialTreeNode"><hr></a>
+
+<h2>TBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TBinomialTreeNode = TTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 241
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TBinomialTreeNode">TBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PBinomialTreeNode"><hr></a>
+
+<h2>PBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PBinomialTreeNode = PTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 242
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#PBinomialTreeNode">PBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TBinomialForest"><hr></a>
+
+<h2>TBinomialForest</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TBinomialForest = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> PBinomialTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 244
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TBinomialForest">TBinomialForest</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringBinomialTreeNode"><hr></a>
+
+<h2>TStringBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringBinomialTreeNode = TStringTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 410
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TStringBinomialTreeNode">TStringBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringBinomialTreeNode"><hr></a>
+
+<h2>PStringBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringBinomialTreeNode = PStringTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 411
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#PStringBinomialTreeNode">PStringBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringBinomialForest"><hr></a>
+
+<h2>TStringBinomialForest</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringBinomialForest = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> PStringBinomialTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 413
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TStringBinomialForest">TStringBinomialForest</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerBinomialTreeNode"><hr></a>
+
+<h2>TIntegerBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerBinomialTreeNode = TIntegerTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 579
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TIntegerBinomialTreeNode">TIntegerBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerBinomialTreeNode"><hr></a>
+
+<h2>PIntegerBinomialTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerBinomialTreeNode = PIntegerTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 580
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#PIntegerBinomialTreeNode">PIntegerBinomialTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerBinomialForest"><hr></a>
+
+<h2>TIntegerBinomialForest</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerBinomialForest = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> PIntegerBinomialTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtbinomqueue.pas on line 582
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html#TIntegerBinomialForest">TIntegerBinomialForest</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbinomqueue.html">adtbinomqueue</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

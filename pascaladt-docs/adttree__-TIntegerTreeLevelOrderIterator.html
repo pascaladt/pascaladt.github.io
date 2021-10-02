@@ -1,0 +1,857 @@
+<html>
+<head>
+<title>Reference for TIntegerTreeLevelOrderIterator</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerTreeLevelOrderIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerTreeLevelOrderIterator = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerLevelOrderIterator)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtiters__-TIntegerLevelOrderIterator.html">TIntegerLevelOrderIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1501
+</p><p>
+
+<h3>Description</h3>
+ A levelorder iterator into <a href="adttree__-TIntegerTree.html">TIntegerTree</a>.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a copy of the iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if self is the first iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#TreeIterator">TreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a tree iterator pointing at the same node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Re-implemented for efficiency reason.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#StartTraversal">StartTraversal</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to the first node in its owner tree, according to levelorder traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves the iterator to the next node according to levelorder traversal order..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Moves self to previous position according to level-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts item before position.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#Destroy">TIntegerIterator.Destroy</a>
+<h3>Source</h3>
+adttree.pas on line 1515
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerIterator.html">TIntegerIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerIterator.html#CopySelf">TIntegerIterator.CopySelf</a>
+<h3>Source</h3>
+adttree.pas on line 1517
+</p><p>
+
+<h3>Description</h3>
+ Returns a copy of the iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Extract">TIntegerForwardIterator.Extract</a>
+<h3>Source</h3>
+adttree.pas on line 1535
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IsStart"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.IsStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IsStart : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#IsStart">TIntegerForwardIterator.IsStart</a>
+<h3>Source</h3>
+adttree.pas on line 1537
+</p><p>
+
+<h3>Description</h3>
+ Returns true if self is the first iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#IsStart">IsStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TreeIterator"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.TreeIterator</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> TreeIterator : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerBasicTreeIterator.html">TIntegerBasicTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html#TreeIterator">TIntegerTreeTraversalIterator.TreeIterator</a>
+<h3>Source</h3>
+adttree.pas on line 1539
+</p><p>
+
+<h3>Description</h3>
+ Returns a tree iterator pointing at the same node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#TreeIterator">TreeIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html#GetItem">TIntegerTreeTraversalIterator.GetItem</a>, <a href="adtiters__-TIntegerIterator.html#GetItem">TIntegerIterator.GetItem</a>
+<h3>Source</h3>
+adttree.pas on line 1542
+</p><p>
+
+<h3>Description</h3>
+ Re-implemented for efficiency reason.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="StartTraversal"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.StartTraversal</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> StartTraversal; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerTreeTraversalIterator.html#StartTraversal">TIntegerTreeTraversalIterator.StartTraversal</a>
+<h3>Source</h3>
+adttree.pas on line 1520
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to the first node in its owner tree, according to levelorder traversal.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#StartTraversal">StartTraversal</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Advance"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.Advance</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Advance; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Advance">TIntegerForwardIterator.Advance</a>
+<h3>Source</h3>
+adttree.pas on line 1524
+</p><p>
+
+<h3>Description</h3>
+ Moves the iterator to the next node according to levelorder traversal order..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Advance">Advance</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="AdvanceOnePosition"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.AdvanceOnePosition</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> AdvanceOnePosition; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#AdvanceOnePosition">TIntegerForwardIterator.AdvanceOnePosition</a>
+<h3>Source</h3>
+adttree.pas on line 1526
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#AdvanceOnePosition">AdvanceOnePosition</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Retreat"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.Retreat</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Retreat; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerBidirectionalIterator.html#Retreat">TIntegerBidirectionalIterator.Retreat</a>
+<h3>Source</h3>
+adttree.pas on line 1530
+</p><p>
+
+<h3>Description</h3>
+ Moves self to previous position according to level-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Retreat">Retreat</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerTreeLevelOrderIterator.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtiters__-TIntegerForwardIterator.html#Insert">TIntegerForwardIterator.Insert</a>
+<h3>Source</h3>
+adttree.pas on line 1534
+</p><p>
+
+<h3>Description</h3>
+ Inserts item before position. Does not violate previous level-order. Goes to the newly inserted item.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

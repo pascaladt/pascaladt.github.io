@@ -1,0 +1,1415 @@
+<html>
+<head>
+<title>Reference for TIntegerRandomAccessContainerAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TIntegerRandomAccessContainerAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerRandomAccessContainerAdt = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TIntegerDoubleListAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TIntegerDoubleListAdt.html">TIntegerDoubleListAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtcont__-TIntegerArrayAdt.html">TIntegerArrayAdt</a>
+<h3>Source</h3>
+adtcont.pas on line 1989
+</p><p>
+
+<h3>Description</h3>
+ Represents a container with random access to items..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the first element in the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator pointing to the one beyond last element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator pointing to the first element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an iterator to the one beyond last element.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at the given index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___1">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes at most n items beginning with start, less if the end of the container is reached.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___2">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all the items from the range [starti,finishi).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Extract">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Extract___overloaded___0">Extract</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#LowIndex">LowIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the lowest index in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#HighIndex">HighIndex</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the highest index in the collection.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the element at the given index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts an item at <span class="local_symbol">index</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts an item at <span class="local_symbol">index</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item at <span class="local_symbol">index</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes the item at <span class="local_symbol">index</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the current capacity of the container.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets the capacity to <span class="local_symbol">cap</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="ForwardStart"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.ForwardStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#ForwardStart">TIntegerListAdt.ForwardStart</a>
+<h3>Source</h3>
+adtcont.pas on line 1999
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the first element in the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#ForwardStart">ForwardStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ForwardFinish"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.ForwardFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> ForwardFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#ForwardFinish">TIntegerListAdt.ForwardFinish</a>
+<h3>Source</h3>
+adtcont.pas on line 2001
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator pointing to the one beyond last element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#ForwardFinish">ForwardFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessStart"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.RandomAccessStart</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessStart : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2003
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator pointing to the first element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessStart">RandomAccessStart</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RandomAccessFinish"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.RandomAccessFinish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RandomAccessFinish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerRandomAccessIterator.html">TIntegerRandomAccessIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2005
+</p><p>
+
+<h3>Description</h3>
+ Returns an iterator to the one beyond last element.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#RandomAccessFinish">RandomAccessFinish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetItem"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.GetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2007
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at the given index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetItem">GetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___1"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(start : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtcont.pas on line 2024
+</p><p>
+
+<h3>Description</h3>
+ Deletes at most n items beginning with start, less if the end of the container is reached. Returns the number of items actually deleted.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___1">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___2"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(start, finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtcont.pas on line 2028
+</p><p>
+
+<h3>Description</h3>
+ Deletes all the items from the range [starti,finishi). Returns the number of items deleted.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___2">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Extract">TIntegerListAdt.Extract</a>
+<h3>Source</h3>
+adtcont.pas on line 2032
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it. Returns the removed item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Extract">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Extract___overloaded___0"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Extract</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Extract(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Extract">TIntegerListAdt.Extract</a>
+<h3>Source</h3>
+adtcont.pas on line 2033
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at <span class="local_symbol">index</span> from the container, but does not dispose it. Returns the removed item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Extract___overloaded___0">Extract</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowIndex"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.LowIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2036
+</p><p>
+
+<h3>Description</h3>
+ Returns the lowest index in the collection. For containers with fixed, zero-based indices always returns 0 (default).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#LowIndex">LowIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="HighIndex"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.HighIndex</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> HighIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2039
+</p><p>
+
+<h3>Description</h3>
+ Returns the highest index in the collection. For containers with fixed, zero-based indices always returns Size - 1 (default).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#HighIndex">HighIndex</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetItem"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.SetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetItem(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2009
+</p><p>
+
+<h3>Description</h3>
+ Sets the element at the given index.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetItem">SetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Insert">TIntegerListAdt.Insert</a>
+<h3>Source</h3>
+adtcont.pas on line 2013
+</p><p>
+
+<h3>Description</h3>
+ Inserts an item at <span class="local_symbol">index</span>. The new element will be at the position <span class="local_symbol">index</span>. The items from the range &lt;index,finish) are moved rightwards..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Insert(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Insert">TIntegerListAdt.Insert</a>
+<h3>Source</h3>
+adtcont.pas on line 2015
+</p><p>
+
+<h3>Description</h3>
+ Inserts an item at <span class="local_symbol">index</span>. The new element will be at the position <span class="local_symbol">index</span>. The items from the range &lt;index,finish) are moved rightwards..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtcont.pas on line 2019
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item at <span class="local_symbol">index</span>. All items after index are moved leftwards.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(iter : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TIntegerForwardIterator.html">TIntegerForwardIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TIntegerListAdt.html#Delete">TIntegerListAdt.Delete</a>
+<h3>Source</h3>
+adtcont.pas on line 2020
+</p><p>
+
+<h3>Description</h3>
+ Deletes the item at <span class="local_symbol">index</span>. All items after index are moved leftwards.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Capacity"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.Capacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> Capacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> GetCapacity </span><span class="program_code"><span class="keyword">write</span></span><span class="program_code"> SetCapacity;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 2041
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#Capacity">Capacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1992
+</p><p>
+
+<h3>Description</h3>
+ Returns the current capacity of the container.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetCapacity"><hr></a>
+
+<h2>TIntegerRandomAccessContainerAdt.SetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetCapacity(cap : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtcont.pas on line 1995
+</p><p>
+
+<h3>Description</h3>
+ Sets the capacity to <span class="local_symbol">cap</span>. Sets only if <span class="local_symbol">cap</span> is bigger than the current capacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html#SetCapacity">SetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TIntegerRandomAccessContainerAdt.html">TIntegerRandomAccessContainerAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

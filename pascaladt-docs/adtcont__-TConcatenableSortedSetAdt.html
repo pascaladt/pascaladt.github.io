@@ -1,0 +1,261 @@
+<html>
+<head>
+<title>Reference for TConcatenableSortedSetAdt</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TConcatenableSortedSetAdt</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TConcatenableSortedSetAdt = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TSortedSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TSortedSetAdt.html">TSortedSetAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adt23tree__-T23Tree.html">T23Tree</a>
+<h3>Source</h3>
+adtcont.pas on line 488
+</p><p>
+
+<h3>Description</h3>
+ A sorted set that supports Concatenate and Split operations, so it can be used as a concatenable priority queue.
+</p><p>
+
+<h3>See also</h3>
+<a href="adt23tree__-T23Tree.html">adt23tree.T23Tree</a>
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Split">Split</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Splits itself into two sets according to the item aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Concatenate">Concatenate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Concatenates aset with self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Split"><hr></a>
+
+<h2>TConcatenableSortedSetAdt.Split</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Split(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 503
+</p><p>
+
+<h3>Description</h3>
+ Splits itself into two sets according to the item aitem. Every item smaller than or equal to <span class="local_symbol">aitem</span> is left in the original set, and every item larger than <span class="local_symbol">aitem</span> goes to the newly created set which is returned by this function.
+</p><p>
+
+<h3>Postcondition</h3>
+ Foreach x : (x in old self and x &lt;= aitem) holds x in self.
+</p><p>
+
+<h3>Postcondition</h3>
+ Foreach x : (x in old self and x &gt; aitem) holds x in Result.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Split">Split</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Concatenate"><hr></a>
+
+<h2>TConcatenableSortedSetAdt.Concatenate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Concatenate(aset : </span><span class="program_code"><span class="global_symbol"><a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">abstract</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtcont.pas on line 496
+</p><p>
+
+<h3>Description</h3>
+ Concatenates aset with self. Every item in one of the concatenated sets must be larger than or equal to every item in the other one. <span class="local_symbol">aset</span> Is <em>destroyed</em>
+</p><p>
+
+<h3>Precondition</h3>
+ Aset &lt;&gt; nil.
+</p><p>
+
+<h3>Precondition</h3>
+ (Foreach x, y : (x in aset and y in self) holds x &lt;= y) or (foreach x, y : (x in self and y in aset) holds x &lt;= y).
+</p><p>
+
+<h3>Postcondition</h3>
+ Foreach x : (x in old aset or x in old self) holds x in self.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html#Concatenate">Concatenate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont__-TConcatenableSortedSetAdt.html">TConcatenableSortedSetAdt</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtcont.html">adtcont</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adthashfunct</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtfunct.html">adtfunct</a>, sysutils
+</p><p>
+
+<h3>Description</h3>
+ This unit provides some fairly good hashing functions for a number of data types. You should use these functions as far as possible instead of your own, because they are mostly widely-used, well-tested, high-quality functions. If you use some non-standard data type try to hash it using FNVHash on its every byte instead of devising some new function..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-THashAdaptor.html">THashAdaptor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-TAnsiStringHasher.html">TAnsiStringHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct__-TIntegerHasher.html">TIntegerHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#AnsiStringHasher">AnsiStringHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Note: it is more efficient to use one of these functions than to create a new hasher every time.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#IntegerHasher">IntegerHasher</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#FNVHash">FNVHash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This uses a very good, widely applicable FNV-1a algorithm.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#OneAtATimeHash">OneAtATimeHash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is the One-at-a-Time hash.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#BobJenkinsHash">BobJenkinsHash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is the Bob Jenkins' hash.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthashfunct.html#THashFunction">THashFunction</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="AnsiStringHasher"><hr></a>
+
+<h2>AnsiStringHasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> AnsiStringHasher : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringHasher.html">IStringHasher</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 250
+</p><p>
+
+<h3>Description</h3>
+ Note: it is more efficient to use one of these functions than to create a new hasher every time. Calling any of those functions does not create a new hasher but reuses one already created.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#AnsiStringHasher">AnsiStringHasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="IntegerHasher"><hr></a>
+
+<h2>IntegerHasher</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> IntegerHasher : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerHasher.html">IIntegerHasher</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 251
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#IntegerHasher">IntegerHasher</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FNVHash"><hr></a>
+
+<h2>FNVHash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FNVHash(ptr : </span><span class="program_code"><span class="global_symbol">Pointer</span></span><span class="program_code">; len : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">UnsignedType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 259
+</p><p>
+
+<h3>Description</h3>
+ This uses a very good, widely applicable FNV-1a algorithm. It has a decent distribution and is considerably simple and fast. This is the default hash recommended for all sorts of data. For more information see www.isthe.com/chongo/tech/comp/fnv/ or just do a net search should this link be dead.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#FNVHash">FNVHash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="OneAtATimeHash"><hr></a>
+
+<h2>OneAtATimeHash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> OneAtATimeHash(ptr : </span><span class="program_code"><span class="global_symbol">Pointer</span></span><span class="program_code">; len : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">UnsignedType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 263
+</p><p>
+
+<h3>Description</h3>
+ This is the One-at-a-Time hash. Very good distribution, but probably slower than FNV.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#OneAtATimeHash">OneAtATimeHash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BobJenkinsHash"><hr></a>
+
+<h2>BobJenkinsHash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> BobJenkinsHash(ptr : </span><span class="program_code"><span class="global_symbol">Pointer</span></span><span class="program_code">; len : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">UnsignedType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 268
+</p><p>
+
+<h3>Description</h3>
+ This is the Bob Jenkins' hash. Good distribution, may be faster than FNV on some machines with slow multiplication (not Intel). See http://burtleburtle.net/bob/hash/evahash.html.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#BobJenkinsHash">BobJenkinsHash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="THashFunction"><hr></a>
+
+<h2>THashFunction</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">THashFunction = </span><span class="program_code"><span class="keyword">function</span></span><span class="program_code">(ptr : Pointer; len : SizeType) : UnsignedType;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthashfunct.pas on line 219
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthashfunct.html#THashFunction">THashFunction</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthashfunct.html">adthashfunct</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

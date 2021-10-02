@@ -1,0 +1,2069 @@
+<html>
+<head>
+<title>Reference for THashTable</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>THashTable</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">THashTable = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(THashSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-THashSetAdt.html">THashSetAdt</a>
+<h3>Source</h3>
+adthash.pas on line 264
+</p><p>
+
+<h3>Description</h3>
+ THashTable is an open hash table. All set operations are average O(1), provided that a decent hash function is used. Default hash function uses the FNV algorithm, which in most cases is sufficiently good and need not be replaced. Warning: the hashing function must not raise exceptions..
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a new THashTable..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of ht.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Frees all items and releases any allocated memory.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns an exact copy of self.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the start iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the finish iterator.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Has">Has</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if the given item is present in the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of items in the set equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exactly the same as below.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem into the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes all items equal to aitem from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator starting the range of items equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the iterator that ends a range of items equal to aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns true if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns number of items;.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the minimal allowed capacity for the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Writes some information about the hash table to the log file including the average number of items in a bucket, number of buckets empty, filled, etc..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Swap">Swap</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at pos from the set;.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Rehashes the table making it 2^EX times larger.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the container - removes all items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the capacity that should be used for table with approximately 2^ex items.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>THashTable.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#Create">THashSetAdt.Create</a>, <a href="adtcont__-TSetAdt.html#Create">TSetAdt.Create</a>, <a href="adtcontbase__-TContainerAdt.html#Create">TContainerAdt.Create</a>
+<h3>Source</h3>
+adthash.pas on line 363
+</p><p>
+
+<h3>Description</h3>
+ Creates a new THashTable..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>THashTable.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ht : </span><span class="program_code"><span class="global_symbol"><a href="adthash__-THashTable.html">THashTable</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#CreateCopy">THashSetAdt.CreateCopy</a>, <a href="adtcont__-TSetAdt.html#CreateCopy">TSetAdt.CreateCopy</a>, <a href="adtcontbase__-TContainerAdt.html#CreateCopy">TContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adthash.pas on line 366
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of ht. If itemCopier is nil then does not copy the items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>THashTable.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Destroy">TContainerAdt.Destroy</a>
+<h3>Source</h3>
+adthash.pas on line 369
+</p><p>
+
+<h3>Description</h3>
+ Frees all items and releases any allocated memory.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopySelf"><hr></a>
+
+<h2>THashTable.CopySelf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopySelf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> ItemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#CopySelf">TContainerAdt.CopySelf</a>
+<h3>Source</h3>
+adthash.pas on line 379
+</p><p>
+
+<h3>Description</h3>
+ Returns an exact copy of self.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#CopySelf">CopySelf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>THashTable.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Start">TSetAdt.Start</a>
+<h3>Source</h3>
+adthash.pas on line 384
+</p><p>
+
+<h3>Description</h3>
+ Returns the start iterator.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>THashTable.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Finish">TSetAdt.Finish</a>
+<h3>Source</h3>
+adthash.pas on line 386
+</p><p>
+
+<h3>Description</h3>
+ Returns the finish iterator.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Has"><hr></a>
+
+<h2>THashTable.Has</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Has(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Has">TSetAdt.Has</a>
+<h3>Source</h3>
+adthash.pas on line 389
+</p><p>
+
+<h3>Description</h3>
+ Returns true if the given item is present in the set.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Has">Has</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>THashTable.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Count">TSetAdt.Count</a>
+<h3>Source</h3>
+adthash.pas on line 392
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of items in the set equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>THashTable.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adthash.pas on line 395
+</p><p>
+
+<h3>Description</h3>
+ Exactly the same as below. Pos is discarded.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>THashTable.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Insert">TSetAdt.Insert</a>
+<h3>Source</h3>
+adthash.pas on line 403
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem into the set. Returns true if self was inserted, or false if it cannot be inserted (this happens for non-multi (without repeated items) set when item equal to aitem is already in the set). If the item is not inserted it is not owned by the container and not disposed !
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete___overloaded___0"><hr></a>
+
+<h2>THashTable.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Delete(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adthash.pas on line 409
+</p><p>
+
+<h3>Description</h3>
+ Removes all items equal to aitem from the set. Returns the number of deleted items.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Delete___overloaded___0">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>THashTable.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#LowerBound">TSetAdt.LowerBound</a>
+<h3>Source</h3>
+adthash.pas on line 412
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator starting the range of items equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>THashTable.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#UpperBound">TSetAdt.UpperBound</a>
+<h3>Source</h3>
+adthash.pas on line 415
+</p><p>
+
+<h3>Description</h3>
+ Returns the iterator that ends a range of items equal to aitem.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>THashTable.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIteratorRange.html">TSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#EqualRange">TSetAdt.EqualRange</a>
+<h3>Source</h3>
+adthash.pas on line 419
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+<h3>Complexity</h3>
+ Average O(1), worst-case O(n).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>THashTable.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Empty">TContainerAdt.Empty</a>
+<h3>Source</h3>
+adthash.pas on line 428
+</p><p>
+
+<h3>Description</h3>
+ Returns true if container is empty. Equivalent to Size = 0, but may be faster;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>THashTable.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Size">TContainerAdt.Size</a>
+<h3>Source</h3>
+adthash.pas on line 430
+</p><p>
+
+<h3>Description</h3>
+ Returns number of items;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="MinCapacity"><hr></a>
+
+<h2>THashTable.MinCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> MinCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#MinCapacity">THashSetAdt.MinCapacity</a>
+<h3>Source</h3>
+adthash.pas on line 432
+</p><p>
+
+<h3>Description</h3>
+ Returns the minimal allowed capacity for the set.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#MinCapacity">MinCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LogStatus"><hr></a>
+
+<h2>THashTable.LogStatus</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> LogStatus(mname : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#LogStatus">THashSetAdt.LogStatus</a>, <a href="adtcontbase__-TContainerAdt.html#LogStatus">TContainerAdt.LogStatus</a>
+<h3>Source</h3>
+adthash.pas on line 375
+</p><p>
+
+<h3>Description</h3>
+ Writes some information about the hash table to the log file including the average number of items in a bucket, number of buckets empty, filled, etc..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#LogStatus">LogStatus</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Swap"><hr></a>
+
+<h2>THashTable.Swap</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Swap(cont : </span><span class="program_code"><span class="global_symbol"><a href="adtcontbase__-TContainerAdt.html">TContainerAdt</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+<h3>Source</h3>
+adthash.pas on line 382
+</p><p>
+
+<h3>See also</h3>
+<a href="adtcontbase__-TContainerAdt.html#Swap">TContainerAdt.Swap</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Swap">Swap</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>THashTable.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TSetIterator.html">TSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TSetAdt.html#Delete">TSetAdt.Delete</a>
+<h3>Source</h3>
+adthash.pas on line 405
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at pos from the set;.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Rehash"><hr></a>
+
+<h2>THashTable.Rehash</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Rehash(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#Rehash">THashSetAdt.Rehash</a>
+<h3>Source</h3>
+adthash.pas on line 423
+</p><p>
+
+<h3>Description</h3>
+ Rehashes the table making it 2^EX times larger. Ex may be negative, but the resulting capacity of the table cannot be less than its minimal allowe value..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Rehash">Rehash</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>THashTable.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TContainerAdt.html#Clear">TContainerAdt.Clear</a>
+<h3>Source</h3>
+adthash.pas on line 425
+</p><p>
+
+<h3>Description</h3>
+ Clears the container - removes all items.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetCapacity"><hr></a>
+
+<h2>THashTable.GetCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetCapacity : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#GetCapacity">THashSetAdt.GetCapacity</a>
+<h3>Source</h3>
+adthash.pas on line 351
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#GetCapacity">GetCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CalculateCapacity"><hr></a>
+
+<h2>THashTable.CalculateCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CalculateCapacity(ex : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#CalculateCapacity">THashSetAdt.CalculateCapacity</a>
+<h3>Source</h3>
+adthash.pas on line 355
+</p><p>
+
+<h3>Description</h3>
+ Returns the capacity that should be used for table with approximately 2^ex items. This simply converts FTableSize to FCapacity.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#CalculateCapacity">CalculateCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMaxFillRatio"><hr></a>
+
+<h2>THashTable.GetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMaxFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#GetMaxFillRatio">THashSetAdt.GetMaxFillRatio</a>
+<h3>Source</h3>
+adthash.pas on line 356
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#GetMaxFillRatio">GetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetMinFillRatio"><hr></a>
+
+<h2>THashTable.GetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetMinFillRatio : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#GetMinFillRatio">THashSetAdt.GetMinFillRatio</a>
+<h3>Source</h3>
+adthash.pas on line 358
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#GetMinFillRatio">GetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMaxFillRatio"><hr></a>
+
+<h2>THashTable.SetMaxFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMaxFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#SetMaxFillRatio">THashSetAdt.SetMaxFillRatio</a>
+<h3>Source</h3>
+adthash.pas on line 357
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#SetMaxFillRatio">SetMaxFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetMinFillRatio"><hr></a>
+
+<h2>THashTable.SetMinFillRatio</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetMinFillRatio(fr : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-THashSetAdt.html#SetMinFillRatio">THashSetAdt.SetMinFillRatio</a>
+<h3>Source</h3>
+adthash.pas on line 359
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html#SetMinFillRatio">SetMinFillRatio</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

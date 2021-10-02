@@ -1,0 +1,3779 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtsegarray</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtdarray.html">adtdarray</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtmem.html">adtmem</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit implements a dynamic low-level segmented array (TSegArray). It is not intended for normal use except for implementing higher level data structures. It is used mainly to implement TSegDequeue and in some time-critical algorithms that need to use queues (as it is a bit faster than the object-oriented implementation of queues).
+</p><p>
+ Note: the distinction between normal, const and var parameters is important semantically. Normal parameters mean that the pointer to the array cannot be changed, but the contents of the array can (and probably will) change. Const parameters mean that both the array pointer and the contents will not change, and var parameters imply that both can, and probably will, change..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#saSegmentCapacity">saSegmentCapacity</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constant
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ The capacity of one segment of a TSegArray..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem">SegArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at an absolute logical index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem">SegArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets an element at an absolute logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront">SegArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the front and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack">SegArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem___overloaded___0">SegArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at an absolute logical index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem___overloaded___0">SegArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets an element at an absolute logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront___overloaded___0">SegArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the front and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack___overloaded___0">SegArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem___overloaded___1">SegArrayGetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the element at an absolute logical index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem___overloaded___1">SegArraySetItem</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Sets an element at an absolute logical index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront___overloaded___1">SegArrayPopFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the front and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack___overloaded___1">SegArrayPopBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pops an element from the back and returns it..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate">SegArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayClear">SegArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of a TSegArray.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards right (back) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards left (front) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront">SegArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the front of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack">SegArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the back..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy">SegArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies a functor to every reserved item..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate___overloaded___0">SegArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate___overloaded___0">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayClear___overloaded___0">SegArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of a TStringSegArray.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight___overloaded___0">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards right (back) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft___overloaded___0">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards left (front) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff___overloaded___0">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront___overloaded___0">SegArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the front of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack___overloaded___0">SegArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the back..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems___overloaded___0">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems___overloaded___0">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy___overloaded___0">SegArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor___overloaded___0">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies a functor to every reserved item..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate___overloaded___1">SegArrayAllocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Allocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate___overloaded___1">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deallocates a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayClear___overloaded___1">SegArrayClear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Clears the state of a TIntegerSegArray.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight___overloaded___1">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards right (back) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft___overloaded___1">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Expands the array towards left (front) to hold at least n more elements..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff___overloaded___1">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront___overloaded___1">SegArrayPushFront</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the front of the array..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack___overloaded___1">SegArrayPushBack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Pushes an element at the back..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems___overloaded___1">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Reserves n items starting at index..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems___overloaded___1">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes n items starting at index.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy___overloaded___1">SegArrayCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor___overloaded___1">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Applies a functor to every reserved item..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TSegArrayRec">TSegArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TStringSegArrayRec">TStringSegArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TIntegerSegArrayRec">TIntegerSegArrayRec</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ This is a segmented array.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TSegArray">TSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#PSegArray">PSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TStringSegArray">TStringSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#PStringSegArray">PStringSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtsegarray.html#PIntegerSegArray">PIntegerSegArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="saSegmentCapacity"><hr></a>
+
+<h2>saSegmentCapacity</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">saSegmentCapacity = 256;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 227
+</p><p>
+
+<h3>Description</h3>
+ The capacity of one segment of a TSegArray..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#saSegmentCapacity">saSegmentCapacity</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayGetItem"><hr></a>
+
+<h2>SegArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 296
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at an absolute logical index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem">SegArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArraySetItem"><hr></a>
+
+<h2>SegArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArraySetItem(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 301
+</p><p>
+
+<h3>Description</h3>
+ Sets an element at an absolute logical index. Returns the old element..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem">SegArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopFront"><hr></a>
+
+<h2>SegArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 311
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the front and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront">SegArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopBack"><hr></a>
+
+<h2>SegArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 314
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack">SegArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayGetItem___overloaded___0"><hr></a>
+
+<h2>SegArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 401
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at an absolute logical index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem___overloaded___0">SegArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArraySetItem___overloaded___0"><hr></a>
+
+<h2>SegArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArraySetItem(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 406
+</p><p>
+
+<h3>Description</h3>
+ Sets an element at an absolute logical index. Returns the old element..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem___overloaded___0">SegArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopFront___overloaded___0"><hr></a>
+
+<h2>SegArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 416
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the front and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront___overloaded___0">SegArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopBack___overloaded___0"><hr></a>
+
+<h2>SegArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 419
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack___overloaded___0">SegArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayGetItem___overloaded___1"><hr></a>
+
+<h2>SegArrayGetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayGetItem(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 506
+</p><p>
+
+<h3>Description</h3>
+ Returns the element at an absolute logical index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayGetItem___overloaded___1">SegArrayGetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArraySetItem___overloaded___1"><hr></a>
+
+<h2>SegArraySetItem</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArraySetItem(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 511
+</p><p>
+
+<h3>Description</h3>
+ Sets an element at an absolute logical index. Returns the old element..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArraySetItem___overloaded___1">SegArraySetItem</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopFront___overloaded___1"><hr></a>
+
+<h2>SegArrayPopFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 521
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the front and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopFront___overloaded___1">SegArrayPopFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPopBack___overloaded___1"><hr></a>
+
+<h2>SegArrayPopBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> SegArrayPopBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 524
+</p><p>
+
+<h3>Description</h3>
+ Pops an element from the back and returns it..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPopBack___overloaded___1">SegArrayPopBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayAllocate"><hr></a>
+
+<h2>SegArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex1, StartIndex2 : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 274
+</p><p>
+
+<h3>Description</h3>
+ Allocates a segmented array. If alloc is nil then menages memory with standard routines. The allocator is not owned by the array and will not be destroyed with its deallocation!.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate">SegArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayDeallocate"><hr></a>
+
+<h2>SegArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 280
+</p><p>
+
+<h3>Description</h3>
+ Deallocates a segmented array. If <span class="local_symbol">a</span> is nil then nothing happens. The argument <span class="local_symbol">a</span> is set to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayClear"><hr></a>
+
+<h2>SegArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 285
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of a TSegArray. Reallocates the array to have <span class="local_symbol">segments</span> segments, from which only one will be allocated. If <span class="local_symbol">segments</span> is &lt;= 0, then leaves 1 segment..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayClear">SegArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandRight"><hr></a>
+
+<h2>SegArrayExpandRight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandRight(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 288
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards right (back) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandLeft"><hr></a>
+
+<h2>SegArrayExpandLeft</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandLeft(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 291
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards left (front) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayLogicalToSegOff"><hr></a>
+
+<h2>SegArrayLogicalToSegOff</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayLogicalToSegOff(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> segment, offset : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 294
+</p><p>
+
+<h3>Description</h3>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushFront"><hr></a>
+
+<h2>SegArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 305
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the front of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront">SegArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushBack"><hr></a>
+
+<h2>SegArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 308
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the back..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack">SegArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayReserveItems"><hr></a>
+
+<h2>SegArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayReserveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 317
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayRemoveItems"><hr></a>
+
+<h2>SegArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 323
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at index. Deallocates space if it can (the space for storing elements, i.e. some segments, not the elements themselves!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayCopy"><hr></a>
+
+<h2>SegArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 328
+</p><p>
+
+<h3>Description</h3>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>. Anything in <span class="local_symbol">dest</span> is lost. <span class="local_symbol">dest</span> Can be nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy">SegArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayApplyFunctor"><hr></a>
+
+<h2>SegArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TSegArray">TSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IUnaryFunctor.html">IUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 331
+</p><p>
+
+<h3>Description</h3>
+ Applies a functor to every reserved item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayAllocate___overloaded___0"><hr></a>
+
+<h2>SegArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex1, StartIndex2 : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 379
+</p><p>
+
+<h3>Description</h3>
+ Allocates a segmented array. If alloc is nil then menages memory with standard routines. The allocator is not owned by the array and will not be destroyed with its deallocation!.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate___overloaded___0">SegArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayDeallocate___overloaded___0"><hr></a>
+
+<h2>SegArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 385
+</p><p>
+
+<h3>Description</h3>
+ Deallocates a segmented array. If <span class="local_symbol">a</span> is nil then nothing happens. The argument <span class="local_symbol">a</span> is set to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate___overloaded___0">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayClear___overloaded___0"><hr></a>
+
+<h2>SegArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 390
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of a TStringSegArray. Reallocates the array to have <span class="local_symbol">segments</span> segments, from which only one will be allocated. If <span class="local_symbol">segments</span> is &lt;= 0, then leaves 1 segment..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayClear___overloaded___0">SegArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandRight___overloaded___0"><hr></a>
+
+<h2>SegArrayExpandRight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandRight(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 393
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards right (back) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight___overloaded___0">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandLeft___overloaded___0"><hr></a>
+
+<h2>SegArrayExpandLeft</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandLeft(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 396
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards left (front) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft___overloaded___0">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayLogicalToSegOff___overloaded___0"><hr></a>
+
+<h2>SegArrayLogicalToSegOff</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayLogicalToSegOff(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> segment, offset : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 399
+</p><p>
+
+<h3>Description</h3>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff___overloaded___0">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushFront___overloaded___0"><hr></a>
+
+<h2>SegArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 410
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the front of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront___overloaded___0">SegArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushBack___overloaded___0"><hr></a>
+
+<h2>SegArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 413
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the back..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack___overloaded___0">SegArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayReserveItems___overloaded___0"><hr></a>
+
+<h2>SegArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayReserveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 422
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems___overloaded___0">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayRemoveItems___overloaded___0"><hr></a>
+
+<h2>SegArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 428
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at index. Deallocates space if it can (the space for storing elements, i.e. some segments, not the elements themselves!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems___overloaded___0">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayCopy___overloaded___0"><hr></a>
+
+<h2>SegArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 433
+</p><p>
+
+<h3>Description</h3>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>. Anything in <span class="local_symbol">dest</span> is lost. <span class="local_symbol">dest</span> Can be nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy___overloaded___0">SegArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayApplyFunctor___overloaded___0"><hr></a>
+
+<h2>SegArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TStringSegArray">TStringSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 436
+</p><p>
+
+<h3>Description</h3>
+ Applies a functor to every reserved item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor___overloaded___0">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayAllocate___overloaded___1"><hr></a>
+
+<h2>SegArrayAllocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayAllocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; StartIndex1, StartIndex2 : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 484
+</p><p>
+
+<h3>Description</h3>
+ Allocates a segmented array. If alloc is nil then menages memory with standard routines. The allocator is not owned by the array and will not be destroyed with its deallocation!.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayAllocate___overloaded___1">SegArrayAllocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayDeallocate___overloaded___1"><hr></a>
+
+<h2>SegArrayDeallocate</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayDeallocate(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 490
+</p><p>
+
+<h3>Description</h3>
+ Deallocates a segmented array. If <span class="local_symbol">a</span> is nil then nothing happens. The argument <span class="local_symbol">a</span> is set to nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayDeallocate___overloaded___1">SegArrayDeallocate</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayClear___overloaded___1"><hr></a>
+
+<h2>SegArrayClear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayClear(</span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; segments : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 495
+</p><p>
+
+<h3>Description</h3>
+ Clears the state of a TIntegerSegArray. Reallocates the array to have <span class="local_symbol">segments</span> segments, from which only one will be allocated. If <span class="local_symbol">segments</span> is &lt;= 0, then leaves 1 segment..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayClear___overloaded___1">SegArrayClear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandRight___overloaded___1"><hr></a>
+
+<h2>SegArrayExpandRight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandRight(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 498
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards right (back) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandRight___overloaded___1">SegArrayExpandRight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayExpandLeft___overloaded___1"><hr></a>
+
+<h2>SegArrayExpandLeft</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayExpandLeft(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 501
+</p><p>
+
+<h3>Description</h3>
+ Expands the array towards left (front) to hold at least n more elements..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayExpandLeft___overloaded___1">SegArrayExpandLeft</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayLogicalToSegOff___overloaded___1"><hr></a>
+
+<h2>SegArrayLogicalToSegOff</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayLogicalToSegOff(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> segment, offset : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 504
+</p><p>
+
+<h3>Description</h3>
+ Converts a logical index into <span class="local_symbol">a</span> to a (segment,offset) pair..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayLogicalToSegOff___overloaded___1">SegArrayLogicalToSegOff</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushFront___overloaded___1"><hr></a>
+
+<h2>SegArrayPushFront</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushFront(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 515
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the front of the array..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushFront___overloaded___1">SegArrayPushFront</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayPushBack___overloaded___1"><hr></a>
+
+<h2>SegArrayPushBack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayPushBack(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; elem : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 518
+</p><p>
+
+<h3>Description</h3>
+ Pushes an element at the back..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayPushBack___overloaded___1">SegArrayPushBack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayReserveItems___overloaded___1"><hr></a>
+
+<h2>SegArrayReserveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayReserveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 527
+</p><p>
+
+<h3>Description</h3>
+ Reserves n items starting at index..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayReserveItems___overloaded___1">SegArrayReserveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayRemoveItems___overloaded___1"><hr></a>
+
+<h2>SegArrayRemoveItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayRemoveItems(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; index : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">; n : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 533
+</p><p>
+
+<h3>Description</h3>
+ Removes n items starting at index. Deallocates space if it can (the space for storing elements, i.e. some segments, not the elements themselves!)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayRemoveItems___overloaded___1">SegArrayRemoveItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayCopy___overloaded___1"><hr></a>
+
+<h2>SegArrayCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> src : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> dest : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 538
+</p><p>
+
+<h3>Description</h3>
+ Copies all the data from <span class="local_symbol">src</span> to <span class="local_symbol">dest</span>. Anything in <span class="local_symbol">dest</span> is lost. <span class="local_symbol">dest</span> Can be nil..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayCopy___overloaded___1">SegArrayCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SegArrayApplyFunctor___overloaded___1"><hr></a>
+
+<h2>SegArrayApplyFunctor</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SegArrayApplyFunctor(a : </span><span class="program_code"><span class="global_symbol"><a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IIntegerUnaryFunctor.html">IIntegerUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 541
+</p><p>
+
+<h3>Description</h3>
+ Applies a functor to every reserved item..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#SegArrayApplyFunctor___overloaded___1">SegArrayApplyFunctor</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TSegArrayRec"><hr></a>
+
+<h2>TSegArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSegArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> FirstSegIndex, LastSegIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> InnerStartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> ItemsInLastSeg : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Segments : </span><span class="program_code"><span class="global_symbol">TPointerDynamicArray</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 260
+</p><p>
+
+<h3>Description</h3>
+ This is a segmented array. Each segment has a capacity of saSegmentCapacity. The segment at Segments[FirstSegIndex] is guaranteed to be always valid (allocated)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TSegArrayRec">TSegArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringSegArrayRec"><hr></a>
+
+<h2>TStringSegArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringSegArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> FirstSegIndex, LastSegIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> InnerStartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> ItemsInLastSeg : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Segments : </span><span class="program_code"><span class="global_symbol">TPointerDynamicArray</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 365
+</p><p>
+
+<h3>Description</h3>
+ This is a segmented array. Each segment has a capacity of saSegmentCapacity. The segment at Segments[FirstSegIndex] is guaranteed to be always valid (allocated)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TStringSegArrayRec">TStringSegArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerSegArrayRec"><hr></a>
+
+<h2>TIntegerSegArrayRec</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSegArrayRec = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> FirstSegIndex, LastSegIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> InnerStartIndex : </span><span class="program_code"><span class="global_symbol">IndexType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> ItemsInLastSeg : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Segments : </span><span class="program_code"><span class="global_symbol">TPointerDynamicArray</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 470
+</p><p>
+
+<h3>Description</h3>
+ This is a segmented array. Each segment has a capacity of saSegmentCapacity. The segment at Segments[FirstSegIndex] is guaranteed to be always valid (allocated)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TIntegerSegArrayRec">TIntegerSegArrayRec</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TSegArray"><hr></a>
+
+<h2>TSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TSegArray = ^TSegArrayRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 268
+</p><p>
+
+<h3>See also</h3>
+<a href="adtsegarray.html#TSegArrayRec">TSegArrayRec</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TSegArray">TSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PSegArray"><hr></a>
+
+<h2>PSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PSegArray = ^TSegArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 269
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#PSegArray">PSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringSegArray"><hr></a>
+
+<h2>TStringSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringSegArray = ^TStringSegArrayRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 373
+</p><p>
+
+<h3>See also</h3>
+<a href="adtsegarray.html#TStringSegArrayRec">TStringSegArrayRec</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TStringSegArray">TStringSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringSegArray"><hr></a>
+
+<h2>PStringSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringSegArray = ^TStringSegArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 374
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#PStringSegArray">PStringSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerSegArray"><hr></a>
+
+<h2>TIntegerSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerSegArray = ^TIntegerSegArrayRec;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 478
+</p><p>
+
+<h3>See also</h3>
+<a href="adtsegarray.html#TIntegerSegArrayRec">TIntegerSegArrayRec</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#TIntegerSegArray">TIntegerSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerSegArray"><hr></a>
+
+<h2>PIntegerSegArray</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerSegArray = ^TIntegerSegArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtsegarray.pas on line 479
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtsegarray.html#PIntegerSegArray">PIntegerSegArray</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtsegarray.html">adtsegarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

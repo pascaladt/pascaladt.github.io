@@ -1,0 +1,1771 @@
+<html>
+<head>
+<title>Reference for TStringBinarySearchTreeBase</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h2>TStringBinarySearchTreeBase</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringBinarySearchTreeBase = </span><span class="program_code"><span class="keyword">class</span></span><span class="program_code">(TStringSortedSetAdt)</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Immediate ancestor</h3>
+<a href="adtcont__-TStringSortedSetAdt.html">TStringSortedSetAdt</a>
+</p><p>
+
+<h3>Immediate descendants</h3>
+<a href="adtavltree__-TStringAvlTree.html">TStringAvlTree</a>, <a href="adtsplaytree__-TStringSplayTree.html">TStringSplayTree</a>, <a href="adtbstree__-TStringBinarySearchTree.html">TStringBinarySearchTree</a>
+<h3>Source</h3>
+adtbstree.pas on line 420
+</p><p>
+
+<h3>Description</h3>
+  TStringBinarySearchTreeBase.
+</p><p>
+ Provides parts of implementation common to all containers based on some kind of binary search tree.
+<h3>Members</h3>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+destructor
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Deletes all items and deallocates any allocated memory.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Start">Start</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Finish">Finish</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Has">Has</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Count">Count</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Insert">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Empty">Empty</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Size">Size</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Delete">Delete</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Removes the item at pos from the set.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Clear">Clear</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#BinaryTree">BinaryTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+property
+</p>
+</td>
+<td width="15%">
+<p>
+public
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the binary tree by means of which this container is implemented.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Create">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a base binary search tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ As above, but assigns a new TStringBinaryTree to FBinaryTree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="15%">
+<p>
+constructor
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Creates a copy of cont.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#GetDisposer">GetDisposer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#FindNode">FindNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first node that contains an item equal to aitem, or nil if no such item exists.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#LowerBoundNode">LowerBoundNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the first node with item &gt;= aitem.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Inserts aitem at proper position in the tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#SetDisposer">SetDisposer</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#ExchangeBinaryTrees">ExchangeBinaryTrees</a>
+</p>
+</td>
+<td width="15%">
+<p>
+procedure
+</p>
+</td>
+<td width="15%">
+<p>
+protected
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Exchanges the binary tree of self (FBinaryTree) with that of <span class="local_symbol">tree</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Destroy"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Destroy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">destructor</span></span><span class="program_code"> Destroy; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Destroy">TStringContainerAdt.Destroy</a>
+<h3>Source</h3>
+adtbstree.pas on line 459
+</p><p>
+
+<h3>Description</h3>
+ Deletes all items and deallocates any allocated memory.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Destroy">Destroy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Start"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Start</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Start : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Start">TStringSetAdt.Start</a>
+<h3>Source</h3>
+adtbstree.pas on line 460
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Start">Start</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Finish"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Finish</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Finish : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Finish">TStringSetAdt.Finish</a>
+<h3>Source</h3>
+adtbstree.pas on line 461
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Finish">Finish</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Has"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Has</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Has(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Has">TStringSetAdt.Has</a>
+<h3>Source</h3>
+adtbstree.pas on line 462
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Has">Has</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Count"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Count</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Count(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Count">TStringSetAdt.Count</a>
+<h3>Source</h3>
+adtbstree.pas on line 463
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Count">Count</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Insert">TStringSetAdt.Insert</a>
+<h3>Source</h3>
+adtbstree.pas on line 464
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Insert">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Insert___overloaded___0"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Insert</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Insert(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Insert">TStringSetAdt.Insert</a>
+<h3>Source</h3>
+adtbstree.pas on line 465
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Insert___overloaded___0">Insert</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBound"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.LowerBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBound(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#LowerBound">TStringSetAdt.LowerBound</a>
+<h3>Source</h3>
+adtbstree.pas on line 472
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt;= aitem, or Finish if container is empty.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#LowerBound">LowerBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="UpperBound"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.UpperBound</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> UpperBound(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#UpperBound">TStringSetAdt.UpperBound</a>
+<h3>Source</h3>
+adtbstree.pas on line 474
+</p><p>
+
+<h3>Description</h3>
+ Returns the first item &gt; aitem, or Finish if container is empty.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#UpperBound">UpperBound</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="EqualRange"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.EqualRange</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> EqualRange(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIteratorRange.html">TStringSetIteratorRange</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#EqualRange">TStringSetAdt.EqualRange</a>
+<h3>Source</h3>
+adtbstree.pas on line 477
+</p><p>
+
+<h3>Description</h3>
+ Returns a range &lt;LowerBound, UpperBound), works faster than calling these two functions separately.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#EqualRange">EqualRange</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Empty"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Empty</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Empty : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Empty">TStringContainerAdt.Empty</a>
+<h3>Source</h3>
+adtbstree.pas on line 479
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Empty">Empty</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Size"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Size</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Size : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Size">TStringContainerAdt.Size</a>
+<h3>Source</h3>
+adtbstree.pas on line 480
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Size">Size</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Delete"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Delete</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Delete(pos : </span><span class="program_code"><span class="global_symbol"><a href="adtiters__-TStringSetIterator.html">TStringSetIterator</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Delete">TStringSetAdt.Delete</a>
+<h3>Source</h3>
+adtbstree.pas on line 469
+</p><p>
+
+<h3>Description</h3>
+ Removes the item at pos from the set. Pos should be advanced to the next position.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Delete">Delete</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Clear"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Clear</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> Clear; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#Clear">TStringContainerAdt.Clear</a>
+<h3>Source</h3>
+adtbstree.pas on line 478
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Clear">Clear</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="BinaryTree"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.BinaryTree</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">property</span></span><span class="program_code"> BinaryTree : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree__-TStringBinaryTree.html">TStringBinaryTree</a></span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">read</span></span><span class="program_code"> FBinaryTree;</span></nobr>
+
+<h3>Visibility</h3>
+public
+<h3>Source</h3>
+adtbstree.pas on line 483
+</p><p>
+
+<h3>Description</h3>
+ Returns the binary tree by means of which this container is implemented.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#BinaryTree">BinaryTree</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create(btree : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree__-TStringBinaryTree.html">TStringBinaryTree</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Create">TStringSetAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtbstree.pas on line 427
+</p><p>
+
+<h3>Description</h3>
+ Creates a base binary search tree. Assigns btree to FBinaryTree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Create">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Create___overloaded___0"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.Create</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> Create; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#Create">TStringSetAdt.Create</a>, <a href="adtcontbase__-TStringContainerAdt.html#Create">TStringContainerAdt.Create</a>
+<h3>Source</h3>
+adtbstree.pas on line 429
+</p><p>
+
+<h3>Description</h3>
+ As above, but assigns a new TStringBinaryTree to FBinaryTree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#Create___overloaded___0">Create</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CreateCopy"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.CreateCopy</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">constructor</span></span><span class="program_code"> CreateCopy(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> cont : </span><span class="program_code"><span class="global_symbol"><a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> itemCopier : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcont__-TStringSetAdt.html#CreateCopy">TStringSetAdt.CreateCopy</a>, <a href="adtcontbase__-TStringContainerAdt.html#CreateCopy">TStringContainerAdt.CreateCopy</a>
+<h3>Source</h3>
+adtbstree.pas on line 431
+</p><p>
+
+<h3>Description</h3>
+ Creates a copy of cont. Uses itemCopier to copy items.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#CreateCopy">CreateCopy</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="GetDisposer"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.GetDisposer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> GetDisposer : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#GetDisposer">TStringContainerAdt.GetDisposer</a>
+<h3>Source</h3>
+adtbstree.pas on line 437
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#GetDisposer">GetDisposer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="FindNode"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.FindNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> FindNode(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">var</span></span><span class="program_code"> parent : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtbstree.pas on line 443
+</p><p>
+
+<h3>Description</h3>
+ Returns the first node that contains an item equal to aitem, or nil if no such item exists. Starts searching from node. Node can be nil. Sets parent to the parent of the returned node or nil if aitem has been found at the root. Sets parent even if aitem is not found.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#FindNode">FindNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LowerBoundNode"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.LowerBoundNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LowerBoundNode(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtbstree.pas on line 447
+</p><p>
+
+<h3>Description</h3>
+ Returns the first node with item &gt;= aitem. Starts searching from node. Node can be nil.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#LowerBoundNode">LowerBoundNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="InsertNode"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.InsertNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> InsertNode(aitem : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">; node : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adtbintree.html#PStringBinaryTreeNode">PStringBinaryTreeNode</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">virtual</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtbstree.pas on line 452
+</p><p>
+
+<h3>Description</h3>
+ Inserts aitem at proper position in the tree. Starts searching from node. Returns the newly created node or nil if aitem could not be inserted.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#InsertNode">InsertNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetOwnsItems"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.SetOwnsItems</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetOwnsItems(b : </span><span class="program_code"><span class="global_symbol">Boolean</span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#SetOwnsItems">TStringContainerAdt.SetOwnsItems</a>
+<h3>Source</h3>
+adtbstree.pas on line 435
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#SetOwnsItems">SetOwnsItems</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="SetDisposer"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.SetDisposer</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> SetDisposer(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> proc : </span><span class="program_code"><span class="global_symbol"><a href="adtfunct__-IStringUnaryFunctor.html">IStringUnaryFunctor</a></span></span><span class="program_code">); </span><span class="program_code"><span class="keyword">override</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Related methods</h3>
+<a href="adtcontbase__-TStringContainerAdt.html#SetDisposer">TStringContainerAdt.SetDisposer</a>
+<h3>Source</h3>
+adtbstree.pas on line 436
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#SetDisposer">SetDisposer</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="ExchangeBinaryTrees"><hr></a>
+
+<h2>TStringBinarySearchTreeBase.ExchangeBinaryTrees</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">procedure</span></span><span class="program_code"> ExchangeBinaryTrees(tree : </span><span class="program_code"><span class="global_symbol"><a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a></span></span><span class="program_code">);</span></nobr>
+
+<h3>Visibility</h3>
+protected
+<h3>Source</h3>
+adtbstree.pas on line 456
+</p><p>
+
+<h3>Description</h3>
+ Exchanges the binary tree of self (FBinaryTree) with that of <span class="local_symbol">tree</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html#ExchangeBinaryTrees">ExchangeBinaryTrees</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree__-TStringBinarySearchTreeBase.html">TStringBinarySearchTreeBase</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtbstree.html">adtbstree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

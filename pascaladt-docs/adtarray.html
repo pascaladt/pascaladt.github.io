@@ -1,0 +1,693 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adtarray</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtdarray.html">adtdarray</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtmem.html">adtmem</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, <a href="adtcont.html">adtcont</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides an array (TArray) and a wrapper around delphi dynamic arrays (TPascalArray)..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TArray.html">TArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TArrayIterator.html">TArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TPascalArray.html">TPascalArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Provides a wrapper for the Delphi dynamic array, allowing it to be used in the algorithms of PascalAdt library..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TPascalArrayIterator.html">TPascalArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArray.html">TStringArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringArrayIterator.html">TStringArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringPascalArray.html">TStringPascalArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Provides a wrapper for the Delphi dynamic array, allowing it to be used in the algorithms of PascalAdt library..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TStringPascalArrayIterator.html">TStringPascalArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TIntegerArray.html">TIntegerArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TIntegerArrayIterator.html">TIntegerArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TIntegerPascalArray.html">TIntegerPascalArray</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Provides a wrapper for the Delphi dynamic array, allowing it to be used in the algorithms of PascalAdt library..
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray__-TIntegerPascalArrayIterator.html">TIntegerPascalArrayIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TStack">TStack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TPascalArrayType">TPascalArrayType</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TStringStack">TStringStack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TStringPascalArrayType">TStringPascalArrayType</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TIntegerStack">TIntegerStack</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adtarray.html#TIntegerPascalArrayType">TIntegerPascalArrayType</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="TStack"><hr></a>
+
+<h2>TStack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStack = TArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 340
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TStack">TStack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TPascalArrayType"><hr></a>
+
+<h2>TPascalArrayType</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TPascalArrayType = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> ItemType;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 344
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TPascalArrayType">TPascalArrayType</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringStack"><hr></a>
+
+<h2>TStringStack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringStack = TStringArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 559
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TStringStack">TStringStack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringPascalArrayType"><hr></a>
+
+<h2>TStringPascalArrayType</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringPascalArrayType = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> String;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 563
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TStringPascalArrayType">TStringPascalArrayType</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerStack"><hr></a>
+
+<h2>TIntegerStack</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerStack = TIntegerArray;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 778
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TIntegerStack">TIntegerStack</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerPascalArrayType"><hr></a>
+
+<h2>TIntegerPascalArrayType</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerPascalArrayType = </span><span class="program_code"><span class="keyword">array</span></span><span class="program_code"> </span><span class="program_code"><span class="keyword">of</span></span><span class="program_code"> Integer;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adtarray.pas on line 782
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adtarray.html#TIntegerPascalArrayType">TIntegerPascalArrayType</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adtarray.html">adtarray</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

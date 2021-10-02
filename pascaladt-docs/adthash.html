@@ -1,0 +1,649 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adthash</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtcont.html">adtcont</a>, <a href="adtmem.html">adtmem</a>, <a href="adthashfunct.html">adthashfunct</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtdarray.html">adtdarray</a>, <a href="adtiters.html">adtiters</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides implementations of a hash table (<a href="adthash__-THashTable.html">THashTable</a>) and of a scatter table (TScatterTable). Scatter tables are sometimes called closed hash tables, the first container metioned is sometimes also called an open hash table or a chained hash table. <a href="adthash__-THashTable.html">THashTable</a> Uses lists to resolve collisions, whereas TScatterTable uses pseudo-random probing technique and keeps all items in one array. They both perform all set operations in average O(1) time and worst-case O(n). However, for most uses <a href="adthash__-THashTable.html">THashTable</a> is recommended as it is slightly faster (better constant factors). On the other hand, TScatterTable consumes less memory..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTable.html">THashTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ THashTable is an open hash table.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-THashTableIterator.html">THashTableIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TStringHashTable.html">TStringHashTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TStringHashTable is an open hash table.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TStringHashTableIterator.html">TStringHashTableIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TStringScatterTable.html">TStringScatterTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TStringScatterTable is a closed hash table.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TStringScatterTableIterator.html">TStringScatterTableIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TIntegerHashTable.html">TIntegerHashTable</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ TIntegerHashTable is an open hash table.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash__-TIntegerHashTableIterator.html">TIntegerHashTableIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#THashNode">THashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#TStringHashNode">TStringHashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#TIntegerHashNode">TIntegerHashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#PHashNode">PHashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#PStringHashNode">PStringHashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adthash.html#PIntegerHashNode">PIntegerHashNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="THashNode"><hr></a>
+
+<h2>THashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">THashNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adthash.html#PHashNode">PHashNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 254
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#THashNode">THashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringHashNode"><hr></a>
+
+<h2>TStringHashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringHashNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adthash.html#PStringHashNode">PStringHashNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 500
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#TStringHashNode">TStringHashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerHashNode"><hr></a>
+
+<h2>TIntegerHashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerHashNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Next : </span><span class="program_code"><span class="global_symbol"><a href="adthash.html#PIntegerHashNode">PIntegerHashNode</a></span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 938
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#TIntegerHashNode">TIntegerHashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PHashNode"><hr></a>
+
+<h2>PHashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PHashNode = ^THashNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 253
+</p><p>
+
+<h3>Description</h3>
+  THashTable.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#PHashNode">PHashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringHashNode"><hr></a>
+
+<h2>PStringHashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringHashNode = ^TStringHashNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 499
+</p><p>
+
+<h3>Description</h3>
+  TStringHashTable.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#PStringHashNode">PStringHashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerHashNode"><hr></a>
+
+<h2>PIntegerHashNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerHashNode = ^TIntegerHashNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adthash.pas on line 937
+</p><p>
+
+<h3>Description</h3>
+  TIntegerHashTable.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adthash.html#PIntegerHashNode">PIntegerHashNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adthash.html">adthash</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>

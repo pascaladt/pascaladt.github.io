@@ -1,0 +1,5880 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="SrcDoc 0.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<p>
+
+<h1>adttree</h1>
+
+<h3>Uses in interface</h3>
+<a href="adtmem.html">adtmem</a>, <a href="adtfunct.html">adtfunct</a>, <a href="adtcontbase.html">adtcontbase</a>, <a href="adtiters.html">adtiters</a>, <a href="adtcont.html">adtcont</a>, <a href="adtdarray.html">adtdarray</a>
+</p><p>
+
+<h3>Description</h3>
+ This unit provides general (in the sense of 'unconstrained') tree class - TTree..
+<h2>Declarations</h2>
+
+</p>
+<table cols="4" border="1" width="100%">
+<tr>
+<td width="30%">
+<p>
+
+<h4>Name</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Type</h4>
+
+</p>
+</td>
+<td width="15%">
+<p>
+
+<h4>Visibility</h4>
+
+</p>
+</td>
+<td width="40%">
+<p>
+
+<h4>Synopsis</h4>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTree.html">TTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a tree using the LCRS (leftmost-child, right sibling) representation.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTreeIterator.html">TTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into TTree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTreePreOrderIterator.html">TTreePreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A preorder iterator into <a href="adttree__-TTree.html">TTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTreePostOrderIterator.html">TTreePostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A postorder iterator into <a href="adttree__-TTree.html">TTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTreeInOrderIterator.html">TTreeInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An inorder iterator into <a href="adttree__-TTree.html">TTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TTreeLevelOrderIterator.html">TTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A levelorder iterator into <a href="adttree__-TTree.html">TTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTree.html">TStringTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a tree using the LCRS (leftmost-child, right sibling) representation.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into TStringTree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreePreOrderIterator.html">TStringTreePreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A preorder iterator into <a href="adttree__-TStringTree.html">TStringTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreePostOrderIterator.html">TStringTreePostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A postorder iterator into <a href="adttree__-TStringTree.html">TStringTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeInOrderIterator.html">TStringTreeInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An inorder iterator into <a href="adttree__-TStringTree.html">TStringTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TStringTreeLevelOrderIterator.html">TStringTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A levelorder iterator into <a href="adttree__-TStringTree.html">TStringTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Implements a tree using the LCRS (leftmost-child, right sibling) representation.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An iterator into TIntegerTree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreePreOrderIterator.html">TIntegerTreePreOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A preorder iterator into <a href="adttree__-TIntegerTree.html">TIntegerTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreePostOrderIterator.html">TIntegerTreePostOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A postorder iterator into <a href="adttree__-TIntegerTree.html">TIntegerTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeInOrderIterator.html">TIntegerTreeInOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ An inorder iterator into <a href="adttree__-TIntegerTree.html">TIntegerTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree__-TIntegerTreeLevelOrderIterator.html">TIntegerTreeLevelOrderIterator</a>
+</p>
+</td>
+<td width="15%">
+<p>
+class
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ A levelorder iterator into <a href="adttree__-TIntegerTree.html">TIntegerTree</a>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Parent">Parent</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostChild">LeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightSibling">RightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChild">RightMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSibling">LeftSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeaf">LeftMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeaf">RightMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Depth">Depth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Height">Height</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Children">Children</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChildNode">RightMostChildNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSiblingNode">LeftSiblingNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeafNode">RightMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeafNode">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LastInOrderNode">LastInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the last node in in-order traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeDepth">NodeDepth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeHeight">NodeHeight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeChildren">NodeChildren</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPreOrderNode">NextPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPostOrderNode">NextPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextInOrderNode">NextInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPreOrderNode">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPostOrderNode">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevInOrderNode">PrevInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Parent___overloaded___2">Parent</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostChild___overloaded___0">LeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightSibling___overloaded___0">RightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChild___overloaded___0">RightMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSibling___overloaded___0">LeftSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeaf___overloaded___2">LeftMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeaf___overloaded___2">RightMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Depth___overloaded___2">Depth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Height___overloaded___2">Height</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Children___overloaded___0">Children</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#CopyOf___overloaded___51">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChildNode___overloaded___0">RightMostChildNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSiblingNode___overloaded___0">LeftSiblingNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeafNode___overloaded___2">RightMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeafNode___overloaded___2">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LastInOrderNode___overloaded___2">LastInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the last node in in-order traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeDepth___overloaded___2">NodeDepth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeHeight___overloaded___2">NodeHeight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeChildren___overloaded___0">NodeChildren</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPreOrderNode___overloaded___2">NextPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPostOrderNode___overloaded___2">NextPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextInOrderNode___overloaded___2">NextInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPreOrderNode___overloaded___2">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPostOrderNode___overloaded___2">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevInOrderNode___overloaded___2">PrevInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Parent___overloaded___3">Parent</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostChild___overloaded___1">LeftMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightSibling___overloaded___1">RightSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChild___overloaded___1">RightMostChild</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSibling___overloaded___1">LeftSibling</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeaf___overloaded___3">LeftMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeaf___overloaded___3">RightMostLeaf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most leaf of the subtree of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Depth___overloaded___3">Depth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Height___overloaded___3">Height</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of iter.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#Children___overloaded___1">Children</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#CopyOf___overloaded___52">CopyOf</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostChildNode___overloaded___1">RightMostChildNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the right-most child of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftSiblingNode___overloaded___1">LeftSiblingNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#RightMostLeafNode___overloaded___3">RightMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LeftMostLeafNode___overloaded___3">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#LastInOrderNode___overloaded___3">LastInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the last node in in-order traversal.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeDepth___overloaded___3">NodeDepth</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the depth of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeHeight___overloaded___3">NodeHeight</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the height of node.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NodeChildren___overloaded___1">NodeChildren</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPreOrderNode___overloaded___3">NextPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextPostOrderNode___overloaded___3">NextPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#NextInOrderNode___overloaded___3">NextInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the next node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPreOrderNode___overloaded___3">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to pre-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevPostOrderNode___overloaded___3">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to post-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PrevInOrderNode___overloaded___3">PrevInOrderNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+function
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p><p>
+ Returns the previous node accoring to in-order.
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#TTreeNode">TTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#TStringTreeNode">TStringTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#TIntegerTreeNode">TIntegerTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+record
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PTreeNode">PTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PStringTreeNode">PStringTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+<a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a>
+</p>
+</td>
+<td width="15%">
+<p>
+type
+</p>
+</td>
+<td width="15%">
+<p>
+global
+</p>
+</td>
+<td width="40%">
+<p>
+
+</p>
+</td>
+</tr>
+<tr>
+<td width="30%">
+<p>
+
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+</p><p>
+<a name="Parent"><hr></a>
+
+<h2>Parent</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Parent(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 607
+</p><p>
+
+<h3>Description</h3>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Parent">Parent</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostChild"><hr></a>
+
+<h2>LeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 610
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostChild">LeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightSibling"><hr></a>
+
+<h2>RightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 613
+</p><p>
+
+<h3>Description</h3>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightSibling">RightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChild"><hr></a>
+
+<h2>RightMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 617
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of iter.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChild">RightMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSibling"><hr></a>
+
+<h2>LeftSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 621
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSibling">LeftSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeaf"><hr></a>
+
+<h2>LeftMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 625
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most leaf of the subtree of iter. The left-most leaf is the node visited first in post-order and in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeaf">LeftMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeaf"><hr></a>
+
+<h2>RightMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 629
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most leaf of the subtree of iter. The right-most leaf is the node visited last in pre-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeaf">RightMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Depth"><hr></a>
+
+<h2>Depth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Depth(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 632
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), where h is the height of the whole tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Depth">Depth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Height"><hr></a>
+
+<h2>Height</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Height(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 634
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Height">Height</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Children"><hr></a>
+
+<h2>Children</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Children(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 637
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Children">Children</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TTreeIterator.html">TTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 640
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#CopyOf">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChildNode"><hr></a>
+
+<h2>RightMostChildNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChildNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 648
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Takes exactly O(c) time, where c is the number of children of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChildNode">RightMostChildNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSiblingNode"><hr></a>
+
+<h2>LeftSiblingNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSiblingNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 652
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSiblingNode">LeftSiblingNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeafNode"><hr></a>
+
+<h2>RightMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 658
+</p><p>
+
+<h3>Description</h3>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree. This algorithm is worst-case O(n) time when all nodes are children of the root of the subtree or if every node has exactly one child. N is the number of nodes in the subtree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeafNode">RightMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeafNode"><hr></a>
+
+<h2>LeftMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 664
+</p><p>
+
+<h3>Description</h3>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree. This is worst-case O(n) time when every node in the sub-tree has exactly one child. N is the number of nodes in the sub-tree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeafNode">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LastInOrderNode"><hr></a>
+
+<h2>LastInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LastInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 666
+</p><p>
+
+<h3>Description</h3>
+ Returns the last node in in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LastInOrderNode">LastInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeDepth"><hr></a>
+
+<h2>NodeDepth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeDepth(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 668
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(h)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeDepth">NodeDepth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeHeight"><hr></a>
+
+<h2>NodeHeight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeHeight(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 670
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeHeight">NodeHeight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeChildren"><hr></a>
+
+<h2>NodeChildren</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeChildren(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 673
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeChildren">NodeChildren</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPreOrderNode"><hr></a>
+
+<h2>NextPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPreOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 675
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPreOrderNode">NextPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPostOrderNode"><hr></a>
+
+<h2>NextPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPostOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 677
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPostOrderNode">NextPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextInOrderNode"><hr></a>
+
+<h2>NextInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 679
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextInOrderNode">NextInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPreOrderNode"><hr></a>
+
+<h2>PrevPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPreOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 681
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPreOrderNode">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPostOrderNode"><hr></a>
+
+<h2>PrevPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPostOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 683
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPostOrderNode">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevInOrderNode"><hr></a>
+
+<h2>PrevInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevInOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 685
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevInOrderNode">PrevInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Parent___overloaded___2"><hr></a>
+
+<h2>Parent</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Parent(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1078
+</p><p>
+
+<h3>Description</h3>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Parent___overloaded___2">Parent</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostChild___overloaded___0"><hr></a>
+
+<h2>LeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1081
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostChild___overloaded___0">LeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightSibling___overloaded___0"><hr></a>
+
+<h2>RightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1084
+</p><p>
+
+<h3>Description</h3>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightSibling___overloaded___0">RightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChild___overloaded___0"><hr></a>
+
+<h2>RightMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1088
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of iter.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChild___overloaded___0">RightMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSibling___overloaded___0"><hr></a>
+
+<h2>LeftSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1092
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSibling___overloaded___0">LeftSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeaf___overloaded___2"><hr></a>
+
+<h2>LeftMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1096
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most leaf of the subtree of iter. The left-most leaf is the node visited first in post-order and in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeaf___overloaded___2">LeftMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeaf___overloaded___2"><hr></a>
+
+<h2>RightMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1100
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most leaf of the subtree of iter. The right-most leaf is the node visited last in pre-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeaf___overloaded___2">RightMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Depth___overloaded___2"><hr></a>
+
+<h2>Depth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Depth(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1103
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), where h is the height of the whole tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Depth___overloaded___2">Depth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Height___overloaded___2"><hr></a>
+
+<h2>Height</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Height(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1105
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Height___overloaded___2">Height</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Children___overloaded___0"><hr></a>
+
+<h2>Children</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Children(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1108
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Children___overloaded___0">Children</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___51"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TStringTreeIterator.html">TStringTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1111
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#CopyOf___overloaded___51">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChildNode___overloaded___0"><hr></a>
+
+<h2>RightMostChildNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChildNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1119
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Takes exactly O(c) time, where c is the number of children of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChildNode___overloaded___0">RightMostChildNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSiblingNode___overloaded___0"><hr></a>
+
+<h2>LeftSiblingNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSiblingNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1123
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSiblingNode___overloaded___0">LeftSiblingNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeafNode___overloaded___2"><hr></a>
+
+<h2>RightMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1129
+</p><p>
+
+<h3>Description</h3>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree. This algorithm is worst-case O(n) time when all nodes are children of the root of the subtree or if every node has exactly one child. N is the number of nodes in the subtree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeafNode___overloaded___2">RightMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeafNode___overloaded___2"><hr></a>
+
+<h2>LeftMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1135
+</p><p>
+
+<h3>Description</h3>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree. This is worst-case O(n) time when every node in the sub-tree has exactly one child. N is the number of nodes in the sub-tree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeafNode___overloaded___2">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LastInOrderNode___overloaded___2"><hr></a>
+
+<h2>LastInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LastInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1137
+</p><p>
+
+<h3>Description</h3>
+ Returns the last node in in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LastInOrderNode___overloaded___2">LastInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeDepth___overloaded___2"><hr></a>
+
+<h2>NodeDepth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeDepth(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1139
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(h)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeDepth___overloaded___2">NodeDepth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeHeight___overloaded___2"><hr></a>
+
+<h2>NodeHeight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeHeight(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1141
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeHeight___overloaded___2">NodeHeight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeChildren___overloaded___0"><hr></a>
+
+<h2>NodeChildren</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeChildren(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1144
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeChildren___overloaded___0">NodeChildren</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPreOrderNode___overloaded___2"><hr></a>
+
+<h2>NextPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPreOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1146
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPreOrderNode___overloaded___2">NextPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPostOrderNode___overloaded___2"><hr></a>
+
+<h2>NextPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPostOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1148
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPostOrderNode___overloaded___2">NextPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextInOrderNode___overloaded___2"><hr></a>
+
+<h2>NextInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1150
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextInOrderNode___overloaded___2">NextInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPreOrderNode___overloaded___2"><hr></a>
+
+<h2>PrevPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPreOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1152
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPreOrderNode___overloaded___2">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPostOrderNode___overloaded___2"><hr></a>
+
+<h2>PrevPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPostOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1154
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPostOrderNode___overloaded___2">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevInOrderNode___overloaded___2"><hr></a>
+
+<h2>PrevInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevInOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1156
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevInOrderNode___overloaded___2">PrevInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Parent___overloaded___3"><hr></a>
+
+<h2>Parent</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Parent(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1549
+</p><p>
+
+<h3>Description</h3>
+ Returns the parent of iter or nil if iter has no parent (i.e. iter is the root).
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Parent___overloaded___3">Parent</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostChild___overloaded___1"><hr></a>
+
+<h2>LeftMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1552
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most child of iter or nil if iter does not have the left-most child.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostChild___overloaded___1">LeftMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightSibling___overloaded___1"><hr></a>
+
+<h2>RightSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1555
+</p><p>
+
+<h3>Description</h3>
+ Returns the right sibling of iter or nil if iter has no right sibling.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightSibling___overloaded___1">RightSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChild___overloaded___1"><hr></a>
+
+<h2>RightMostChild</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChild(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1559
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of iter or nil if iter does not have the right-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of iter.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChild___overloaded___1">RightMostChild</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSibling___overloaded___1"><hr></a>
+
+<h2>LeftSibling</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSibling(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1563
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSibling___overloaded___1">LeftSibling</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeaf___overloaded___3"><hr></a>
+
+<h2>LeftMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1567
+</p><p>
+
+<h3>Description</h3>
+ Returns the left-most leaf of the subtree of iter. The left-most leaf is the node visited first in post-order and in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeaf___overloaded___3">LeftMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeaf___overloaded___3"><hr></a>
+
+<h2>RightMostLeaf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeaf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1571
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most leaf of the subtree of iter. The right-most leaf is the node visited last in pre-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeaf___overloaded___3">RightMostLeaf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Depth___overloaded___3"><hr></a>
+
+<h2>Depth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Depth(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1574
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(h), where h is the height of the whole tree.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Depth___overloaded___3">Depth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Height___overloaded___3"><hr></a>
+
+<h2>Height</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Height(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1576
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of iter.
+</p><p>
+
+<h3>Complexity</h3>
+ O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Height___overloaded___3">Height</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="Children___overloaded___1"><hr></a>
+
+<h2>Children</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> Children(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1579
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">iter</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#Children___overloaded___1">Children</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="CopyOf___overloaded___52"><hr></a>
+
+<h2>CopyOf</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> CopyOf(</span><span class="program_code"><span class="keyword">const</span></span><span class="program_code"> iter : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree__-TIntegerTreeIterator.html">TIntegerTreeIterator</a></span></span><span class="program_code">; </span><span class="program_code"><span class="keyword">overload</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1582
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#CopyOf___overloaded___52">CopyOf</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostChildNode___overloaded___1"><hr></a>
+
+<h2>RightMostChildNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostChildNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1590
+</p><p>
+
+<h3>Description</h3>
+ Returns the right-most child of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Takes exactly O(c) time, where c is the number of children of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostChildNode___overloaded___1">RightMostChildNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftSiblingNode___overloaded___1"><hr></a>
+
+<h2>LeftSiblingNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftSiblingNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1594
+</p><p>
+
+<h3>Description</h3>
+ Returns the left sibling (neighbour) of node or nil if node is the left-most child.
+</p><p>
+
+<h3>Complexity</h3>
+ O(ls), where ls is the number of left siblings of node.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftSiblingNode___overloaded___1">LeftSiblingNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="RightMostLeafNode___overloaded___3"><hr></a>
+
+<h2>RightMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> RightMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1600
+</p><p>
+
+<h3>Description</h3>
+ Right-most leaf in a sub-tree is the node which is visited in pre-order traversal after all other nodes the sub-tree. This algorithm is worst-case O(n) time when all nodes are children of the root of the subtree or if every node has exactly one child. N is the number of nodes in the subtree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#RightMostLeafNode___overloaded___3">RightMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LeftMostLeafNode___overloaded___3"><hr></a>
+
+<h2>LeftMostLeafNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LeftMostLeafNode(subtree : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1606
+</p><p>
+
+<h3>Description</h3>
+ Left-most leaf in a sub-tree is the node that is visited in post-order and in-order traversals before any other node in the sub-tree. This is worst-case O(n) time when every node in the sub-tree has exactly one child. N is the number of nodes in the sub-tree..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LeftMostLeafNode___overloaded___3">LeftMostLeafNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="LastInOrderNode___overloaded___3"><hr></a>
+
+<h2>LastInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> LastInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1608
+</p><p>
+
+<h3>Description</h3>
+ Returns the last node in in-order traversal.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#LastInOrderNode___overloaded___3">LastInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeDepth___overloaded___3"><hr></a>
+
+<h2>NodeDepth</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeDepth(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1610
+</p><p>
+
+<h3>Description</h3>
+ Returns the depth of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(h)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeDepth___overloaded___3">NodeDepth</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeHeight___overloaded___3"><hr></a>
+
+<h2>NodeHeight</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeHeight(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1612
+</p><p>
+
+<h3>Description</h3>
+ Returns the height of node.
+</p><p>
+
+<h3>Complexity</h3>
+ Worst case O(n)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeHeight___overloaded___3">NodeHeight</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NodeChildren___overloaded___1"><hr></a>
+
+<h2>NodeChildren</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NodeChildren(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol">SizeType</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1615
+</p><p>
+
+<h3>Description</h3>
+ Returns the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+<h3>Complexity</h3>
+ O(c), where c is the number of children of <span class="local_symbol">node</span>.
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NodeChildren___overloaded___1">NodeChildren</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPreOrderNode___overloaded___3"><hr></a>
+
+<h2>NextPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPreOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1617
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPreOrderNode___overloaded___3">NextPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextPostOrderNode___overloaded___3"><hr></a>
+
+<h2>NextPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextPostOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1619
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextPostOrderNode___overloaded___3">NextPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="NextInOrderNode___overloaded___3"><hr></a>
+
+<h2>NextInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> NextInOrderNode(node : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1621
+</p><p>
+
+<h3>Description</h3>
+ Returns the next node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#NextInOrderNode___overloaded___3">NextInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPreOrderNode___overloaded___3"><hr></a>
+
+<h2>PrevPreOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPreOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1623
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to pre-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPreOrderNode___overloaded___3">PrevPreOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevPostOrderNode___overloaded___3"><hr></a>
+
+<h2>PrevPostOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevPostOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1625
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to post-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevPostOrderNode___overloaded___3">PrevPostOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PrevInOrderNode___overloaded___3"><hr></a>
+
+<h2>PrevInOrderNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code"><span class="keyword">function</span></span><span class="program_code"> PrevInOrderNode(node, root : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">) : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1627
+</p><p>
+
+<h3>Description</h3>
+ Returns the previous node accoring to in-order.
+</p><p>
+
+<h3>Complexity</h3>
+ Amortized O(1)..
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PrevInOrderNode___overloaded___3">PrevInOrderNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TTreeNode"><hr></a>
+
+<h2>TTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TTreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftMostChild, RightSibling : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PTreeNode">PTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">ItemType</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 248
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TTree.html">TTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#TTreeNode">TTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TStringTreeNode"><hr></a>
+
+<h2>TStringTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TStringTreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftMostChild, RightSibling : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PStringTreeNode">PStringTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">String</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 719
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TStringTree.html">TStringTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#TStringTreeNode">TStringTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="TIntegerTreeNode"><hr></a>
+
+<h2>TIntegerTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">TIntegerTreeNode = </span><span class="program_code"><span class="keyword">record</span></span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Parent, LeftMostChild, RightSibling : </span><span class="program_code"><span class="global_symbol"><a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a></span></span><span class="program_code">;</span>
+<br>
+
+&nbsp;&nbsp;&nbsp;
+<span class="program_code"> Item : </span><span class="program_code"><span class="global_symbol">Integer</span></span><span class="program_code">;</span>
+<br>
+<span class="program_code"> </span><span class="program_code"><span class="keyword">end</span></span><span class="program_code">;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1190
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#TIntegerTreeNode">TIntegerTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PTreeNode"><hr></a>
+
+<h2>PTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PTreeNode = ^TTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 247
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TTree.html">TTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PTreeNode">PTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PStringTreeNode"><hr></a>
+
+<h2>PStringTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PStringTreeNode = ^TStringTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 718
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TStringTree.html">TStringTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PStringTreeNode">PStringTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p><p>
+<a name="PIntegerTreeNode"><hr></a>
+
+<h2>PIntegerTreeNode</h2>
+
+<h3>Declaration</h3>
+
+<nobr>
+
+</p><p>
+<span class="program_code">PIntegerTreeNode = ^TIntegerTreeNode;</span></nobr>
+
+<h3>Visibility</h3>
+global
+<h3>Source</h3>
+adttree.pas on line 1189
+</p><p>
+
+<h3>Description</h3>
+  General tree class.
+</p><p>
+ A node of an LCRS tree.
+</p><p>
+
+<h3>See also</h3>
+<a href="adttree__-TIntegerTree.html">TIntegerTree</a>
+</p><p>
+
+</p>
+<table cols="3" border="1" width="100%">
+<tr>
+<td width="33%">
+<p>
+<a href="adttree.html#PIntegerTreeNode">PIntegerTreeNode</a>
+</p>
+</td>
+<td width="33%">
+<p>
+<a href="adttree.html">adttree</a>
+</p>
+</td>
+</tr>
+</table>
+<p>
+
+</p>
+</body>
+</html>
