@@ -1,1 +1,12 @@
 theme: jekyll-theme-slate
+title: PascalAdt
+description: Library of Algorithms and Data Structures for Free Pascal
+
+show_downloads: true
+
+github:
+  is_project_page: true
+  repository_url: "https://github.com/lukaszcz/pascaladt"
+  repository_name: PascalAdt
+  owner_url: "https://lukaszcz.github.io"
+  owner_name: "Lukasz Czajka"
