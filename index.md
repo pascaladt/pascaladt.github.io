@@ -33,9 +33,9 @@ Installation and usage
 Documentation
 -------------
 
-[PascalAdt documentation](pascaladt-docs/index.html) includes a tutorial and the API documentation auto-generated from sources with the [srcdoc](https://github.com/lukaszcz/srcdoc/) program.
+[PascalAdt documentation](pascaladt-docs/index.html) includes a tutorial and the API documentation auto-generated from sources with the [SrcDoc](https://github.com/lukaszcz/srcdoc/) program.
 
-See [docsrc/tutorial.txt](https://github.com/lukaszcz/pascaladt/docsrc/tutorial.txt) and [demo/customer/customer.pas](https://github.com/lukaszcz/pascaladt/demo/customer/customer.pas) in the PascalAdt sources.
+See also [docsrc/tutorial.txt](https://github.com/lukaszcz/pascaladt/blob/master/docsrc/tutorial.txt) and [demo/customer/customer.pas](https://github.com/lukaszcz/pascaladt/blob/master/demo/customer/customer.pas) in the PascalAdt sources.
 
 Copyright and license
 ---------------------
