@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+PascalAdt is a library of data structures and algorithms for Free
+Pascal and Delphi, inspired by the C++ STL library.
 
-You can use the [editor on GitHub](https://github.com/pascaladt/pascaladt.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Features
+--------
+* STL-like class hierarchies of containers, iterators and functors.
+* Automatic memory management for iterators.
+* Dynamic array containers.
+* Linked lists: singly linked, doubly linked and xor linked lists.
+* Double-ended queues: circular and segmented.
+* Search trees: AVL trees, splay trees, 2-3-trees.
+* Hash tables: open and closed.
+* Priority queues: binomial heaps.
+* Sorting algorithms: quick sort, merge sort, shell sort, insertion sort.
+* Selection algorithms: Hoare, Blum-Floyd-Pratt-Rivest-Tarjan.
+* String algorithms: Knuth-Morris-Pratt, Boyer-Moore, Karp-Miller-Rosenberg.
+* Sequence algorithms: binary search, interpolation seach, partition,
+  merge, random shuffle, etc.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Requirements
+------------
+* [Free Pascal](https://www.freepascal.org).
+* Linux (should work on other systems, but the installation and
+  compilation scripts might need adjusting).
+* C compiler to compile the MCP macro processor.
 
-### Markdown
+Installation and usage
+----------------------
+* Compilation: `make`
+* Tests: `make test`
+* Installation `make install`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Documentation
+-------------
 
-```markdown
-Syntax highlighted code block
+See [docsrc/tutorial.txt](docsrc/tutorial.txt) and [demo/customer/customer.pas](demo/customer/customer.pas).
 
-# Header 1
-## Header 2
-### Header 3
+Copyright and license
+---------------------
 
-- Bulleted
-- List
+Copyright (C) 2004-2021 Lukasz Czajka
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pascaladt/pascaladt.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Distributed under LGPL 2.1. See [LICENSE](LICENSE).
